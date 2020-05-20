@@ -21,7 +21,7 @@ const Vindermere = (props) => {
 
    return (
 <section className="vindermere-container" onClick={(event) => props.stopPropagation(event)}>
-the early morning sun forces your eyes , throat is dry and your stomach grawls with too mant days without a meal,your coin purse hasnt felt the weight of gold for far too long. this bad luck must end soon
+
 <img src={pictureToggle} />
    <div className="image-selector">
 {mappedPic}
