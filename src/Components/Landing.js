@@ -2,14 +2,46 @@ import React, {useState} from "react";
 import { Link } from "react-router-dom";
 import Skills from "./Skills";
 import Projects from "./Projects/Projects";
+import Vindermere from "./Projects/Vindermere";
 import Pic1 from "../images/experience.png"
 import Pic2 from "../images/pern-stack.png"
 import Pic3 from "../images/DMT-worlds2.png";
 
 const Landing = () => {
 
+  const [overlayToggle, setOverlayToggle] = useState(false),
+             [toggleType, setToggleType] = useState();
+
+  const vindermere = "vindermere";
+
+  const setToggle = (toggleType) => {
+    console.log(toggleType)
+    setToggleType(toggleType)
+    setOverlayToggle(true);
+  },
+
+  resetToggle = () => {
+    setToggleType();
+    setOverlayToggle(false);
+  },
+
+  stopPropagation = (event) => {
+    event.stopPropagation();
+    event.nativeEvent.stopImmediatePropagation();
+  };
+
    return(
    <main>
+         {overlayToggle ? (
+            <div id="one" className="landing-overlay"
+                     onClick={()=>
+                       resetToggle()}
+                    // onMouseOver={() => document.getElementsByTagName("main").style.overflow='hidden'}
+                    >
+            {toggleType === vindermere ? (
+               <Vindermere stopPropagation = {stopPropagation}
+                                      setToggle = {setToggle} />) : null }
+             </div> ) : null}
    <div className="quote-container">
      <h2 className="intro-quote">
     "Success is the natural consequence of <br />consistently applying basic fundamentals."<br />
@@ -21,7 +53,7 @@ const Landing = () => {
     <Skills />
    </div>
    </div>
-    <Projects/>
+    <Projects setToggle = {setToggle}/>
    <section className="overview-container">
      <section className="feature-left">
        <div className="image">
