@@ -5,8 +5,7 @@ import ecoVerdePic from "../../images/Eco Verde Estimating - login.png";
 import notepadPic from "../../images/Notepad - view.png";
 
 const Projects = (props) => {
-
-  const vindermere = "vindermere"
+  const {vindermere, ecoVerde} = props
 
   return (
    <div className="project-container">
@@ -18,7 +17,9 @@ const Projects = (props) => {
             {/* <h3>Full Stack Application<br />
                     Group Project (3 Members)</h3> */}
             <p>"The early morning sun forces your eyes open; your throat is dry and your stomach growls with too many days without a meal. Your coin purse hasn't felt the weight of gold for far too long. this bad luck must end soon."</p>
+            <div style={{height: "6vh"}}>
             <button onClick={() => props.setToggle(vindermere)}>More Info</button>
+            </div>
           </div>
             <div className="image-container">
               <img  src={vindermerePic} alt="Vindermere Picture"/>
@@ -41,7 +42,9 @@ const Projects = (props) => {
             <h1>Eco Verde Estimating </h1>
             {/* <h3>Full Stack Application</h3> */}
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer interdum consequat posuere. Praesent auctor eros in magna facilisis ultricies. Nulla augue metus, euismod non pulvinar sit amet, venenatis non tortor. Quisque pharetra elit et pellentesque placerat. Proin sit amet odio leo. </p>
-            <button>More Info</button>
+            <div style={{height: "6vh"}}>
+            <button onClick={() => props.setToggle(ecoVerde)}>More Info</button>
+            </div>
          </div>
       </div>
        <div className="project">
@@ -50,7 +53,9 @@ const Projects = (props) => {
             {/* <h3>Full Stack Application<br />
                     Group Project (3 Members)</h3> */}
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer interdum consequat posuere. Praesent auctor eros in magna facilisis ultricies. Nulla augue metus, euismod non pulvinar sit amet, venenatis non tortor. </p>
+            <div style={{height: "6vh"}}>
             <button>More Info</button>
+            </div>
          </div>
          <div className="image-container">
           <img id="notepad" src={notepadPic} alt="NotePad Picture"/>

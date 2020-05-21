@@ -37,6 +37,7 @@ const Skills = () => {
                       <h4>{el.description}</h4>
                    </div> )
   })
+
    return (
       <section className="skills-container">
         <h1>SKILLS</h1>
