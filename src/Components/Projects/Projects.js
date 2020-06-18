@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import vindermerePic from "../../images/Vindermere - Login.png";
 import ecoVerdePic from "../../images/Eco Verde Estimating - login.png";
 import notepadPic from "../../images/Notepad - view.png";
+import "./Projects.scss";
 
 const Projects = (props) => {
   const {vindermere, ecoVerde} = props
@@ -24,9 +25,9 @@ const Projects = (props) => {
             <div className="image-container">
               <img  src={vindermerePic} alt="Vindermere Picture"/>
               <div className="project-details" onClick={() => props.setToggle(vindermere)}> 
-                <h3>Vindermere </h3>
+                {/* <h3>Vindermere </h3>
                 <p> Full Stack Application<br />
-                Group Project (3 Members)</p>
+                Group Project (3 Members)</p> */}
               </div>
             </div>
         </div>
@@ -34,8 +35,9 @@ const Projects = (props) => {
           <div className="image-container">
             <img  src={ecoVerdePic} alt="Eco Verde Picture"/>
             <div className="project-details"> 
-              <h3>Eco Verde Estimating</h3>
-              <p> Full Stack Application</p>
+              {/* <h3>Eco Verde Estimating</h3>
+              <p> Full Stack Application</p> 
+              <p> Most Technical Award <p>*/}
             </div>
           </div>
           <div className="project-info">
@@ -60,8 +62,8 @@ const Projects = (props) => {
          <div className="image-container">
           <img id="notepad" src={notepadPic} alt="NotePad Picture"/>
           <div className="project-details"> 
-          <h3>Notepad </h3>
-          <p>No Database</p>
+          {/* <h3>Notepad </h3>
+          <p>No Database</p> */}
           </div>
           </div>
       </div>

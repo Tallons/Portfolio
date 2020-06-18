@@ -1,0 +1,377 @@
+@import "../../modules/_variables.scss";
+
+//Projects
+
+@media  (min-width: 300px){  
+.project-container {
+   display: flex;
+   flex-direction: column;
+   justify-content: space-evenly;
+   text-align: center;
+   align-items: center;
+   min-height: 50vh;
+   width: 100%;
+   margin-top: 5em;
+   color: $pal-one;
+   
+   .projects {
+      display: flex;
+      flex-direction: column;
+      // align-items: center;
+      justify-content: space-evenly;
+      width: 84%;
+      min-height: 80vh;
+      // background: linear-gradient(0deg, $pal-three 0%, $pal-six 80%);
+      background-color: $pal-six;;
+      border-radius: 5px;
+      padding: .5em;
+      box-shadow: 8px 8px 25px black;
+      
+      
+      .project {
+         // margin: 1em 0 1em;
+         display: flex;
+         flex-direction: column-reverse;
+         justify-content: center;
+         width: 100%;
+         // height: 60vh;
+         // padding:5px;
+         margin: .25em 0 .25em;
+         box-sizing: border-box;
+         border-radius: 5px;
+         // background-color: seagreen;
+         border: 2px solid green;
+         
+         .project-info {
+            display: flex;
+            flex-direction: column;
+            justify-content:space-evenly;   
+            align-items: center;
+            padding: .25em 1.5em .25em 1.5em;
+            width: 100%;
+            height: 260vh;
+            box-sizing: border-box;
+            background-color: $pal-five;
+            border-top-left-radius: 5px;
+            border-bottom-left-radius: 5px;
+            border: 2px solid orange;
+            
+            h1{
+               color: $pal-two;
+               font-size:16px;
+            }
+            p {
+               font-size: 12px;
+               font-style: italic;
+            }
+            button {
+               width: 32vw;
+               height: 5vh;
+               background-color: transparent;
+               border: 2px solid $pal-two;
+               color: $pal-one;
+               font-size: 14px;
+               font-weight: bold;
+               border-radius: 5px;
+            }
+            button:hover {
+               transition:.5s;
+               color: $pal-two;
+               border-color: $pal-one;
+               background-color: $pal-five;
+               cursor: pointer;
+               font-size: 22px;
+               height: 5vh;
+               width: 11vw;
+            }
+      }
+
+      .project-info:hover{
+         transition:1s;
+         background-color: $pal-four;
+         
+         h1 {
+            transition:.5s;
+            color: $pal-zero;
+         }
+      }
+
+      .image-container {
+         position: relative;
+         border-radius: 5px 5px 0 0;
+         width: 100%;
+         height:25vh;
+
+         img {
+            height: 25vh;
+            border-radius: 5px 5px 0 0;
+         }
+      }
+      
+   }
+
+
+      // this may be used later on
+
+   //  .project-details {
+   //     position: absolute;
+   //     display: flex;
+   //     flex-direction: column;
+   //     justify-content: center;
+   //     visibility: hidden; 
+   //     opacity:0;
+   //       z-index:1;
+   //       top:0;
+   //       left:0;
+   //       background-color: rgba(55,54,77, 0.6);
+   //       width: 100%;
+   //       height: 100%;
+   //       border-radius: 5px;
+   //       transition: .7s;
+   //    }
+   //     .project-details:hover {
+   //        transition: .7s;
+   //       opacity:1;
+   //       cursor: pointer;
+   //      }
+      
+      }
+   }
+}
+
+@media  (min-width: 450px){  
+   .project-container
+   .projects
+   .project{
+      height: 60vh;
+
+      .image-container {
+         height: 30vh;
+
+         img {
+            height: 30vh;
+         }
+      }
+   }
+}
+
+@media  (min-width: 600px){  
+   .project-container
+   .projects
+   .project{
+      height: 70vh;
+
+      .image-container {
+         height: 35vh;
+
+         img {
+            height: 35vh;
+         }
+      }
+   }
+}
+
+@media  (min-width: 700px){  
+   .project-container
+   .projects
+   .project{
+      height: 70vh;
+
+      .image-container {
+         height: 40vh;
+
+         img {
+            height: 40vh;
+         }
+      }
+   }
+}
+
+@media  (min-width: 800px){  
+   .project-container
+   .projects
+   .project{
+      height: 80vh;
+
+      .image-container {
+         height: 45vh;
+
+         img {
+            height: 45vh;
+         }
+      }
+   }
+}
+
+@media  (min-width: 900px){  
+   .project-container
+   .projects
+   .project{
+      height: 85vh;
+
+      .image-container {
+         height: 50vh;
+
+         img {
+            height: 50vh;
+         }
+      }
+   }
+}
+
+@media  (min-width: 1000px){  
+   .project-container
+   .projects
+   .project{
+      display: flex;
+      flex-direction: row;
+      height: 50vh;
+      .project-info {
+         height: 50vh;
+         width: 45%;
+
+         button {
+            width: 15vw;
+         }
+         }
+      .image-container {
+         height: 50vh;
+         img {
+            height: 50vh;
+         }
+      }
+   }
+   
+}
+
+@media  (min-width: 1150px){  
+   .project-container
+   .projects
+   .project{
+      height: 70vh;
+      .project-info {
+         height: 70vh;
+         }
+      .image-container {
+         height: 70vh;
+         img {
+            height: 70vh;
+         }
+      }
+   }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// @media  (min-width: 500px){  
+//    .project-container {
+      
+//       .projects {
+//          // display: flex;
+//          // flex-direction: column;
+//          // // align-items: center;
+//          // justify-content: space-evenly;
+//          // width: 84%;
+//          // min-height: 80vh;
+//          // // background: linear-gradient(0deg, $pal-three 0%, $pal-six 80%);
+//          // background-color: $pal-six;;
+//          // border-radius: 5px;
+//          // padding: .5em;
+//          // box-shadow: 8px 8px 25px black;
+         
+         
+//          .project {
+//             // margin: 1em 0 1em;
+//             display: flex;
+//             flex-direction: column-reverse;
+//             justify-content: center;
+//             width: 100%;
+//             height: 58vh;
+//             // padding:5px;
+//             margin: .25em 0 .25em;
+//             box-sizing: border-box;
+//             border-radius: 5px;
+//             // background-color: seagreen;
+   
+//             .project-info {
+//                display: flex;
+//                flex-direction: column;
+//                justify-content:space-evenly;   
+//                align-items: center;
+//                padding: .25em 1.5em .25em 1.5em;
+//                width: 100%;
+//                height: 35vh;
+//                box-sizing: border-box;
+//                background-color: $pal-five;
+//                border-top-left-radius: 5px;
+//                border-bottom-left-radius: 5px;
+   
+//                h1{
+//                   color: $pal-two;
+//                   font-size:16px;
+//                }
+//                p {
+//                   font-size: 12px;
+//                   font-style: italic;
+//                }
+//                button {
+//                   width: 32vw;
+//                   height: 5vh;
+//                   background-color: transparent;
+//                   border: 2px solid $pal-two;
+//                   color: $pal-one;
+//                   font-size: 14px;
+//                   font-weight: bold;
+//                   border-radius: 5px;
+//                }
+//                button:hover {
+//                   transition:.5s;
+//                   color: $pal-two;
+//                   border-color: $pal-one;
+//                   background-color: $pal-five;
+//                   cursor: pointer;
+//                   font-size: 22px;
+//                   height: 5vh;
+//                   width: 11vw;
+//                }
+//          }
+   
+//          .project-info:hover{
+//             transition:1s;
+//             background-color: $pal-four;
+            
+//             h1 {
+//                transition:.5s;
+//                color: $pal-zero;
+//             }
+//          }
+   
+//          // .image-container {
+//          //    position: relative;
+//          //    border-radius: 5px;
+//          //    width: 100%;
+//          //    height:30vh;
+   
+//          //    img {
+//          //       height: 25vh;
+   
+//          //    }
+//          // }
+         
+//       }
+
+//          }
+//       }
+//    }

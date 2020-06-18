@@ -4,8 +4,8 @@ import Skills from "./Skills";
 import Projects from "./Projects/Projects";
 import Vindermere from "./Projects/Vindermere";
 import EcoVerde from "./Projects/EcoVerde";
-import Pic1 from "../images/experience.png"
-import Pic2 from "../images/pern-stack.png"
+import Pic1 from "../images/pern-stack.png"
+import Pic2 from "../images/Experience One.jpg"
 import Pic3 from "../images/DMT-worlds2.png";
 
 const Landing = () => {
@@ -49,7 +49,7 @@ const Landing = () => {
              </div> ) : null}
       <div className="quote-container">
         <h2 className="intro-quote">
-        "Success is the natural consequence of <br />consistently applying basic fundamentals."<br />
+        "Success is the natural consequence <br />of consistently applying <br />basic fundamentals."<br />
           - Jim Rohn - 
         </h2>
       </div>
@@ -62,39 +62,42 @@ const Landing = () => {
                          vindermere = {vindermere}
                          ecoVerde = {ecoVerde}/>
       <section className="overview-container">
-        <section className="feature-left">
+        <section className="feature-one">
           <div className="image">
             <img id="pic-one"src={Pic1} alt="light bulb, cogs, and a tool"  height="100%"/>
           </div>
           <div className="content">
-              <h3>EXPERIENCE</h3> 
+              <h3>ABOUT ME</h3> 
             <p>
               Vitae natoque dictum etiam semper magnis enim feugiat amet
               curabitur tempor orci penatibus. Tellus erat mauris ipsum
               fermentum etiam vivamus eget. Nunc nibh morbi quis fusce lacus.
             </p>
+            <button> Read More</button>
           </div>
         </section>
-        <section className="feature-right">
+        <section className="feature-two">
             <img src={Pic2} alt="PERN Stack" height="100%"/>
           <div className="content">
-            <h3>DEVELOPMENT </h3>
+            <h3>EXPERIENCE </h3>
             <p>
               PERN STACK
               Vitae natoque dictum etiam semper magnis enim feugiat amet
               curabitur tempor orci penatibus. Tellus erat mauris ipsum
               fermentum etiam vivamus eget. Nunc nibh morbi quis fusce lacus. 
             </p>
+            <button> More Experience</button>
           </div>
         </section>
-        <section className="feature-left">
-              <img id= "pic-three" src={Pic3} alt="Double-Mini" height="150%" width="100%"/>
+        <section className="feature-one">
+              <img id= "pic-three" src={Pic3} alt="Double-Mini" height="100%" width="100%"/>
             <div className="content">
                 <h3> GYMNASTICS</h3>
                 <p>
-                I have being competing in gymnastics for 10 + years.
+                I have been competing in gymnastics for 10 + years.
                 I competed at the 2019 World Championships in Tokyo, Japan and brought home a silver
                 </p>
+                <button> Read More</button>
             </div>
         </section>
       </section>

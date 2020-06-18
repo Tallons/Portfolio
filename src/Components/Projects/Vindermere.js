@@ -13,6 +13,8 @@ import newHeroView from "../../images/Vindermere New Hero.png";
 // import marketView from "../../images/Vindermere Markest View.png";
 import dungeonView from "../../images/Vindermere Dungeon.png";
 import combatView from "../../images/Vindermere Combat.png";
+import "./Vindermere.scss";
+
 const Vindermere = (props) => {
 
    const [imageToggle, setPictureToggle] = useState(townView)

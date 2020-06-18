@@ -12,6 +12,7 @@ import sassIcon from "../images/Sass_Logo.png";
 import postIcon from "../images/Postman Logo.png";
 import chartIcon from "../images/chartjs-logo.svg";
 import gitIcon from "../images/Git Icon.png";
+import "./Skills.scss"
 
 const Skills = () => {
 
