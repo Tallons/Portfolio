@@ -1,0 +1,58 @@
+@import "../../modules/variables";
+
+* {
+   margin: 0;
+   padding: 0;
+   border: 0;
+   width: 100%;
+}
+
+.about-me-page {
+   background-color: black;
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+
+
+   nav {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 8vh;
+      width: 80%;
+      background-color: $pal-three;
+      color: $pal-one;
+      
+      h3 {
+         display: flex;
+         justify-content: center;
+         width: 20%;
+         border: 2px solid red;
+      }
+
+   }
+}
+.about-me-container {
+   // background-color: blue;
+   background: linear-gradient(0deg, $pal-six 0%, $pal-three 50%);
+   height: 100vh;
+   width: 80%;
+   color: $pal-one;
+}
+.feature {
+   display: flex;
+   border: 2px solid green;
+   width: 95%;
+   
+   img {
+      height: 200px;
+      width:200px;
+      border: 2px solid red;
+   }
+
+   .feature-description {
+      display: flex;
+      flex-direction: column;
+   }
+
+}

@@ -41,7 +41,7 @@ const Skills = () => {
 
    return (
       <section className="skills-container">
-        <h1>SKILLS</h1>
+        <h1 id="skills">SKILLS</h1>
         {mappedIcons}
       </section>
    )

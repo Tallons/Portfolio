@@ -7,7 +7,8 @@ const Header = () => {
      <header>
       <section className="nav-bar-container">
          <nav className="nav-bar-1">
-            <span className="nav-item">SKILLS</span>
+            {/* <span className="nav-item">SKILLS</span> */}
+            <a href="#skills">SKILLS</a>
             <span className="nav-item">PORTFOLIO</span>
             <span className="nav-item">ABOUT ME</span>
             <span className="nav-item">CONTACT</span>

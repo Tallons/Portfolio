@@ -4,7 +4,7 @@ import Skills from "./Skills";
 import Projects from "./Projects/Projects";
 import Vindermere from "./Projects/Vindermere";
 import EcoVerde from "./Projects/EcoVerde";
-import Pic1 from "../images/pern-stack.png"
+import Pic1 from "../images/Family - one.jpg"
 import Pic2 from "../images/Experience One.jpg"
 import Pic3 from "../images/DMT-worlds2.png";
 
@@ -86,7 +86,7 @@ const Landing = () => {
               curabitur tempor orci penatibus. Tellus erat mauris ipsum
               fermentum etiam vivamus eget. Nunc nibh morbi quis fusce lacus. 
             </p>
-            <button> More Experience</button>
+            <Link to="/me"><button> More Experience</button></Link>
           </div>
         </section>
         <section className="feature-one">

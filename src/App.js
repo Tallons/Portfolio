@@ -1,15 +1,24 @@
 import React from 'react';
 import Header from "./Components/Header";
-import Landing from "./Components/Landing"
+import routes from "./router";
+import {withRouter} from "react-router-dom";
 import './App.scss';
 
-function App() {
+function App(props) {
   return (
     <div className="App">
+              {props.location.pathname === "/"
+        ? (<>
    <Header />
-   <Landing />
+   {routes}
+   </>
+   ) : (
+   <>
+    {routes}
+   </>)}
+
     </div>
   );
 }
 
-export default App;
+export default withRouter(App);
