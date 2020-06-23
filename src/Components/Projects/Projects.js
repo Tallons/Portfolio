@@ -10,7 +10,7 @@ const Projects = (props) => {
 
   return (
    <div className="project-container">
-     <h1>PORTFOLIO</h1>
+     <h1 id="portfolio">PORTFOLIO</h1>
      <section className="projects">
        <div className="project">
           <div className="project-info">

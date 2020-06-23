@@ -1,4 +1,5 @@
 import React from 'react';
+import { HashLink as Link } from "react-router-hash-link"
 import toothless from "../images/toothlessIcon.JPG"
 
 const Header = () => {
@@ -8,8 +9,10 @@ const Header = () => {
       <section className="nav-bar-container">
          <nav className="nav-bar-1">
             {/* <span className="nav-item">SKILLS</span> */}
-            <a href="#skills">SKILLS</a>
-            <span className="nav-item">PORTFOLIO</span>
+            <Link to="#skills">SKILLS</Link>
+            <Link to="#portfolio">PORFOLIO</Link>
+            {/* <Link to="#skills">SKILLS</Link> */}
+            {/* <span className="nav-item">PORTFOLIO</span> */}
             <span className="nav-item">ABOUT ME</span>
             <span className="nav-item">CONTACT</span>
          </nav>
