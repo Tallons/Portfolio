@@ -35,9 +35,48 @@
 .about-me-container {
    // background-color: blue;
    background: linear-gradient(0deg, $pal-six 0%, $pal-three 50%);
-   height: 100vh;
+   min-height: 100vh;
    width: 80%;
    color: $pal-one;
+}
+.feature-container {
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+}
+.column {
+   display: flex;
+   flex-direction: row;
+   border: 2px solid rgb(32, 150, 201);
+
+}
+.feature-column{
+   display: flex;
+   flex-direction: column;
+   width: 95%;
+
+   .feature-column-title-box{
+      display: flex;
+      width: 100%;
+      border: 2px solid red;
+      
+      .feature-column-title {
+         display: flex;
+         flex-direction: column;
+         justify-content: center;
+         text-align: center;
+         width:70%;
+         border: 2px solid purple;
+      }
+   
+   img {
+      height: 150px;
+      width:150px;
+      border: 2px solid orange;
+
+   }
+}
 }
 .feature {
    display: flex;
@@ -45,14 +84,35 @@
    width: 95%;
    
    img {
-      height: 200px;
-      width:200px;
-      border: 2px solid red;
+      height: 75px;
+      width:75px;
+      // border: 2px solid red;
+      border-radius: 50%;
+
    }
 
    .feature-description {
       display: flex;
       flex-direction: column;
    }
+
+}
+
+
+// Experience
+
+.radio-button-container {
+   display: flex;
+   justify-content: center;
+   width: 80%;
+   border: 2px solid red;
+}
+.radio-button {
+   height: 5vh;
+   width: 15vw;
+   background-color: $pal-one;
+   color: $pal-three;
+}
+.one {
 
 }

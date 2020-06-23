@@ -1,15 +1,18 @@
-import React from  "react";
+import React, {useState} from  "react";
 import Experience from  "./Experience";
 import "./AboutMe.scss";
 
 const AboutMe = (props) => {
-   const aboutMe = false;
+   const [aboutMe, setAboutMe] = useState(false),
+   [experience, setExperience] = useState(true)
 
    console.log(props)
 return (
    <div className="about-me-page">
       <nav>
-         <h3> About Me </h3>
+         {/* <h3 onClick={() => {setAboutMe(true), setExperience(false)}}> About Me </h3> */}
+         {/* <h3 onClick={() => {setAboutMe(false), setExperience(true)}}> Experience </h3> */}
+         <h3> About me </h3>
          <h3> Experience </h3>
          <h3> Gymnastics </h3>
       </nav>
@@ -24,8 +27,8 @@ return (
             </div>
          </section>
           ) : null}
-         
-         <Experience />
+         { experience ? (
+         <Experience />) : null}
 
          
       </section>
