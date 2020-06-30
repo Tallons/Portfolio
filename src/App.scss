@@ -33,16 +33,20 @@
 header {
    background-attachment:		scroll,	scroll,	fixed;
    // height: 50vh;
-   width:100vw;
+   width:100%;
+   height: 100vh;
    background-image:
-   url('./images/top-3200.svg'),
-   url('./images/overlay.png'),
-   url('./images/Blue-Landscape-Mural.webp');
-   background-position:	bottom center,	top left,	center center;
-   background-repeat:	repeat-x,	repeat,	no-repeat;
-   background-size:	3200px 460px,	auto,	cover;
-   padding: 8em 0 20em 0;
-   text-align: center;
+   // url('./images/top-3200.svg'),
+   // url('./images/overlay.png'),
+   // url('./images/Blue-Landscape-Mural.webp');
+   url('./images/2014 Senior Pic.png');
+   // background-position:	bottom center,	top left,	center center;
+   background-repeat:	no-repeat;
+   background-size:	cover;
+   border-bottom: 5px solid $pal-seven;
+   // padding: 8em 0 20em 0;
+   // text-align: center;
+   
 
    @media  (min-width: 320px){
       header {
@@ -59,6 +63,7 @@ header {
          font-size: 12px;
          letter-spacing: 2px;
          height:7vh;
+         box-shadow: 5px 15px 25px black;
          background-color: rgba(55, 54, 77, 0.95);
          color: $pal-two;
          z-index: 2;
@@ -152,7 +157,7 @@ main {
    justify-content: center;
    align-items: center;
    min-height:100vh;
-   background: linear-gradient(0deg, $pal-six 0%, $pal-three 50%);
+   background: linear-gradient(0deg, $pal-two 0%, $pal-three 50%);
 }
    .quote-container {
       display:flex;
@@ -167,6 +172,7 @@ main {
          font-size: 16px;
          width: 80%;
          color: $pal-one;
+         text-shadow: 3px 3px $pal-five;
       }
    }
 
@@ -202,10 +208,12 @@ main {
          h3, h4, h5, h6 {
             padding:  .5em;
             text-align: inherit;
+            text-shadow: 3px 3px $pal-five;
       }
       p {
          padding:  .5em;
          box-sizing: border-box;
+         text-shadow: 3px 3px $pal-five;
       }
 
    }

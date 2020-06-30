@@ -91,9 +91,13 @@
            }
    
             .skills-icon-container {
+               display: flex;
+               flex-direction: column;
                width: 45px;
                margin: 1em;
                text-align: center;
+               align-items: center;
+               justify-content: center;
                font-size: 12px;
    
                .skill-icon {

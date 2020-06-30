@@ -5,7 +5,7 @@ import javaIcon from "../images/Java Logo.png";
 import htmlIcon from "../images/html-5-logo.png";
 import reactIcon from "../images/React Icon.png";
 import reduxIcon from "../images/Redux Icon.png";
-import nodejsIcon from "../images/nodejs-icon.svg";
+import nodejsIcon from "../images/nodejs-icon.png";
 import postgresqlIcon from "../images/Postgresql Logo.png";
 import expressIcon from "../images/Express Logo.png";
 import sassIcon from "../images/Sass_Logo.png";

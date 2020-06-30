@@ -96,31 +96,30 @@ $hexagon-width: 115px;
    .hexagon{
       height: 140px;
       width: 145px;
+      // box-shadow: 5px 5px red;
+   }
+   .hexagon:hover {
+      // background-color: red;
    }
    .hexagon-two {
-      // background-image: url("../../images/DevMountain - Hexagon.png");
-      // background-size: 100% 100%;
+      padding-top:5px;
       height: 140px;
       width: 145px;
    }
    
    .hexagon-four {
-      // background-image: url("../../images/DevMountain - Hexagon.png");
-      // background-size: 100% 100%;
+      height: 150px;
+      width: 145px;
+   }
+
+   .hexagon-six {
+      padding-top:5px;
       height: 140px;
       width: 145px;
    }
    
-   
-   .test {
-      height: 50px;
-      width: 50px;
-      // background-image: url("../../images/DevMountain - Hexagon.png");
-
-}
 
 .about-me-container {
-   // background-color: blue;
    background: linear-gradient(0deg, $pal-three 0%, $pal-six 50%);
    min-height: 100vh;
    width: 80%;
