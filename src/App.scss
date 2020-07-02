@@ -5,6 +5,7 @@
    padding: 0;
    border: 0;
    width: 100%;
+   font-family: 'Montserrat', sans-serif;
 }
 
 .landing-overlay {
@@ -29,49 +30,47 @@
    
 }
 
-// header
-header {
-   background-attachment:		scroll,	scroll,	fixed;
-   // height: 50vh;
-   width:100%;
-   height: 100vh;
-   background-image:
-   // url('./images/top-3200.svg'),
-   // url('./images/overlay.png'),
-   // url('./images/Blue-Landscape-Mural.webp');
-   url('./images/2014 Senior Pic.png');
-   // background-position:	bottom center,	top left,	center center;
-   background-repeat:	no-repeat;
-   background-size:	cover;
-   border-bottom: 5px solid $pal-seven;
-   // padding: 8em 0 20em 0;
-   // text-align: center;
-   
 
    @media  (min-width: 320px){
       header {
-         background-attachment:		scroll,	scroll,	fixed;
-         height: 30vh;
-         width:100vw;
+         background-image: url('./images/2014 Senior Pic.png');
+         width:100%;
+         height: 40vh;
+         background-repeat:	no-repeat;
+         background-size: 100% 140%;
+         border-bottom: 5px solid $pal-seven;
+         // height: 30vh;
+         // width:100vw;
       }
       .nav-bar-container {
          display: flex;
-         // justify-content: center;
+         justify-content: center;
          align-items: center;
          position: fixed;
-         font-weight: bold;
+         // font-weight: bold;
          font-size: 12px;
          letter-spacing: 2px;
-         height:7vh;
+         height:5vh;
          box-shadow: 5px 15px 25px black;
-         background-color: rgba(55, 54, 77, 0.95);
+         // background-color: $pal-six;
+         background-color: rgba(89,21,0, .96);
          color: $pal-two;
          z-index: 2;
          top: 0;
          width: 100vw;
+         
+         a {
+            display: flex;
+            justify-content: center;
+            text-decoration: none;
+            text-emphasis: none;
+            font-size: 12px;
+            color: $pal-two;
+         }
       }
       .nav-bar-1 {
-            width: 800%;
+         text-decoration: none;
+            // width: 100%;
             display: flex;
             // justify-content: space-evenly;
          }
@@ -89,17 +88,28 @@ header {
              width: 110px;
              border-radius: 50%;
           }
-          h1 {
-            font-size: 30px;
-            word-spacing: 10px;
-         }
-         h2 {
-            font-size: 20px;
+          .name {
+             position: relative;
+             left: 10vw;
+            //  top: 5vh;
+             font-size: 30px;
+             font-weight: bold;
+            //  word-spacing: 10px;
+             text-shadow: 5px 3px black
+            }
+            .sub-heading {
+            position: relative;
+            top: -10vh;
+            left: 10vw;
+            font-weight: normal;
+            line-height: 2em;
+            font-size: 15px;
             word-spacing: 2px;
+            text-shadow: 5px 3px black;
          }
       }
    }
-}
+
 
       @media  (min-width: 550px){
          .nav-item {

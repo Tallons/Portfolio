@@ -1,20 +1,21 @@
-import React, {useState} from  "react";
+import React, {useState, useEffect} from  "react";
 import Family from "./Family";
-import Foot from "./Foot";
+import Injury from "./Injury";
+import Gymnastics from "./Gymnastics";
 import Experience from  "./Experience";
 import Education from "./Education";
 import pic from "../../images/DevMountain - Hexagon.png";
-import hoverPic from "../../images/DevMountain - Hexagon Selected.png";
+import hoverPic from "../../images/DevMountain - Hexagon 1.png";
 import pic1 from "../../images/Family - Hexagon.png";
-import hoverPic1 from "../../images/Family - Hexagon Selected.png"
+import hoverPic1 from "../../images/Family - Hexagon 1.png"
 import pic2 from "../../images/Foot Injury - Hexagon.png";
-import hoverPic2 from "../../images/Foot Injury - Hexagon Selected.png";
+import hoverPic2 from "../../images/Foot Injury - Hexagon 1.png";
 import pic3 from "../../images/Experience - Hexagon.png";
-import hoverPic3 from "../../images/Experience - Hexagon Selected.png";
+import hoverPic3 from "../../images/Experience - Hexagon 1.png";
 import pic4 from "../../images/Mission Farewell - Hexagon.png";
-import hoverPic4 from "../../images/Mission Farewell - Hexagon Selected.png";
+import hoverPic4 from "../../images/Mission Farewell - Hexagon 1.png";
 import pic5 from "../../images/Gymnastics - Hexagon.png";
-import hoverPic5 from "../../images/Gymnastics - Hexagon Selected.png";
+import hoverPic5 from "../../images/Gymnastics - Hexagon 1.png";
 
 import "./AboutMe.scss";
 
@@ -25,12 +26,17 @@ const AboutMe = (props) => {
 
    const me = "me",
              family = "family",
-             foot = "foot",
+             injury = "injury",
+             gymnastics = "gymnastics",
              education = "education",
              experience = "experience"
 
+   useEffect (() => {
+     
+   },[])
 
    console.log(props)
+   console.log(aboutMeToggle)
 
 return (
    <div className="about-me-page">
@@ -42,33 +48,58 @@ return (
       </nav> */}
       <section className="hexagon-container">
          <div className="hexagon-row-one">
+         { aboutMeToggle !== family ? (
             <img className="hexagon-two" src={pic1}
-                     onClick={()=> setAboutMeToggle(family)} 
+                     onClick={(e)=> {
+                        setAboutMeToggle(family)
+                        e.currentTarget.src=pic1 }}
                      onMouseOver={e => e.currentTarget.src=hoverPic1} 
                      onMouseOut={e => e.currentTarget.src=pic1} />
-            <img className="hexagon-four" src={pic2} onClick={()=> setAboutMeToggle(foot)}
-            onMouseOver={e => e.currentTarget.src=hoverPic2} 
-            onMouseOut={e => e.currentTarget.src=pic2}/>
+         ) : <img className="hexagon-selected" src={pic1} /> }
+         { aboutMeToggle !== injury ? (
+            <img className="hexagon-four" src={pic2} 
+                     onClick={(e)=> {
+                        setAboutMeToggle(injury)
+                        e.currentTarget.src=pic2 }}
+                     onMouseOver={e => e.currentTarget.src=hoverPic2} 
+                     onMouseOut={e => e.currentTarget.src=pic2}/>
+         ) : <img className="hexagon-selected" src={pic2} /> }
+         { aboutMeToggle !== education ? (
             <img className="hexagon-six" src={pic} 
-                     onClick={()=> setAboutMeToggle(education)} 
+                     onClick={(e)=> {
+                        setAboutMeToggle(education)
+                        e.currentTarget.src=pic }}
                      onMouseOver={e => e.currentTarget.src=hoverPic} 
                      onMouseOut={e => e.currentTarget.src=pic} />
+          ) : <img className="hexagon-selected" src={pic} /> }
             {/* <div className="hexagon hexagon-six"  ></div> */}
          </div>
          <div className="hexagon-row-two">
-            <img className="hexagon" src={pic4} 
-                     onClick={()=> setAboutMeToggle(me)}
+         { aboutMeToggle !== me ? (
+            <img className="hexagon-one" src={pic4} 
+                     onClick={(e)=> {
+                           setAboutMeToggle(me)
+                           e.currentTarget.src=pic4 }}
                      onMouseOver={e => e.currentTarget.src=hoverPic4} 
                      onMouseOut={e => e.currentTarget.src=pic4} />
-            <img className="hexagon" src={pic5} 
-                     onClick={()=> setAboutMeToggle(me)} 
+         ) : <img className="hexagon-selected" src={pic4} /> }
+         { aboutMeToggle !== gymnastics ? (
+            <img className="hexagon-three" src={pic5} 
+                     onClick={(e)=> {
+                        setAboutMeToggle(gymnastics)
+                        e.currentTarget.src=pic5 }}
                      onMouseOver={e => e.currentTarget.src=hoverPic5} 
                      onMouseOut={e => e.currentTarget.src=pic5}/>
-            <img className="hexagon" src={pic} onClick={()=> setAboutMeToggle(me)} />
-            <img className="hexagon" src={pic3} 
-                     onClick={()=> setAboutMeToggle(experience)}
+         ) : <img className="hexagon-selected" src={pic5} /> }
+            <img className="hexagon-five" src={pic} onClick={()=> setAboutMeToggle(me)} />
+         { aboutMeToggle !== experience ? (
+            <img className="hexagon-seven" src={pic3} 
+                     onClick={(e)=> {
+                        setAboutMeToggle(experience)
+                        e.currentTarget.src=pic3 }}
                      onMouseOver={e => e.currentTarget.src=hoverPic3} 
                      onMouseOut={e => e.currentTarget.src=pic3} />
+         ) :  <img className="hexagon-selected" src={pic3} /> }
             </div>
          {/* <div className="hexagon-row-one">
             <img className="test" src={pic1}/>
@@ -79,10 +110,18 @@ return (
       <section className="about-me-container">
          { aboutMeToggle === me ? (
             <section className="feature">
-            <img />
+            {/* <img /> */}
             <div className="feature-description">
-               <h1>Lorem Ipsum </h1>
-               <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum</p>
+               <h1>A Closer Look </h1>
+               <li>Not a big bug fan especially scorpions </li>
+               <li>Favorite Movie Princess Bride </li>
+               <li>LOVE WATERMELON</li>
+               <li> at 2 years-old, my parents always had to watch me, because I woudl run outside the house NAKED</li>
+               <li>I am a Chololate Milk Conoseur (ask me about my top five)</li>
+               <li> I have been to almost 40 states and 7 Countries </li>
+               <li>Favorite band: Bee Gees</li>
+               <li></li>
+                     
             </div>
          </section>
           ) : null}
@@ -91,8 +130,11 @@ return (
          { aboutMeToggle === family ? (
          <Family />) : null}
 
-         { aboutMeToggle === foot ? (
-         <Foot />) : null}
+         { aboutMeToggle === injury ? (
+         <Injury />) : null}
+
+         { aboutMeToggle === gymnastics ? (
+         <Gymnastics />) : null}
 
          { aboutMeToggle === education ? (
             <Education />) : null}

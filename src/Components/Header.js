@@ -18,9 +18,9 @@ const Header = () => {
          </nav>
       </section>
       <section className="header-title-container">
-         <img className="header-icon" src={toothless} />
-         <h1>NOAH ORR</h1>
-         <h2> Software Developer<br /> 2019 World Silver Medalist </h2>
+         {/* <img className="header-icon" src={toothless} /> */}
+         <h1 className="name">NOAH ORR</h1>
+         <h2 className="sub-heading"> Software Developer<br /> 2019 World Silver Medalist </h2>
       </section>
      </header>
   )

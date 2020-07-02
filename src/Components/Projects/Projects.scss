@@ -22,7 +22,7 @@
       width: 84%;
       min-height: 80vh;
       // background: linear-gradient(0deg, $pal-three 0%, $pal-six 80%);
-      background-color: $pal-six;;
+      background-color: $pal-six;
       border-radius: 5px;
       padding: .5em;
       box-shadow: 8px 8px 25px black;
@@ -40,7 +40,6 @@
          box-sizing: border-box;
          border-radius: 5px;
          // background-color: seagreen;
-         border: 2px solid green;
          
          .project-info {
             display: flex;
@@ -54,7 +53,6 @@
             background-color: $pal-five;
             border-top-left-radius: 5px;
             border-bottom-left-radius: 5px;
-            border: 2px solid orange;
             
             h1{
                color: $pal-two;

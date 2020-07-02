@@ -44,12 +44,14 @@ $hexagon-width: 115px;
 .hexagon-row-one{
   display:flex;
   justify-content: center;
+  align-items: center;
   width: $hexagon-width * 3.5;
   margin-bottom: -22px;
 }
 .hexagon-row-two{
   display:flex;
   justify-content: center;
+  align-items: center;
   width: $hexagon-width  * 4.65;//this will need to be adjusted
   
 }
@@ -93,21 +95,53 @@ $hexagon-width: 115px;
 //       border-left: $hexagon-width/2 solid transparent;
 //       border-right: $hexagon-width/2 solid transparent;
 //    }
-   .hexagon{
-      height: 140px;
-      width: 145px;
+   .hexagon-selected{
+      height: 200px;
+      width: 200px;
       // box-shadow: 5px 5px red;
    }
-   .hexagon:hover {
-      // background-color: red;
+   .hexagon-one {
+      // padding-top:5px;
+      height: 150px;
+      width: 145px;
+   }
+   .hexagon-one:hover {
+      height: 155px;
+      width: 150px;
    }
    .hexagon-two {
       padding-top:5px;
       height: 140px;
+      width: 147px;
+   }
+   .hexagon-two:hover {
+      padding-top:2px;
+      height: 145px;
+      width: 150px;
+   }
+   .hexagon-three {
+      // padding-top:5px;
+      height: 150px;
       width: 145px;
+   }
+   .hexagon-three:hover {
+      height: 155px;
+      width: 150px;
    }
    
    .hexagon-four {
+      height: 150px;
+      width: 145px;
+   }
+   .hexagon-four:hover {
+      height: 150px;
+      width: 145px;
+   }
+   .hexagon-five {
+      height: 150px;
+      width: 145px;
+   }
+   .hexagon-five:hover {
       height: 150px;
       width: 145px;
    }
@@ -116,6 +150,21 @@ $hexagon-width: 115px;
       padding-top:5px;
       height: 140px;
       width: 145px;
+   }
+   .hexagon-six:hover {
+      padding-top:3px;
+      height: 148px;
+      width: 146px;
+   }
+   .hexagon-seven {
+      // padding-top:5px;
+      height: 153px;
+      width: 145px;
+   }
+   .hexagon-seven:hover {
+      // padding-top:3px;
+      height: 158px;
+      width: 150px;
    }
    
 
@@ -133,7 +182,7 @@ $hexagon-width: 115px;
 }
 .column {
    display: flex;
-   flex-direction: row;
+   // flex-direction: row;
    border: 2px solid rgb(32, 150, 201);
 
 }
