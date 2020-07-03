@@ -11,9 +11,13 @@
    align-items: center;
    min-height: 50vh;
    width: 100%;
-   margin-top: 5em;
+   margin-top: 3em;
    color: $pal-one;
    
+   #portfolio{
+      font-weight: normal;
+   }
+
    .projects {
       display: flex;
       flex-direction: column;
@@ -25,8 +29,8 @@
       background-color: $pal-six;
       border-radius: 5px;
       padding: .5em;
+      margin-top: 1em;
       box-shadow: 8px 8px 25px black;
-      
       
       .project {
          // margin: 1em 0 1em;
@@ -41,14 +45,14 @@
          border-radius: 5px;
          // background-color: seagreen;
          
-         .project-info {
+        .project-info {
             display: flex;
             flex-direction: column;
             justify-content:space-evenly;   
             align-items: center;
             padding: .25em 1.5em .25em 1.5em;
             width: 100%;
-            height: 260vh;
+            height: 40vh;
             box-sizing: border-box;
             background-color: $pal-five;
             border-top-left-radius: 5px;
@@ -56,10 +60,12 @@
             
             h1{
                color: $pal-two;
-               font-size:16px;
+               font-family: $main-font;
+               font-size:28px;
             }
             p {
                font-size: 12px;
+               font-family: $main-font;
                font-style: italic;
             }
             button {
@@ -106,6 +112,10 @@
          }
       }
       
+   }
+   .column-reverse {
+      display: flex;
+      flex-direction: column;
    }
 
 
@@ -171,9 +181,41 @@
 
 @media  (min-width: 700px){  
    .project-container
-   .projects
+      .projects{
+      margin-top: 2em;
    .project{
       height: 70vh;
+
+      .project-info {
+         
+         h1{
+            font-size:40px;
+         }
+         p {
+            font-size: 16px;
+            width: 80%;
+         }
+         button {
+            width: 32vw;
+            height: 5vh;
+            background-color: transparent;
+            border: 2px solid $pal-two;
+            color: $pal-one;
+            font-size: 22px;
+            font-weight: bold;
+            border-radius: 5px;
+         }
+         button:hover {
+            transition:.5s;
+            color: $pal-two;
+            border-color: $pal-one;
+            background-color: $pal-five;
+            cursor: pointer;
+            font-size: 24px;
+            height: 5vh;
+            width: 18vw;
+         }
+   }
 
       .image-container {
          height: 40vh;
@@ -183,6 +225,7 @@
          }
       }
    }
+}
 }
 
 @media  (min-width: 800px){  

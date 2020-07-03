@@ -49,7 +49,7 @@ const Landing = () => {
              </div> ) : null}
       <div className="quote-container">
         <h2 className="intro-quote">
-        "Success is the natural consequence <br />of consistently applying <br />basic fundamentals."<br />
+        "Success is the natural consequence of consistently <br /> applying basic fundamentals."<br />
           - Jim Rohn - 
         </h2>
       </div>

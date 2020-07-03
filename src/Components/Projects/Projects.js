@@ -14,11 +14,11 @@ const Projects = (props) => {
      <section className="projects">
        <div className="project">
           <div className="project-info">
-            <h1 style={{fontSize: "32px"}}>Vindermere </h1>
+            <h1>Vindermere </h1>
             {/* <h3>Full Stack Application<br />
                     Group Project (3 Members)</h3> */}
             <p>"The early morning sun forces your eyes open; your throat is dry and your stomach growls with too many days without a meal. Your coin purse hasn't felt the weight of gold for far too long. this bad luck must end soon."</p>
-            <div style={{height: "6vh"}}>
+            <div >
             <button onClick={() => props.setToggle(vindermere)}>More Info</button>
             </div>
           </div>
@@ -31,7 +31,7 @@ const Projects = (props) => {
               </div>
             </div>
         </div>
-      <div className="project">
+      <div className="project column-reverse">
           <div className="image-container">
             <img  src={ecoVerdePic} alt="Eco Verde Picture"/>
             <div className="project-details"> 
@@ -43,8 +43,8 @@ const Projects = (props) => {
           <div className="project-info">
             <h1>Eco Verde Estimating </h1>
             {/* <h3>Full Stack Application</h3> */}
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer interdum consequat posuere. Praesent auctor eros in magna facilisis ultricies. Nulla augue metus, euismod non pulvinar sit amet, venenatis non tortor. Quisque pharetra elit et pellentesque placerat. Proin sit amet odio leo. </p>
-            <div style={{height: "6vh"}}>
+            <p> An estimating software tailor made for Eco Verde Irrigation. This program allows for quick and customizable bids. Including material, payroll, and production rate adjustments. </p>
+            <div>
             <button onClick={() => props.setToggle(ecoVerde)}>More Info</button>
             </div>
          </div>
@@ -55,7 +55,7 @@ const Projects = (props) => {
             {/* <h3>Full Stack Application<br />
                     Group Project (3 Members)</h3> */}
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer interdum consequat posuere. Praesent auctor eros in magna facilisis ultricies. Nulla augue metus, euismod non pulvinar sit amet, venenatis non tortor. </p>
-            <div style={{height: "6vh"}}>
+            <div>
             <button>More Info</button>
             </div>
          </div>
