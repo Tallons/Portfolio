@@ -1,5 +1,7 @@
 @import "../../modules/variables";
 
+
+@media  (min-width: 320px){  
 .vindermere-container {
    display: flex;
    flex-direction: column;
@@ -12,45 +14,49 @@
    background: $pal-five-dark;
    box-shadow: 5px 5px 25px;
    border-radius: 5px;
-
-.image-container{
-   display: flex;
-   justify-content: space-between;
-   width:100%;
-   height: 65vh;
-   box-sizing: border-box;
-   padding: 0 1em 0 1em;
    
-   .image-selector{
+   .image-container{
       display: flex;
       flex-direction: column;
-      align-items: center;
-      justify-content: space-evenly;
-      width: 15%;
-      background-color: $pal-three-dark;
-      padding: 0 .5em 0 .5em;
-      border-radius: 5px;
-      margin-right: .5em;
+      justify-content: space-between;
+      width:100%;
+      height: 50vh;
+      box-sizing: border-box;
+      padding: 0 1em 0 1em;
+      border: 5px solid purple;
       
-      img {
-         width:100%;
-         // height: 20%;
+      .image-selector{
+         border: 3px solid blue;
+         display: flex;
+         flex-wrap: wrap;
+         align-items: center;
+         justify-content: center;
+         width: 90%;
+         background-color: $pal-three-dark;
+         padding: 0 .5em 0 .5em;
          border-radius: 5px;
-            }
+
+         img {
+            width:100%;
+            // height: 20%;
+            border-radius: 5px;
+         }
          .pic {
+            height:  7vh;
             // width: 100%;
-            height:  11vh;
+            width: 30%;
             position: relative;
             // margin: .25em;
             // z-index:1;
             
             img {
-               height:11vh;
+               height:7vh;
                border-radius: 5px;
                // width:100%;
                position: relative;
             }
             .pic-select {
+               border: 3px solid green;
                width:100%;
                border-radius: 5px;
                box-sizing: border-box;
@@ -63,7 +69,7 @@
                ;
                // margin-bottom:5px;
             }
-
+            
             .pic-select:hover {
                background-color: $pal-zero;
                z-index:1;
@@ -71,7 +77,7 @@
             .pic-selected {
                border-radius: 5px;
                box-sizing: border-box;
-               width:100%;
+               width:20%;
                height: 100%;
                top:0;
                left:0;
@@ -82,34 +88,39 @@
          }
       }
    }
-      .main-image {
-                  height: 65vh;
-                  width:85%;
-                  border-radius: 5px;
-               }
-
-      .Vindermere-details {
+   .main-image {
+      height: 25vh;
+      width:97%;
+      border-radius: 5px;
+      margin-bottom: 5px;
+      border: 2px solid green;
+   }
+   
+   .Vindermere-details {
+      border: 2px solid red;
          display: flex;
          flex-direction: column;
-         height: 27vh;
+         height: 50%;
          width: 100%;
          box-sizing: border-box;
+         font-size: 10px;
          padding:  1em 4em 1em 4em;
 
          h1 {
             color: $pal-two;
             margin-bottom: .75em;
          }
-      
+   }
          .skills-container {
-            margin-top: .75em;
+            border: 2px solid indianred;
+            // margin-top: .75em;
             display: flex;
             justify-content: center;
             flex-flow: row wrap;
             text-align: center;
            color: $pal-one;
-           height: 10vh;
-           width: 100%;
+           height: 15vh;
+           width: 100%
    
            h1 {
                font-size: 32px;
@@ -117,16 +128,160 @@
            }
    
             .skills-icon-container {
-               width: 70px;
+               width: 40px;
                margin: .5em;
                text-align: center;
-               font-size: 14px;
+               font-size: 8px;
    
                .skill-icon {
-                  height: 50px;
-                  width: 50px;
+                  height: 30px;
+                  width: 30px;
+               }
+            }
+         
+      }
+   }
+}
+
+@media  (min-width: 1000px){  
+
+   .vindermere-container{
+      height: 95vh;
+      width: 900px;
+      
+      .image-container{
+         flex-direction: row;
+         height: 65vh;
+         padding: 0 1em 0 1em;
+   
+         .image-selector{
+            border: 3px solid blue;
+            display: flex;
+            flex-wrap: none;
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-evenly;
+            width: 15%;
+            padding: 0 .5em 0 .5em;
+            margin-right: .5em;
+
+               img {
+                  width:100%;
+                  height: 20%;
+                  border-radius: 5px;
+               }
+               .pic {
+                  // width: 100%;
+                  height:  11vh;
+                  width: 30%;
+                  position: relative;
+                  // margin: .25em;
+                  // z-index:1;
+                  
+                  img {
+                     height:11vh;
+                     border-radius: 5px;
+                     // width:100%;
+                     position: relative;
+                  }
+                  .pic-select {
+                     border: 3px solid green;
+                     width:20%;
+                     border-radius: 5px;
+                     box-sizing: border-box;
+                     height: 100%;
+                     position: absolute;
+                     top:0;
+                     left:0;
+                     z-index:1;
+                     opacity: .5;
+                     ;
+                     // margin-bottom:5px;
+                  }
+                  
+                  .pic-select:hover {
+                     background-color: $pal-zero;
+                     z-index:1;
+                  }
+                  .pic-selected {
+                     border-radius: 5px;
+                     box-sizing: border-box;
+                     width:20%;
+                     height: 100%;
+                     top:0;
+                     left:0;
+                     position: absolute;
+                     background-color:rgba(55,54,77, 0.8);
+                     z-index: 1;
+                  }
                }
             }
          }
+         .main-image {
+            height: 25vh;
+            width:97%;
+            border-radius: 5px;
+            margin-bottom: 5px;
+            border: 2px solid green;
+         }
+         
+         .Vindermere-details {
+            border: 2px solid red;
+               display: flex;
+               flex-direction: column;
+               height: 30vh;
+               width: 100%;
+               box-sizing: border-box;
+               font-size: 12px;
+               padding:  1em 4em 1em 4em;
+      
+               h1 {
+                  color: $pal-two;
+                  margin-bottom: .75em;
+               }
+            
+               .skills-container {
+                  margin-top: .75em;
+                  display: flex;
+                  justify-content: center;
+                  flex-flow: row wrap;
+                  text-align: center;
+                 color: $pal-one;
+                 height: 10vh;
+                 width: 100%;
+         
+                 h1 {
+                     font-size: 32px;
+                     margin-bottom: 1em;
+                 }
+         
+                  .skills-icon-container {
+                     width: 70px;
+                     margin: .5em;
+                     text-align: center;
+                     font-size: 14px;
+         
+                     .skill-icon {
+                        height: 50px;
+                        width: 50px;
+                     }
+                  }
+               }
+            }
       }
    }
+
+@media  (min-width: 1200px){  
+
+   .vindermere-container{
+      height: 95vh;
+      width: 1000px;
+      
+      .image-container{
+         flex-direction: row;
+         height: 65vh;
+         padding: 0 1em 0 1em;
+   
+      }
+   }
+}

@@ -1,5 +1,8 @@
 @import "../../modules/variables";
 $hexagon-width: 115px;
+$hexagon-size-320: 70px;
+$hexagon-size-350: 80px;
+$hexagon-size-450: 90px;
 
 * {
    margin: 0;
@@ -8,53 +11,56 @@ $hexagon-width: 115px;
    width: 100%;
 }
 
-.about-me-page {
-   background:  linear-gradient(0deg, $pal-six 0%, $pal-three 50%);
-   display: flex;
-   flex-direction: column;
-   align-items: center;
-
-
-   nav {
+@media  (min-width: 320px){  
+   .about-me-page {
+      background:  linear-gradient(0deg, $pal-six 0%, $pal-three 50%);
       display: flex;
-      justify-content: center;
+      flex-direction: column;
       align-items: center;
-      height: 8vh;
-      width: 80%;
-      background-color: $pal-three;
-      color: $pal-one;
-      
-      h3 {
+
+
+      nav {
          display: flex;
          justify-content: center;
-         width: 20%;
-         border: 2px solid red;
+         align-items: center;
+         height: 8vh;
+         width: 80%;
+         background-color: $pal-three;
+         color: $pal-one;
+         
+         h3 {
+            display: flex;
+            justify-content: center;
+            width: 20%;
+            border: 2px solid red;
+         }
       }
-
    }
-}
-.hexagon-container {
-   width:70%;
-   height: 350px;
-   display: flex;
-   flex-direction: column;
-   align-items: center;
+   .hexagon-container {
+      width:75%;
+      height: 200px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+   }
+   .hexagon-row-one{
+   display:flex;
    justify-content: center;
-}
-.hexagon-row-one{
-  display:flex;
-  justify-content: center;
-  align-items: center;
-  width: $hexagon-width * 3.5;
-  margin-bottom: -22px;
-}
-.hexagon-row-two{
-  display:flex;
-  justify-content: center;
-  align-items: center;
-  width: $hexagon-width  * 4.65;//this will need to be adjusted
-  
-}
+   align-items: center;
+   width: 100%;
+   margin-bottom: -15px;
+   border: 2px solid red;
+   }
+   .hexagon-row-two{
+      display:flex;
+      justify-content: center;
+      align-items: center;
+      width: 100%;//this will need to be adjusted
+      border: 2px solid green;
+      margin-right:2px;
+      
+   }
 // .hexagon { 
 //    position: relative;
 //    width: $hexagon-width;
@@ -80,7 +86,7 @@ $hexagon-width: 115px;
    
 //    .hexagon::after {
 //       top: 100%;
-//       border-top: $hexagon-width/3.46 solid white;
+      // border-top: $hexagon-width/3.46 solid white;
       
 //    }
    
@@ -96,159 +102,518 @@ $hexagon-width: 115px;
 //       border-right: $hexagon-width/2 solid transparent;
 //    }
    .hexagon-selected{
-      height: 200px;
-      width: 200px;
+      height: $hexagon-size-320+20;
+      width: $hexagon-size-320+20;
       // box-shadow: 5px 5px red;
    }
    .hexagon-one {
       // padding-top:5px;
-      height: 150px;
-      width: 145px;
+      height: $hexagon-size-320;
+      width: $hexagon-size-320;
    }
    .hexagon-one:hover {
-      height: 155px;
-      width: 150px;
+      height: $hexagon-size-320;
+      width: $hexagon-size-320;
    }
    .hexagon-two {
       padding-top:5px;
-      height: 140px;
-      width: 147px;
+      height: $hexagon-size-320;
+      width: $hexagon-size-320 + 5;
    }
    .hexagon-two:hover {
       padding-top:2px;
-      height: 145px;
-      width: 150px;
+      height: $hexagon-size-320 + 5;
+      width: $hexagon-size-320;
    }
    .hexagon-three {
       // padding-top:5px;
-      height: 150px;
-      width: 145px;
+      height: $hexagon-size-320;
+      width: $hexagon-size-320 - 5;
    }
    .hexagon-three:hover {
-      height: 155px;
-      width: 150px;
+      height: $hexagon-size-320 + 5;
+      width: $hexagon-size-320;
    }
    
    .hexagon-four {
-      height: 150px;
-      width: 145px;
+      height: $hexagon-size-320;
+      width: $hexagon-size-320 - 5;
    }
    .hexagon-four:hover {
-      height: 150px;
-      width: 145px;
+      height: $hexagon-size-320;
+      width: $hexagon-size-320 - 5;
    }
    .hexagon-five {
-      height: 150px;
-      width: 145px;
+      height: $hexagon-size-320;
+      width: $hexagon-size-320 - 5;
    }
    .hexagon-five:hover {
-      height: 150px;
-      width: 145px;
+      height: $hexagon-size-320;
+      width: $hexagon-size-320 - 5;
    }
 
    .hexagon-six {
-      padding-top:5px;
-      height: 140px;
-      width: 145px;
+      // padding-top:5px;
+      height: $hexagon-size-320 - 10;
+      width: $hexagon-size-320 - 5;
    }
    .hexagon-six:hover {
       padding-top:3px;
-      height: 148px;
-      width: 146px;
+      height: $hexagon-size-320 - 2;
+      width: $hexagon-size-320 - 4;
    }
    .hexagon-seven {
       // padding-top:5px;
-      height: 153px;
-      width: 145px;
+      height: $hexagon-size-320;
+      width: $hexagon-size-320 - 5;
    }
    .hexagon-seven:hover {
       // padding-top:3px;
-      height: 158px;
-      width: 150px;
-   }
-   
-
-.about-me-container {
-   background: linear-gradient(0deg, $pal-three 0%, $pal-six 50%);
-   min-height: 100vh;
-   width: 80%;
-   color: $pal-one;
-}
-.feature-container {
-   display: flex;
-   flex-direction: column;
-   justify-content: center;
-   align-items: center;
-}
-.column {
-   display: flex;
-   // flex-direction: row;
-   border: 2px solid rgb(32, 150, 201);
-
-}
-.feature-column{
-   display: flex;
-   flex-direction: column;
-   width: 95%;
-
-   .feature-column-title-box{
-      display: flex;
-      width: 100%;
-      border: 2px solid red;
-      
-      .feature-column-title {
-         display: flex;
-         flex-direction: column;
-         justify-content: center;
-         text-align: center;
-         width:70%;
-         border: 2px solid purple;
-      }
-   
-   img {
-      height: 150px;
-      width:150px;
-      border: 2px solid orange;
-   
-   
-   }
-}
-}
-.feature {
-   display: flex;
-   border: 2px solid green;
-   width: 95%;
-   
-   img {
-      height: 75px;
-      width:75px;
-      // border: 2px solid red;
-      border-radius: 50%;
-
+      height: $hexagon-size-320;
+      width: $hexagon-size-320 - 5;
    }
 
-   .feature-description {
+   .about-me-container {
+      background: linear-gradient(0deg, $pal-three 0%, $pal-six 50%);
+      min-height: 100vh;
+      width: 80%;
+      color: $pal-one;
+   }
+   .feature-container {
       display: flex;
       flex-direction: column;
+      justify-content: center;
+      align-items: center;
    }
+   .column {
+      display: flex;
+      // flex-direction: row;
+      border: 2px solid rgb(32, 150, 201);
 
-}
+   }
+   .feature-column{
+      display: flex;
+      flex-direction: column;
+      width: 95%;
 
+         .feature-column-title-box{
+            display: flex;
+            width: 100%;
+            border: 2px solid red;
+            
+            .feature-column-title {
+               display: flex;
+               flex-direction: column;
+               justify-content: center;
+               text-align: center;
+               width:70%;
+               border: 2px solid purple;
+            }
+         
+         img {
+            height: 150px;
+            width:150px;
+            border: 2px solid orange;
+         
+         
+         }
+      }
+   }
+   .feature {
+      display: flex;
+      border: 2px solid green;
+      width: 95%;
+      
+      img {
+         height: 75px;
+         width:75px;
+         // border: 2px solid red;
+         border-radius: 50%;
+      }
+
+      .feature-description {
+         display: flex;
+         flex-direction: column;
+      }
+   }
 
 // Experience
 
-.radio-button-container {
-   display: flex;
-   justify-content: center;
-   width: 80%;
+   .radio-button-container {
+      display: flex;
+      justify-content: center;
+      width: 80%;
+      border: 2px solid red;
+   }
+   .radio-button {
+      height: 5vh;
+      width: 15vw;
+      background-color: $pal-one;
+      color: $pal-three;
+   }
+   .one {
+
+   }
+}
+
+@media  (min-width: 350px){  
+
+   .hexagon-container {
+      width:75%;
+      height: 220px;
+
+   }
+   .hexagon-row-one{
+
+   width: 100%;
+   margin-bottom: -15px;
    border: 2px solid red;
-}
-.radio-button {
-   height: 5vh;
-   width: 15vw;
-   background-color: $pal-one;
-   color: $pal-three;
-}
-.one {
+   }
+   .hexagon-row-two{
+      display:flex;
+      justify-content: center;
+      align-items: center;
+      width: 100%;//this will need to be adjusted
+      border: 2px solid green;
+      margin-right:2px;
+   }
+   .hexagon-selected{
+      height: $hexagon-size-350 - 10px;
+      width: $hexagon-size-350 - 20px;
+      // box-shadow: 5px 5px red;
+   }
+   .hexagon-one {
+      // padding-top:5px;
+      height: $hexagon-size-350+15;
+      width: $hexagon-size-350;
+   }
+   .hexagon-one:hover {
+      height: $hexagon-size-350;
+      width: $hexagon-size-350;
+   }
+   .hexagon-two {
+      padding-top:5px;
+      height: $hexagon-size-350;
+      width: $hexagon-size-350+5;
+   }
+   .hexagon-two:hover {
+      padding-top:2px;
+      height: $hexagon-size-350 + 5;
+      width: $hexagon-size-350;
+   }
+   .hexagon-three {
+      // padding-top:5px;
+      height: $hexagon-size-350;
+      width: $hexagon-size-350 - 5;
+   }
+   .hexagon-three:hover {
+      height: $hexagon-size-350 + 5;
+      width: $hexagon-size-350;
+   }
+   
+   .hexagon-four {
+      height: $hexagon-size-350;
+      width: $hexagon-size-350 - 5;
+   }
+   .hexagon-four:hover {
+      height: $hexagon-size-350;
+      width: $hexagon-size-350 - 5;
+   }
+   .hexagon-five {
+      height: $hexagon-size-350;
+      width: $hexagon-size-350 - 5;
+   }
+   .hexagon-five:hover {
+      height: $hexagon-size-350;
+      width: $hexagon-size-350 - 5;
+   }
+
+   .hexagon-six {
+      // padding-top:5px;
+      height: $hexagon-size-350 - 10;
+      width: $hexagon-size-350 - 5;
+   }
+   .hexagon-six:hover {
+      padding-top:3px;
+      height: $hexagon-size-350 - 2;
+      width: $hexagon-size-350 - 4;
+   }
+   .hexagon-seven {
+      // padding-top:5px;
+      height: $hexagon-size-350;
+      width: $hexagon-size-350 - 5;
+   }
+   .hexagon-seven:hover {
+      // padding-top:3px;
+      height: $hexagon-size-350;
+      width: $hexagon-size-350 - 5;
+   }
+
+   .hexagon-selected{
+      height: 120px;
+      width: 115px;
+      // box-shadow: 5px 5px red;
+   }
+   .hexagon-one {
+      // padding-top:5px;
+      height: 80px;
+      width: 80px;
+   }
+   .hexagon-one:hover {
+      height: 85px;
+      width: 80px;
+   }
+   .hexagon-two {
+      padding-top:5px;
+      height: 80px;
+      width: 85px;
+   }
+   .hexagon-two:hover {
+      padding-top:2px;
+      height: 85px;
+      width: 80px;
+   }
+   .hexagon-three {
+      // padding-top:5px;
+      height: 80px;
+      width: 75px;
+   }
+   .hexagon-three:hover {
+      height:85px;
+      width: 80px;
+   }
+   
+   .hexagon-four {
+      height: 83px;
+      width: 83px;
+   }
+   .hexagon-four:hover {
+      height: 80px;
+      width: 75px;
+   }
+   .hexagon-five {
+      height: 80px;
+      width: 75px;
+   }
+   .hexagon-five:hover {
+      height: 80px;
+      width: 75px;
+   }
+
+   .hexagon-six {
+      // padding-top:5px;
+      height: 80px;
+      width: 85px;
+   }
+   .hexagon-six:hover {
+      padding-top:3px;
+      height: 88px;
+      width: 86px;
+   }
+   .hexagon-seven {
+      // padding-top:5px;
+      height: 85px;
+      width: 75px;
+   }
+   .hexagon-seven:hover {
+      // padding-top:3px;
+      height:88px;
+      width: 80px;
+   }
 
 }
+
+@media  (min-width: 400px){  
+
+   .hexagon-container {
+      width:75%;
+      height: 220px;
+
+   }
+   .hexagon-row-one{
+
+   width: 100%;
+   margin-bottom: -15px;
+   border: 2px solid red;
+   }
+   .hexagon-row-two{
+      display:flex;
+      justify-content: center;
+      align-items: center;
+      width: 100%;//this will need to be adjusted
+      border: 2px solid green;
+      margin-right:2px;
+   }
+   .hexagon-selected{
+      height: 120px;
+      width: 115px;
+      // box-shadow: 5px 5px red;
+   }
+   .hexagon-one {
+      // padding-top:5px;
+      height: 90px;
+      width: 90px;
+   }
+   .hexagon-one:hover {
+      height: 65px;
+      width: 60px;
+   }
+   .hexagon-two {
+      padding-top:5px;
+      height: 90px;
+      width: 95px;
+   }
+   .hexagon-two:hover {
+      padding-top:2px;
+      height: 95px;
+      width: 90px;
+   }
+   .hexagon-three {
+      // padding-top:5px;
+      height: 90px;
+      width: 85px;
+   }
+   .hexagon-three:hover {
+      height:95px;
+      width: 90px;
+   }
+   
+   .hexagon-four {
+      height: 90px;
+      width: 85px;
+   }
+   .hexagon-four:hover {
+      height: 90px;
+      width: 85px;
+   }
+   .hexagon-five {
+      height: 90px;
+      width: 85px;
+   }
+   .hexagon-five:hover {
+      height: 90px;
+      width: 85px;
+   }
+
+   .hexagon-six {
+      // padding-top:5px;
+      height: 80px;
+      width: 85px;
+   }
+   .hexagon-six:hover {
+      padding-top:3px;
+      height: 88px;
+      width: 86px;
+   }
+   .hexagon-seven {
+      // padding-top:5px;
+      height: 85px;
+      width: 75px;
+   }
+   .hexagon-seven:hover {
+      // padding-top:3px;
+      height:88px;
+      width: 80px;
+   }
+
+}
+
+
+@media  (min-width: 1000px) {
+   .hexagon-container {
+      width:70%;
+      height: 350px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+   }
+   .hexagon-row-one{
+     display:flex;
+     justify-content: center;
+     align-items: center;
+     width: $hexagon-width * 3.5;
+     margin-bottom: -22px;
+   }
+   .hexagon-row-two{
+     display:flex;
+     justify-content: center;
+     align-items: center;
+     width: $hexagon-width  * 4.65;//this will need to be adjusted
+     
+   }
+
+      .hexagon-selected{
+         height: 200px;
+         width: 200px;
+         // box-shadow: 5px 5px red;
+      }
+      .hexagon-one {
+         // padding-top:5px;
+         height: 150px;
+         width: 145px;
+      }
+      .hexagon-one:hover {
+         height: 155px;
+         width: 150px;
+      }
+      .hexagon-two {
+         padding-top:5px;
+         height: 140px;
+         width: 147px;
+      }
+      .hexagon-two:hover {
+         padding-top:2px;
+         height: 145px;
+         width: 150px;
+      }
+      .hexagon-three {
+         // padding-top:5px;
+         height: 150px;
+         width: 145px;
+      }
+      .hexagon-three:hover {
+         height: 155px;
+         width: 150px;
+      }
+      
+      .hexagon-four {
+         height: 150px;
+         width: 145px;
+      }
+      .hexagon-four:hover {
+         height: 150px;
+         width: 145px;
+      }
+      .hexagon-five {
+         height: 150px;
+         width: 145px;
+      }
+      .hexagon-five:hover {
+         height: 150px;
+         width: 145px;
+      }
+   
+      .hexagon-six {
+         padding-top:5px;
+         height: 140px;
+         width: 145px;
+      }
+      .hexagon-six:hover {
+         padding-top:3px;
+         height: 148px;
+         width: 146px;
+      }
+      .hexagon-seven {
+         // padding-top:5px;
+         height: 153px;
+         width: 145px;
+      }
+      .hexagon-seven:hover {
+         // padding-top:3px;
+         height: 158px;
+         width: 150px;
+      }
+      
+}
+
