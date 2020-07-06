@@ -298,6 +298,13 @@ main {
          box-shadow: 5px 5px 25px black;
          border-radius: 5px;
          color: $pal-one;
+
+         .pic-one {
+            width: 50%;
+         }
+         .pic-two {
+            width: 50%;
+         }
          
          h3, h4, h5, h6 {
             padding:  .5em;

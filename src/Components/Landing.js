@@ -4,6 +4,7 @@ import Skills from "./Skills";
 import Projects from "./Projects/Projects";
 import Vindermere from "./Projects/Vindermere";
 import EcoVerde from "./Projects/EcoVerde";
+import InProgress from "./InProgress/InProgress";
 import Pic1 from "../images/Family - one.jpg"
 import Pic2 from "../images/Experience One.jpg"
 import Pic3 from "../images/DMT-worlds2.png";
@@ -61,10 +62,12 @@ const Landing = () => {
         <Projects setToggle = {setToggle}
                          vindermere = {vindermere}
                          ecoVerde = {ecoVerde}/>
+      <InProgress />
       <section className="overview-container">
+        <h1> ABOUT ME</h1>
         <section className="feature-one">
           <div className="image">
-            <img id="pic-one"src={Pic1} alt="light bulb, cogs, and a tool"  height="100%"/>
+            <img className="pic-one"src={Pic1} alt="light bulb, cogs, and a tool"  height="100%"/>
           </div>
           <div className="content">
               <h3>ABOUT ME</h3> 
@@ -73,11 +76,10 @@ const Landing = () => {
               curabitur tempor orci penatibus. Tellus erat mauris ipsum
               fermentum etiam vivamus eget. Nunc nibh morbi quis fusce lacus.
             </p>
-            <button> Read More</button>
           </div>
         </section>
-        <section className="feature-two">
-            <img src={Pic2} alt="PERN Stack" height="100%"/>
+        {/* <section className="feature-two"> */}
+            {/* <img src={Pic2} alt="PERN Stack" height="100%"/>
           <div className="content">
             <h3>EXPERIENCE </h3>
             <p>
@@ -85,12 +87,11 @@ const Landing = () => {
               Vitae natoque dictum etiam semper magnis enim feugiat amet
               curabitur tempor orci penatibus. Tellus erat mauris ipsum
               fermentum etiam vivamus eget. Nunc nibh morbi quis fusce lacus. 
-            </p>
-            <Link to="/me"><button> More Experience</button></Link>
-          </div>
-        </section>
+            </p> */}
+          {/* </div> */}
+        {/* </section> */}
         <section className="feature-one">
-              <img id= "pic-three" src={Pic3} alt="Double-Mini" height="100%" width="100%"/>
+              <img className= "pic-two" src={Pic3} alt="Double-Mini" height="100%" width="100%"/>
             <div className="content">
                 <h3> GYMNASTICS</h3>
                 <p>
@@ -100,6 +101,10 @@ const Landing = () => {
                 <button> Read More</button>
             </div>
         </section>
+            <Link to="/me"><button> Learn More</button></Link>
+      </section>
+      <section className="contact-me-container">
+        <h1> CONTACT ME</h1>
       </section>
 
    </main>
