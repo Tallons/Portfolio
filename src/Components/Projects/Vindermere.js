@@ -48,7 +48,7 @@ const Vindermere = (props) => {
    })
 
    return (
-<section className="vindermere-container" onClick={(event) => props.stopPropagation(event)}>
+      <section className="vindermere-container" onClick={(event) => props.stopPropagation(event)}>
    <div className="image-container">
 
       <div className="image-selector">
@@ -56,6 +56,7 @@ const Vindermere = (props) => {
       </div> 
       <img className="main-image" src={imageToggle} alt={`${imageToggle}`}/>
    </div>
+      
    <div className="Vindermere-details">
          {/* <h1> Vindermere</h1> */}
          {imageToggle === townView ?  <> <h4> Welcome to Vindermere Traveler!</h4> <p>The town view was designed as the landing page and is meant to accomadate a hero's interation with the town's people. You will be able to trade and train your skill. There is talk of the local bank opening.</p> <h4>Difficulties</h4> <li>Screen size was a big issue, the words and highlight boxes were distorted due to changes in a computer's screen size. </li> <li></li></> : null }
@@ -66,9 +67,10 @@ const Vindermere = (props) => {
 
          {imageToggle === dungeonView ?  <> <h4> Inventory System </h4> <p> The Inventory system is drag and drop. Due to game design, the inventory is saved in three places: <li><strong>State:</strong> Items appear and can be used, but are deleted if game is not saved</li><li><strong>Local Storage:</strong> Kept track of hero's saved inventory</li> <li><strong>Database:</strong> used to get inventory on new game</li></p> <h4>Difficulties</h4> <li> Drag and drop items into hero model and inventory, while keeping track of the item's image and stats</li><li>Getting the state, local storage, and database to update and cooperate with each other.</li></> : null }
 
-      <button>Return</button>
-   </div>
-         <div className="skills-container">
+      
+   </div>  
+   <button onClick={() => props.resetToggle()}>Return</button> 
+        <div className="skills-container">
          {mappedIcons}
          
 

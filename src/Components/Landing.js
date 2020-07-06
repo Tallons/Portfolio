@@ -6,8 +6,7 @@ import Vindermere from "./Projects/Vindermere";
 import EcoVerde from "./Projects/EcoVerde";
 import InProgress from "./InProgress/InProgress";
 import Pic1 from "../images/Family - one.jpg"
-import Pic2 from "../images/Experience One.jpg"
-import Pic3 from "../images/DMT-worlds2.png";
+import Pic2 from "../images/DMT-worlds2.png";
 
 const Landing = () => {
 
@@ -43,7 +42,8 @@ const Landing = () => {
                     >
             {toggleType === vindermere ? (
                <Vindermere stopPropagation = {stopPropagation}
-                                      setToggle = {setToggle} />) : null }
+                                      setToggle = {setToggle}
+                                      resetToggle = {resetToggle} />) : null }
             {toggleType === ecoVerde ? (
               <EcoVerde stopPropagation = {stopPropagation}
               setToggle = {setToggle} />) : null }
@@ -65,9 +65,10 @@ const Landing = () => {
       <InProgress />
       <section className="overview-container">
         <h1> ABOUT ME</h1>
-        <section className="feature-one">
-          <div className="image">
-            <img className="pic-one"src={Pic1} alt="light bulb, cogs, and a tool"  height="100%"/>
+        <section className="about-me-overview-container">
+          <div className="images">
+            <img className="pic-one"src={Pic1} alt=""  height="100%"/>
+            <img className= "pic-two" src={Pic2} alt="Double-Mini" height="100%" width="100%"/>
           </div>
           <div className="content">
               <h3>ABOUT ME</h3> 
@@ -76,29 +77,10 @@ const Landing = () => {
               curabitur tempor orci penatibus. Tellus erat mauris ipsum
               fermentum etiam vivamus eget. Nunc nibh morbi quis fusce lacus.
             </p>
-          </div>
-        </section>
-        {/* <section className="feature-two"> */}
-            {/* <img src={Pic2} alt="PERN Stack" height="100%"/>
-          <div className="content">
-            <h3>EXPERIENCE </h3>
-            <p>
-              PERN STACK
-              Vitae natoque dictum etiam semper magnis enim feugiat amet
-              curabitur tempor orci penatibus. Tellus erat mauris ipsum
-              fermentum etiam vivamus eget. Nunc nibh morbi quis fusce lacus. 
-            </p> */}
-          {/* </div> */}
-        {/* </section> */}
-        <section className="feature-one">
-              <img className= "pic-two" src={Pic3} alt="Double-Mini" height="100%" width="100%"/>
-            <div className="content">
-                <h3> GYMNASTICS</h3>
-                <p>
-                I have been competing in gymnastics for 10 + years.
-                I competed at the 2019 World Championships in Tokyo, Japan and brought home a silver
-                </p>
-                <button> Read More</button>
+ 
+              
+
+
             </div>
         </section>
             <Link to="/me"><button> Learn More</button></Link>

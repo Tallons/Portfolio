@@ -6,6 +6,7 @@
       display: flex;
       flex-direction: column;
       align-items: center;
+      justify-content: space-between;
       box-sizing: border-box;
       height: 95vh;
       width: 85%;
@@ -88,52 +89,62 @@
       }
       .main-image {
          height: 25vh;
-         border-radius: 5px;
+         border-radius: 7px;
          margin: 5px 0 5px;
       }
       
       .Vindermere-details {
-         border: 2px solid red;
             display: flex;
             flex-direction: column;
-            height: 35%;
+            min-height: 20%;
             width: 100%;
             box-sizing: border-box;
             font-size: 9px;
             padding:  1em 1.5em 1em 1.5em;
    
-            h1 {
-               color: $pal-two;
-               margin-bottom: .75em;
-            }
+      }
+      button {
+         position: relative;
+         width: 35vw;
+         top: 1vh;
+         height: 5vh;
+         background-color: transparent;
+         border: 2px solid $pal-five;
+         color: $pal-one;
+         font-size: 16px;
+         font-weight: bold;
+         border-radius: 5px;
+      }
+      button:hover {
+         transition:.5s;
+         color: $pal-two;
+         border-color: $pal-one;
+         background-color: $pal-five;
+         cursor: pointer;
+         font-size: 22px;
+         height: 7vh;
+         width: 40vw;
       }
             .skills-container {
-               border: 2px solid indianred;
-               // margin-top: .75em;
                display: flex;
                justify-content: center;
                flex-flow: row wrap;
                text-align: center;
               color: $pal-one;
-              height: 15vh;
-              width: 100%;
+              height: 18vh;
+              width: 80%;
               padding: 1em 0 1em 0;
-      
-              h1 {
-                  font-size: 32px;
-                  margin-bottom: 1em;
-              }
-      
+
                .skills-icon-container {
-                  width: 40px;
+                  width: 45px;
                   margin: .5em;
                   text-align: center;
-                  font-size: 8px;
-                  height: 20%;
+                  font-size: 9px;
+                  height: 21%;
       
                   .skill-icon {
-                     height: 25px;
-                     width: 25px;
+                     height: 30px;
+                     width: 30px;
                   }
                }
             
@@ -170,8 +181,7 @@
    }
    
    .Vindermere-details {
-      border: 2px solid red;
-         height: 50%;
+         height: 30%;
          font-size: 11px;
    }
          .skills-container {
@@ -190,6 +200,29 @@
       }
    }
 }
+@media  (min-width: 600px) {
+   .vindermere-container 
+   .skills-container {
+      height: 8vh;
+      width: 100%;
+   }
+}
+@media  (min-width: 700px) {
+   .vindermere-container 
+   .skills-container {
+
+      .skills-icon-container {
+         width: 60px;
+         font-size: 10px;
+
+         .skill-icon {
+            height: 40px;
+            width: 40px;
+         }
+      }
+   }
+}
+
 
 @media  (min-width: 750px) and (min-height:900px){  
 
@@ -220,6 +253,8 @@
       .Vindermere-details {
             font-size: 16px;
       }
+
+
             .skills-container {
               height: 15%;
               width: 100%;
@@ -238,206 +273,104 @@
       }
    }
 
+   @media  (min-width: 900px){  
+   .vindermere-container
+   button {
+      width: 250px;
+
+   }
+}
+
    @media  (min-width: 1000px){  
    .vindermere-container{
-      height: 95vh;
-      width: 80%;
+      width: 900px;
       
       .image-container{
-         // flex-direction: row;
-         height: 40%;
+         flex-direction: row;
+         height: 55%;
          padding: 0 1em 0 1em;
    
          .image-selector{
-            // display: flex;
-            // flex-wrap: none;
-            // flex-direction: row;
-            // align-items: center;
-            height:30vh;
+            height:42vh;
             justify-content: space-evenly;
             width: 25%;
             margin-right: .5em;
 
                .pic {
-                  height:  5vh;
+                  height:  8vh;
                   width: 100%;
                   
                   img {
-                     height:5vh;
+                     height:8vh;
                   }
                }
             }
          }
          .main-image {
-            // height: 26vh;
             width:80%;
          }
          
          .Vindermere-details {
-            border: 2px solid red;
-               // height: 35%;
-               // width: 100%;
-               box-sizing: border-box;
+               height: 40%;
                font-size: 16px;
-               padding:  1em 4em 1em 4em;
-      
-               h1 {
-                  color: $pal-two;
-                  margin-bottom: .75em;
-               }
+         }  
+         button {
+            width: 300px;
+            height: 8vh;
+         }
+         button:hover {
+            width: 320px;
+            height: 9vh;
+         }
             
                .skills-container {
-                  margin-top: .75em;
-                  display: flex;
-                  justify-content: center;
-                  flex-flow: row wrap;
-                  text-align: center;
-                 color: $pal-one;
-                 height: 10vh;
-                 width: 100%;
-         
-                 h1 {
-                     font-size: 32px;
-                     margin-bottom: 1em;
-                 }
-         
+                  height: 11%;
+
                   .skills-icon-container {
-                     width: 70px;
-                     margin: .5em;
-                     text-align: center;
+                     width: 80px;
                      font-size: 14px;
          
                      .skill-icon {
-                        height: 50px;
-                        width: 50px;
+                        height: 60px;
+                        width: 60px;
                      }
                   }
                }
             }
       }
-   }
 
 @media  (min-width: 1200px){  
 
    .vindermere-container{
-      height: 95vh;
       width: 1000px;
       
       .image-container{
-         flex-direction: row;
          height: 65vh;
-         padding: 0 1em 0 1em;
-      
-            .image-selector{
-               border: 3px solid blue;
-               display: flex;
-               flex-wrap: none;
-               flex-direction: column;
-               align-items: center;
-               // height:40vh;
-               justify-content: space-evenly;
-               width: 15%;
-               padding: 0 .5em 0 .5em;
-               margin-right: .5em;
-   
-                  img {
-                     width:100%;
-                     height: 20%;
-                     border-radius: 5px;
-                  }
-                  .pic {
-                     height:  7vh;
-                     width: 100%;
-                     
-                     img {
-                        height:7vh;
-                        border-radius: 5px;
-                        // width:100%;
-                        position: relative;
-                     }
-                     .pic-select {
-                        border: 3px solid green;
-                        width:100%;
-                        border-radius: 5px;
-                        box-sizing: border-box;
-                        height: 100%;
-                        position: absolute;
-                        top:0;
-                        left:0;
-                        z-index:1;
-                        opacity: .5;
-                        ;
-                        // margin-bottom:5px;
-                     }
-                     
-                     .pic-select:hover {
-                        background-color: $pal-zero;
-                        z-index:1;
-                     }
-                     .pic-selected {
-                        border-radius: 5px;
-                        box-sizing: border-box;
-                        width:100%;
-                        height: 100%;
-                        top:0;
-                        left:0;
-                        position: absolute;
-                        background-color:rgba(55,54,77, 0.8);
-                        z-index: 1;
-                     }
-                  }
-               }
             }
             .main-image {
                height: 55vh;
                width:85%;
-               border-radius: 5px;
-               margin-bottom: 5px;
-               border: 2px solid green;
             }
             
-            .Vindermere-details {
-               border: 2px solid red;
-                  display: flex;
-                  flex-direction: column;
-                  height: 35%;
-                  width: 100%;
-                  box-sizing: border-box;
-                  font-size: 16px;
-                  padding:  1em 4em 1em 4em;
-         
-                  h1 {
-                     color: $pal-two;
-                     margin-bottom: .75em;
-                  }
-               
                   .skills-container {
-                     margin-top: .75em;
-                     display: flex;
-                     justify-content: center;
-                     flex-flow: row wrap;
-                     text-align: center;
-                    color: $pal-one;
-                    height: 10vh;
-                    width: 100%;
             
-                    h1 {
-                        font-size: 32px;
-                        margin-bottom: 1em;
-                    }
-            
-                     .skills-icon-container {
+                    .skills-icon-container {
+                     width: 95px;
+                     font-size: 16px;
+         
+                     .skill-icon {
+                        height: 70px;
                         width: 70px;
-                        margin: .5em;
-                        text-align: center;
-                        font-size: 14px;
-            
-                        .skill-icon {
-                           height: 50px;
-                           width: 50px;
                         }
                      }
                   }
-               }
+               
+   }
+}
+
+@media  (min-width: 1400px){  
+
+   .vindermere-container{
+      width: 1100px;
    }
 }

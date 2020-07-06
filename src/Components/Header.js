@@ -1,6 +1,5 @@
 import React from 'react';
 import { HashLink as Link } from "react-router-hash-link"
-import toothless from "../images/toothlessIcon.JPG"
 
 const Header = () => {
 
@@ -18,7 +17,6 @@ const Header = () => {
          </nav>
       </section>
       <section className="header-title-container">
-         {/* <img className="header-icon" src={toothless} /> */}
          <h1 className="name">NOAH ORR</h1>
          <h2 className="sub-heading"> Software Developer<br /> 2019 World Silver Medalist </h2>
       </section>
