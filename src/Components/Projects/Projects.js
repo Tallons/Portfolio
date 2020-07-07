@@ -31,7 +31,7 @@ const Projects = (props) => {
               </div>
             </div>
         </div>
-      <div className="project column-reverse">
+      <div className="column-reverse">
           <div className="image-container">
             <img  src={ecoVerdePic} alt="Eco Verde Picture"/>
             <div className="project-details"> 

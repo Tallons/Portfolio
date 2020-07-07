@@ -42,7 +42,6 @@
          align-items: center;
          position: fixed;
          // font-weight: bold;
-         font-size: 12px;
          letter-spacing: 2px;
          height:5vh;
          box-shadow: 5px 15px 25px black;
@@ -176,6 +175,13 @@
       header {
          height: 65vh;
       }
+      .nav-bar-container {
+         height: 5vh;
+
+         a {
+            font-size: 18px;
+         }
+      }
       .header-title-container {
          .name {
             top:6vh;
@@ -190,6 +196,13 @@
       header {
          height: 70vh;
       }
+      .nav-bar-container {
+         height: 5vh;
+
+         a {
+            font-size: 20px;
+         }
+      }
       .header-title-container {
          .name {
             top:4vh;
@@ -197,6 +210,30 @@
          }
          .sub-heading {
             top: 20vh;
+            font-size: 35px;
+
+         }
+      }
+   }
+
+   @media  (min-width: 1000px) and (min-height: 1200px){  
+      header {
+         height: 45vh;
+      }
+      .nav-bar-container {
+         height: 3vh;
+
+         a {
+            font-size: 16px;
+         }
+      }
+      .header-title-container {
+         .name {
+            top:2vh;
+            font-size: 60px;
+         }
+         .sub-heading {
+            top: 8vh;
             font-size: 35px;
 
          }
@@ -421,8 +458,15 @@ main {
       }
    }
 
-
-
+   @media  (min-width: 1000px) and (min-height: 1200px){  
+      .quote-container {
+         height: 18vh;
+      
+         .intro-quote {
+            font-size: 26px;
+         }
+      }
+   }
 
    @media  (min-width: 1320px){  // bigger size
 
