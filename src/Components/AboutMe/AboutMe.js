@@ -16,6 +16,8 @@ import pic4 from "../../images/Mission Farewell - Hexagon.png";
 import hoverPic4 from "../../images/Mission Farewell - Hexagon 1.png";
 import pic5 from "../../images/Gymnastics - Hexagon.png";
 import hoverPic5 from "../../images/Gymnastics - Hexagon 1.png";
+import pic6 from "../../images/Worlds - Hexagon 2.png";
+// import hoverPic6 from "../../images/Gymnastics - Hexagon 1.png";
 
 import "./AboutMe.scss";
 
@@ -91,7 +93,7 @@ return (
                      onMouseOver={e => e.currentTarget.src=hoverPic5} 
                      onMouseOut={e => e.currentTarget.src=pic5}/>
          ) : <img className="hexagon-selected" src={pic5} /> }
-            <img className="hexagon-five" src={pic} onClick={()=> setAboutMeToggle(me)} />
+            <img className="hexagon-five" src={pic6} onClick={()=> setAboutMeToggle(me)} />
          { aboutMeToggle !== experience ? (
             <img className="hexagon-seven" src={pic3} 
                      onClick={(e)=> {
@@ -120,6 +122,7 @@ return (
                <li>I am a Chololate Milk Conoseur (ask me about my top five)</li>
                <li> I have been to almost 40 states and 7 Countries </li>
                <li>Favorite band: Bee Gees</li>
+               <li>Learning Japanese</li>
                <li></li>
                      
             </div>

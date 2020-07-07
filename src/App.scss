@@ -1,4 +1,5 @@
 @import "./modules/_variables.scss";
+@import "./modules/_mixins.scss";
 
 * {
    margin: 0;
@@ -9,9 +10,7 @@
 }
 
 .landing-overlay {
-   display: flex;
-   justify-content: space-evenly;
-   align-items: center;
+   @include column;
    width:100%;
    height:100%;
    background-color: rgba(6, 10, 20, 0.85);
@@ -37,9 +36,8 @@
 
       }
       .nav-bar-container {
-         display: flex;
+         @include row;
          justify-content: center;
-         align-items: center;
          position: fixed;
          // font-weight: bold;
          letter-spacing: 2px;
@@ -68,12 +66,10 @@
          }
       
       .header-title-container{
-         display: flex;
-         flex-direction: column;
+         @include column;
          justify-content: space-evenly;
-         align-items: center;
-          height: 40vh;
-          color: $pal-one;
+         height: 40vh;
+         color: $pal-one;
          width: 50%;
 
           .name {
@@ -278,17 +274,14 @@
 @media  (min-width: 320px){
 
 main {
-   display:flex;
-   flex-direction: column;
-   justify-content: center;
-   align-items: center;
+   @include column;
    min-height:100vh;
    background: linear-gradient(-45deg, $pal-four 40%, $pal-three 60%);
 }
 .quote-container {
-   display:flex;
+   @include row;
    justify-content: center;
-   align-items: center;
+
    height: 15vh;
    width: 100%;
 
@@ -315,71 +308,69 @@ main {
    }
 
    .skills-container-title {
-      display: flex;
-      flex-direction: column;
+      @include column;
    }
 
 // about me
 
-   .overview-container{
-   display: flex;
-   justify-content: flex-start;
-   align-items: flex-start;
-   flex-direction: column;
-   // align-items: center;
-   min-height: 20vh;
-   width:85%;
-   padding: 10vh 0 10vh 0;
-   
 
-      .about-me-overview-container{
+
+
+   .about-me-overview-container{
+      @include column;
+      width:90%;
+      min-height: 40vh;
+      box-sizing: border-box;
+      padding: .5em;
+      background-color: $pal-six;
+      box-shadow: 5px 5px 25px black;
+      border-radius: 5px;
+      color: $pal-one;
+
+      .images {
          display: flex;
          flex-direction: column;
-         position: relative;
-         border: 2px solid red;
-         height: 80vh;
-         box-sizing: border-box;
-         width: 100%;
-         // background: linear-gradient(0deg, $pal-six 0%, $pal-six 40%, $pal-three 100%);
-         background-color: $pal-four-dark;
-         box-shadow: 5px 5px 25px black;
-         border-radius: 5px;
-         color: $pal-one;
+         
 
-         .images {
-            display: flex;
-            flex-direction: column;
-            
-
-            .pic-one {
-               width: 95%;
-               align-self: center;
-               // margin: .5em .5em 0 .5em;
-               box-sizing: border-box;
-               border-bottom: 2px solid $pal-five;
-               // height: 50px;
-            }
-            .pic-two {
-               // border-bottom: 1px solid $pal-five;
-               // margin: 0 .5em 0 .5em;
-               align-self: center;
-               width: 95%; 
-               height: 250px; 
-               box-sizing: border-box;
-               object-fit: cover;
-               // width: 50%;
-               object-position: 25% -10px;
-            }
-            
+         .pic-one {
+            width: 100%;
+            align-self: center;
+            box-sizing: border-box;
+            border-bottom: 2px solid $pal-six;
+            border-radius: 5px 5px 0 0;
          }
+         .pic-two {
+            align-self: center;
+            width: 100%; 
+            height: 250px; 
+            box-sizing: border-box;
+            object-fit: cover;
+            object-position: 25% -10px;
+            border-bottom: 2px solid $pal-six;
+         }
+         
+      }
+      .content{
+         @include column;
+         background-color: $pal-five;
+         border-radius: 0 0 5px 5px;
             p {
-               padding: 1.5em;
+               padding: 1em;
                box-sizing: border-box;
             }
-
+            a {
+               @include button;
+               margin: 0 0 1em;
+               text-decoration: none;
+            }
+            a:hover {
+               @include button-hover;
+            }
+         }
       }
+
    }
-}
+
 
 
    @media  (min-width: 500px){  
@@ -482,21 +473,7 @@ main {
          }
          
          // about me
-         
-         @media  (min-width: 350px){
 
-            main
-            .overview-container{
-               display: flex;
-               justify-content: space-evenly;
-               align-items: center;
-
-               // min-height: 40vh;
-               width:85%;
-               padding: 10vh 0 10vh 0;
-            }
-         }
-         
          @media  (min-width: 1000px){
             .overview-container{
                display: flex;
@@ -530,12 +507,32 @@ main {
 
    // Footer
 
-   .landing-footer {
-      display: flex;
-      flex-direction: column;
+   .contact-me-container {
+      @include column;
       justify-content: space-evenly;
       text-align: center;
-      height: 50vh;
-      width: 100%;
-      margin-top: 5em;
+      min-height: 20vh;
+
+      .email-container {
+         @include row;
+         width: 80%;
+         justify-content: center;
+         height: 5vh;
+         color: $pal-one;
+         letter-spacing: 2px;
+         margin-bottom:1em;
+         img {
+            height: 50px;
+            width: 50px;
+         }
+      }
+      .contact-icons-container {
+         @include row;
+         margin-bottom:1em;
+
+         img {
+            height: 50px;
+            width: 50px;
+         }
+      }
    }

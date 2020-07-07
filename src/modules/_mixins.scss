@@ -1,0 +1,39 @@
+@import "./_variables.scss";
+
+@mixin row{
+   display: flex;
+   align-items: center;
+   justify-content: space-evenly;
+}
+@mixin column{
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   justify-content: center;
+}
+
+@mixin button{
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   width: 32vw;
+   margin-top: 1em;
+   height: 4vh;
+   background-color: transparent;
+   border: 2px solid $pal-two;
+   color: $pal-one;
+   font-size: 14px;
+   font-weight: bold;
+   border-radius: 5px;
+}
+
+@mixin button-hover {
+   transition:.5s;
+   color: $pal-zero;
+   border-color: $pal-zero;
+   background-color: $pal-five;
+   cursor: pointer;
+   font-size: 22px;
+   height: 5vh;
+   width: 16vw;
+}

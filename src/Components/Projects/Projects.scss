@@ -1,23 +1,19 @@
 @import "../../modules/_variables.scss";
+@import "../../modules/mixins.scss";
 
 //Projects
 
 @media  (min-width: 300px){  
 .project-container {
-   display: flex;
-   flex-direction: column;
+   @include column;
    justify-content: space-evenly;
    text-align: center;
-   align-items: center;
    min-height: 50vh;
    width: 100%;
    color: $pal-one;
 
    .projects {
-      display: flex;
-      flex-direction: column;
-      // align-items: center;
-      justify-content: space-evenly;
+      @include column;
       width: 84%;
       min-height: 80vh;
       // background: linear-gradient(0deg, $pal-three 0%, $pal-six 80%);
@@ -27,10 +23,8 @@
       box-shadow: 8px 8px 25px black;
       
       .project {
-         // margin: 1em 0 1em;
-         display: flex;
+         @include column;
          flex-direction: column-reverse;
-         justify-content: center;
          width: 100%;
          // height: 60vh;
          // padding:5px;
@@ -39,10 +33,7 @@
          border-radius: 5px;
          
         .project-info {
-            display: flex;
-            flex-direction: column;
-            justify-content:space-evenly;   
-            align-items: center;
+           @include column;
             padding: .5em 1.5em .5em 1.5em;
             border-top: 2px solid $pal-six;
             width: 100%;
@@ -63,25 +54,12 @@
                font-style: italic;
             }
             button {
-               width: 32vw;
-               margin-top: 1em;
-               height: 4vh;
-               background-color: transparent;
-               border: 2px solid $pal-two;
-               color: $pal-one;
-               font-size: 14px;
-               font-weight: bold;
-               border-radius: 5px;
+               @include button;
+               align-self: center;
+               
             }
             button:hover {
-               transition:.5s;
-               color: $pal-zero;
-               border-color: $pal-zero;
-               background-color: $pal-five;
-               cursor: pointer;
-               font-size: 22px;
-               height: 5vh;
-               width: 16vw;
+               @include button-hover;
             }
       }
 
@@ -109,24 +87,15 @@
       
    }
    .column-reverse {
-      display: flex;
-      flex-direction: column;
-      // margin: 1em 0 1em;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
+      @include column;
       width: 100%;
-      // height: 60vh;
-      // padding:5px;
       margin: .25em 0 .25em;
       box-sizing: border-box;
       border-radius: 5px;
 
       .project-info {
-         display: flex;
-         flex-direction: column;
+         @include column;
          justify-content:space-evenly;   
-         align-items: center;
          padding: .5em 1.5em .5em 1.5em;
          border-top: 2px solid $pal-six;
          width: 100%;
@@ -395,7 +364,7 @@
             }
          }
          .column-reverse {
-            height: 80vh;
+            height: 85vh;
 
             .image-container {
                height: 45vh;
@@ -424,7 +393,7 @@
       }
    }
    .column-reverse {
-      height: 85vh;
+      height: 90vh;
 
       .image-container {
          height: 50vh;
@@ -444,6 +413,7 @@
          display: flex;
          flex-direction: row;
          height: 50vh;
+         
          .project-info {
             height: 50vh;
             padding: .5em 1em .5em 1em;
@@ -473,17 +443,17 @@
          flex-direction: row;
          height: 50vh;
 
-         project-info {
+         .project-info {
             height: 50vh;
-            // padding: .5em 1em .5em 1em;
+            padding: .5em 1em .5em 1em;
             width: 45%;
             font-size: 16px;
-            border-bottom-right-radius: 5px;
-            border-top-right-radius: 5px;
-            // border-top: none;
-            border-right: 2px solid $pal-six;
-            border: 5px solid purple;
-
+            border-radius: 0 5px 5px 0;
+            border-top: none;
+            border-left: 2px solid $pal-six;
+            h1 {
+               font-size: 30px;
+            }
                button {
                   width: 15vw;
                }
@@ -492,8 +462,7 @@
             height: 50vh;
             img {
                height: 50vh;
-               border-bottom-right-radius: 5px;
-               border-top-left-radius: 0;
+               border-radius: 5px 0 0 5px;
             }
          }
       }
@@ -534,16 +503,35 @@
 
 @media  (min-width: 1150px){  
    .project-container
-   .projects
+   .projects{
    .project{
-      height: 70vh;
+      height: 60vh;
       .project-info {
-         height: 70vh;
+         height: 60vh;
          }
       .image-container {
-         height: 70vh;
+         height: 60vh;
          img {
-            height: 70vh;
+            height: 60vh;
+         }
+      }
+   }
+      .column-reverse{
+         height: 60vh;
+
+         .project-info {
+            height: 60vh;
+
+            h1 {
+               font-size: 36px;
+            }
+            }
+         .image-container {
+            height: 60vh;
+            img {
+               height: 60vh;
+
+            }
          }
       }
    }

@@ -7,6 +7,12 @@ import EcoVerde from "./Projects/EcoVerde";
 import InProgress from "./InProgress/InProgress";
 import Pic1 from "../images/2014 Family Picture.jpg"
 import Pic2 from "../images/DMT-worlds2.png";
+import EmailIcon from "../images/contact-icons/Email.png";
+import FacebookIcon from "../images/contact-icons/Facebook.png";
+import GithubIcon from "../images/contact-icons/Github.png";
+import GymIcon from "../images/contact-icons/USAG Logo - White.png";
+import LinkIcon from "../images/contact-icons/LinkedIn.png";
+
 
 const Landing = () => {
 
@@ -31,6 +37,28 @@ const Landing = () => {
     event.stopPropagation();
     event.nativeEvent.stopImmediatePropagation();
   };
+
+const contactIconList = [
+  // {image: EmailIcon, alt: "Email Icon", description: "Noahorr2@yahoo.com"},
+
+  {image: FacebookIcon, alt: "Facebook Icon", site: "https://www.facebook.com/Tallons27", description: "Tallons27"},
+  {image: GithubIcon, alt: "GitHub Icon", site: "https://github.com/Tallons", description: "Tallons"},
+  {image: GymIcon, alt: "Usa Gymnastics Icon", site: "https://usagym.org/pages/athletes/athleteListDetail.html?id=227805", description: "Noah Orr Gymnastics Profile"},
+  {image: LinkIcon, alt: "LinkedIn Icon", site: "https://www.linkedin.com/in/noah-orr-tallons/", description: "Noah Orr"},
+
+]
+
+const mappedContactIcons = contactIconList.map(el => {
+  return (  <div className="contact-icon-container">
+                    <a href={el.site} target="_blank">
+                      <img className="contact-icon" src={el.image} alt={el.alt} />
+                    </a>
+                    {/* <h4>{el.description}</h4> */}
+                 </div> )
+})
+
+
+
 
    return(
    <main>
@@ -69,7 +97,7 @@ const Landing = () => {
       <h1 className="section-title">IN PROGRESS</h1>
       <InProgress />
         <h1 className="section-title"> ABOUT ME</h1>
-      <section className="overview-container">
+
         <section className="about-me-overview-container">
           <div className="images">
             <img className="pic-one"src={Pic1} alt=""  />
@@ -85,20 +113,22 @@ const Landing = () => {
               
 
 
+            <Link to="/me">Learn More</Link>
             </div>
-            <Link to="/me"><button> Learn More</button></Link>
+            <div className="button-container">
+            </div>
         </section>
-      </section>
       <div  id="contact"></div>
         <h1 className="section-title"> CONTACT ME</h1>
       <section className="contact-me-container">
+              <div className="email-container">
+                 <img src={EmailIcon}/>
+                <h4> Noahorr2@yahoo.com</h4>
+              </div>
+             <div className="contact-icons-container">
 
-        <a> 
-          GitHub </a>
-        <a> Facebook </a>
-        <a> LinkedIn </a>
-        <a> USAG</a>
-        <a> Email </a>
+              {mappedContactIcons}
+             </div>
       </section>
 
    </main>

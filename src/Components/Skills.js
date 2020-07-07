@@ -1,17 +1,17 @@
 import React from "react";
-import jsIcon from "../images/JS Logo 2.png";
-import tsIcon from "../images/TS Logo.png";
-import javaIcon from "../images/Java Logo.png";
-import htmlIcon from "../images/html-5-logo.png";
-import reactIcon from "../images/React Icon.png";
-import reduxIcon from "../images/Redux Icon.png";
-import nodejsIcon from "../images/nodejs-icon.png";
-import postgresqlIcon from "../images/Postgresql Logo.png";
-import expressIcon from "../images/Express Logo.png";
-import sassIcon from "../images/Sass_Logo.png";
-import postIcon from "../images/Postman Logo.png";
-import chartIcon from "../images/chartjs-logo.svg";
-import gitIcon from "../images/Git Icon.png";
+import jsIcon from "../images/skill-icons/JS Logo 2.png";
+import tsIcon from "../images/skill-icons/TS Logo.png";
+import javaIcon from "../images/skill-icons/Java Logo.png";
+import htmlIcon from "../images/skill-icons/html-5-logo.png";
+import reactIcon from "../images/skill-icons/React Icon.png";
+import reduxIcon from "../images/skill-icons/Redux Icon.png";
+import nodejsIcon from "../images/skill-icons/nodejs-icon.png";
+import postgresqlIcon from "../images/skill-icons/Postgresql Logo.png";
+import expressIcon from "../images/skill-icons/Express Logo.png";
+import sassIcon from "../images/skill-icons/Sass_Logo.png";
+import postIcon from "../images/skill-icons/Postman Logo.png";
+import chartIcon from "../images/skill-icons/chartjs-logo.svg";
+import gitIcon from "../images/skill-icons/Git Icon.png";
 import "./Skills.scss"
 
 const Skills = () => {
