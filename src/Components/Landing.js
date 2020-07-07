@@ -5,7 +5,7 @@ import Projects from "./Projects/Projects";
 import Vindermere from "./Projects/Vindermere";
 import EcoVerde from "./Projects/EcoVerde";
 import InProgress from "./InProgress/InProgress";
-import Pic1 from "../images/Family - one.jpg"
+import Pic1 from "../images/2014 Family Picture.jpg"
 import Pic2 from "../images/DMT-worlds2.png";
 
 const Landing = () => {
@@ -54,39 +54,51 @@ const Landing = () => {
           - Jim Rohn - 
         </h2>
       </div>
+      <div  id="skills"></div>
       <div className="skills-container-border">
       <div className="skills-container-title">
+      <h1 className="section-title">SKILLS</h1>
         <Skills />
       </div>
-      </div>
+      </div >
+      <div  id="portfolio"></div>
+      <h1 className="section-title">PORTFOLIO</h1>
         <Projects setToggle = {setToggle}
                          vindermere = {vindermere}
                          ecoVerde = {ecoVerde}/>
+      <h1 className="section-title">IN PROGRESS</h1>
       <InProgress />
+        <h1 className="section-title"> ABOUT ME</h1>
       <section className="overview-container">
-        <h1> ABOUT ME</h1>
         <section className="about-me-overview-container">
           <div className="images">
-            <img className="pic-one"src={Pic1} alt=""  height="100%"/>
-            <img className= "pic-two" src={Pic2} alt="Double-Mini" height="100%" width="100%"/>
+            <img className="pic-one"src={Pic1} alt=""  />
+            <img className= "pic-two" src={Pic2} alt="Double-Mini" />
           </div>
           <div className="content">
-              <h3>ABOUT ME</h3> 
+
             <p>
-              Vitae natoque dictum etiam semper magnis enim feugiat amet
-              curabitur tempor orci penatibus. Tellus erat mauris ipsum
-              fermentum etiam vivamus eget. Nunc nibh morbi quis fusce lacus.
+              This is me, here I am. Stuff goes here = )
             </p>
+            <p> Remember to fill this in</p>
  
               
 
 
             </div>
-        </section>
             <Link to="/me"><button> Learn More</button></Link>
+        </section>
       </section>
+      <div  id="contact"></div>
+        <h1 className="section-title"> CONTACT ME</h1>
       <section className="contact-me-container">
-        <h1> CONTACT ME</h1>
+
+        <a> 
+          GitHub </a>
+        <a> Facebook </a>
+        <a> LinkedIn </a>
+        <a> USAG</a>
+        <a> Email </a>
       </section>
 
    </main>

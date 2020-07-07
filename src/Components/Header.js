@@ -6,14 +6,11 @@ const Header = () => {
   return (
      <header>
       <section className="nav-bar-container">
-         <nav className="nav-bar-1">
-            {/* <span className="nav-item">SKILLS</span> */}
+         <nav className="nav-bar">
             <Link to="#skills">SKILLS</Link>
             <Link to="#portfolio">PORFOLIO</Link>
-            {/* <Link to="#skills">SKILLS</Link> */}
-            {/* <span className="nav-item">PORTFOLIO</span> */}
-            <span className="nav-item">ABOUT ME</span>
-            <span className="nav-item">CONTACT</span>
+            <Link to="#about-me">ABOUT ME</Link>
+            <Link to="#contact">CONTACT</Link>
          </nav>
       </section>
       <section className="header-title-container">

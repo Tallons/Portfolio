@@ -13,10 +13,6 @@
    width: 100%;
    margin-top: 3em;
    color: $pal-one;
-   
-   #portfolio{
-      font-weight: normal;
-   }
 
    .projects {
       display: flex;
@@ -43,7 +39,6 @@
          margin: .25em 0 .25em;
          box-sizing: border-box;
          border-radius: 5px;
-         // background-color: seagreen;
          
         .project-info {
             display: flex;
@@ -80,13 +75,13 @@
             }
             button:hover {
                transition:.5s;
-               color: $pal-two;
-               border-color: $pal-one;
+               color: $pal-zero;
+               border-color: $pal-zero;
                background-color: $pal-five;
                cursor: pointer;
                font-size: 22px;
                height: 5vh;
-               width: 11vw;
+               width: 16vw;
             }
       }
 
@@ -198,20 +193,11 @@
          button {
             width: 32vw;
             height: 5vh;
-            background-color: transparent;
-            border: 2px solid $pal-two;
-            color: $pal-one;
-            font-size: 22px;
-            font-weight: bold;
+            font-size: 20px;
             border-radius: 5px;
          }
          button:hover {
-            transition:.5s;
-            color: $pal-two;
-            border-color: $pal-one;
-            background-color: $pal-five;
-            cursor: pointer;
-            font-size: 24px;
+            font-size: 26px;
             height: 5vh;
             width: 18vw;
          }
@@ -301,118 +287,3 @@
       }
    }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-// @media  (min-width: 500px){  
-//    .project-container {
-      
-//       .projects {
-//          // display: flex;
-//          // flex-direction: column;
-//          // // align-items: center;
-//          // justify-content: space-evenly;
-//          // width: 84%;
-//          // min-height: 80vh;
-//          // // background: linear-gradient(0deg, $pal-three 0%, $pal-six 80%);
-//          // background-color: $pal-six;;
-//          // border-radius: 5px;
-//          // padding: .5em;
-//          // box-shadow: 8px 8px 25px black;
-         
-         
-//          .project {
-//             // margin: 1em 0 1em;
-//             display: flex;
-//             flex-direction: column-reverse;
-//             justify-content: center;
-//             width: 100%;
-//             height: 58vh;
-//             // padding:5px;
-//             margin: .25em 0 .25em;
-//             box-sizing: border-box;
-//             border-radius: 5px;
-//             // background-color: seagreen;
-   
-//             .project-info {
-//                display: flex;
-//                flex-direction: column;
-//                justify-content:space-evenly;   
-//                align-items: center;
-//                padding: .25em 1.5em .25em 1.5em;
-//                width: 100%;
-//                height: 35vh;
-//                box-sizing: border-box;
-//                background-color: $pal-five;
-//                border-top-left-radius: 5px;
-//                border-bottom-left-radius: 5px;
-   
-//                h1{
-//                   color: $pal-two;
-//                   font-size:16px;
-//                }
-//                p {
-//                   font-size: 12px;
-//                   font-style: italic;
-//                }
-//                button {
-//                   width: 32vw;
-//                   height: 5vh;
-//                   background-color: transparent;
-//                   border: 2px solid $pal-two;
-//                   color: $pal-one;
-//                   font-size: 14px;
-//                   font-weight: bold;
-//                   border-radius: 5px;
-//                }
-//                button:hover {
-//                   transition:.5s;
-//                   color: $pal-two;
-//                   border-color: $pal-one;
-//                   background-color: $pal-five;
-//                   cursor: pointer;
-//                   font-size: 22px;
-//                   height: 5vh;
-//                   width: 11vw;
-//                }
-//          }
-   
-//          .project-info:hover{
-//             transition:1s;
-//             background-color: $pal-four;
-            
-//             h1 {
-//                transition:.5s;
-//                color: $pal-zero;
-//             }
-//          }
-   
-//          // .image-container {
-//          //    position: relative;
-//          //    border-radius: 5px;
-//          //    width: 100%;
-//          //    height:30vh;
-   
-//          //    img {
-//          //       height: 25vh;
-   
-//          //    }
-//          // }
-         
-//       }
-
-//          }
-//       }
-//    }
