@@ -1,7 +1,8 @@
 import React from "react";
 import jsIcon from "../images/skill-icons/JS Logo 2.png";
-import tsIcon from "../images/skill-icons/TS Logo.png";
 import javaIcon from "../images/skill-icons/Java Logo.png";
+import tsIcon from "../images/skill-icons/TS Logo.png";
+import PythonIcon from "../images/skill-icons/Python.png";
 import htmlIcon from "../images/skill-icons/html-5-logo.png";
 import reactIcon from "../images/skill-icons/React Icon.png";
 import reduxIcon from "../images/skill-icons/Redux Icon.png";
@@ -18,8 +19,9 @@ const Skills = () => {
 
   const iconList = [
     {image: jsIcon, alt: "JavaScript Icon", description: "JavaScript"},
-    {image: tsIcon, alt: "TypeScript Icon", description: "TypeScript"},
     {image: javaIcon, alt: "Java Icon", description: "Java"},
+    {image: tsIcon, alt: "TypeScript Icon", description: "TypeScript"},
+    {image: PythonIcon, alt: "Python Icon", description: "Python"},
     {image: postgresqlIcon, alt: "PostgreSQL Icon", description: "PostgreSQL"},
     {image: htmlIcon, alt: "HTML 5 Icon", description: "HTML 5"},
     {image: nodejsIcon, alt: "Nodejs Icon", description: "Nodejs"},

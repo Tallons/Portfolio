@@ -10,7 +10,6 @@
    text-align: center;
    min-height: 50vh;
    width: 100%;
-   color: $pal-one;
 
    .projects {
       @include column;
@@ -34,6 +33,7 @@
          
         .project-info {
            @include column;
+           justify-content:space-evenly;   
             padding: .5em 1.5em .5em 1.5em;
             border-top: 2px solid $pal-six;
             width: 100%;
@@ -52,6 +52,7 @@
                font-size: 10px;
                font-family: $main-font;
                font-style: italic;
+               color: $pal-one;
             }
             button {
                @include button;
@@ -114,6 +115,7 @@
             font-size: 10px;
             font-family: $main-font;
             font-style: italic;
+            color: $pal-one;
          }
          button {
             width: 32vw;
@@ -341,6 +343,7 @@
 
          .image-container {
             height: 40vh;
+            border: 2px solid red;
 
             img {
                height: 40vh;
@@ -354,7 +357,7 @@
    .project-container
    .projects{
       .project{
-         height: 80vh;
+         height: 75vh;
 
          .image-container {
             height: 45vh;
@@ -363,20 +366,21 @@
                height: 45vh;
             }
          }
+      }
          .column-reverse {
             height: 85vh;
 
             .image-container {
-               height: 45vh;
+               height: 50vh;
       
                img {
-                  height: 45vh;
+                  height: 50vh;
                }
             }
          }
       }
    }
-}
+
 
 @media  (min-width: 900px){  
    .project-container

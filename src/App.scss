@@ -5,8 +5,9 @@
    margin: 0;
    padding: 0;
    border: 0;
-   // width: 2000px;
    font-family: $main-font;
+   text-decoration: none;
+   text-emphasis: none;
 }
 
 .landing-overlay {
@@ -26,6 +27,8 @@
 }
 
    @media  (min-width: 320px){
+
+      // ------------------  header ----------------------------------
       header {
          background-image: url('./images/2014 Senior Pic.jpg');
          width:100%;
@@ -33,7 +36,6 @@
          background-repeat:	no-repeat;
          background-size: 100% 140%;
          border-bottom: 5px solid $pal-six-dark;
-
       }
       .nav-bar-container {
          @include row;
@@ -57,12 +59,20 @@
             font-size: 10px;
             color: $pal-two;
          }
+         a:hover{
+            text-decoration: none;
+            text-emphasis: none;
+            background-color: transparent;
+         }
+         a:after{
+            text-decoration: none;
+            text-emphasis: none;
+         }
       }
       .nav-bar {
+         display: flex;
          text-decoration: none;
             width: 90%;
-            display: flex;
-            // justify-content: space-evenly;
          }
       
       .header-title-container{
@@ -92,9 +102,140 @@
             text-shadow: 5px 3px black;
          }
       }
+
+         // ------------------  main ----------------------------------
+      main {
+         @include column;
+         min-height:100vh;
+         background: linear-gradient(-45deg, $pal-four 40%, $pal-three 60%);
+      }
+
+      .quote-container {
+         @include row;
+         justify-content: center;
+         height: 15vh;
+         width: 100%;
+         
+         .intro-quote {
+            font-family: 'Montserrat', sans-serif;
+            font-weight: normal;
+            font-style: italic;
+            text-align: center;
+            font-size: 12px;
+            width: 90%;
+            color: $pal-one;
+            text-shadow: 3px 3px $pal-five;
+            line-height: 1.4em;
+         }
+      }
+      .section-title {
+         padding:  1em;
+         text-align: center;
+         width: 80%;
+         color: $pal-one;
+         font-weight: normal;
+      }
+
+      .skills-container-title {
+         @include column;
+      }
+
+   // ------------------ about me ----------------------------------
+
+   .about-me-overview-container{
+      @include column;
+      width:85%;
+      min-height: 40vh;
+      box-sizing: border-box;
+      padding: .5em;
+      background-color: $pal-six;
+      box-shadow: 5px 5px 25px black;
+      border-radius: 5px;
+      color: $pal-one;
+
+      .images {
+         display: flex;
+         flex-direction: column;
+         
+         .pic-one {
+            width: 100%;
+            align-self: center;
+            box-sizing: border-box;
+            border-bottom: 2px solid $pal-six;
+            border-radius: 5px 5px 0 0;
+         }
+         .pic-two {
+            align-self: center;
+            width: 100%; 
+            height: 250px; 
+            box-sizing: border-box;
+            object-fit: cover;
+            object-position: 25% -10px;
+            border-bottom: 2px solid $pal-six;
+         }
+      }
+      .content{
+         @include column;
+         background-color: $pal-five;
+         border-radius: 0 0 5px 5px;
+            p {
+               padding: 1em;
+               box-sizing: border-box;
+            }
+            a {
+               @include button;
+               margin: 0 0 1em;
+               text-decoration: none;
+            }
+            a:hover {
+               @include button-hover;
+               text-decoration: none;
+               background-color: transparent;
+            }
+         }
+      }
+
+// ------------------ contact me ----------------------------------
+
+   .contact-me-container {
+      @include column;
+      justify-content: space-evenly;
+      text-align: center;
+      min-height: 20vh;
+
+      .email-container {
+         @include row;
+         width: 80%;
+         justify-content: center;
+         height: 5vh;
+         color: $pal-one;
+         letter-spacing: 2px;
+         margin-bottom:1.5em;
+         padding: .25em;
+         border-radius: 5px;
+         box-shadow: 5px 5px 20px black;
+         background-color: $pal-six;
+
+         img {
+            height: 50px;
+            width: 50px;
+         }
+      }
+      .contact-icons-container {
+         @include row;
+         margin-bottom:1em;
+
+         img {
+            height: 50px;
+            width: 50px;
+         }
+      }
+   }
    }
 
    @media  (min-width: 400px){
+
+      // ------------------  header ----------------------------------
          header {
             height: 34vh;
          }
@@ -116,9 +257,45 @@
          }
       }
    }
+
+   @media  (min-width: 425px){  
+      // ------------------ about me ----------------------------------
+      .about-me-overview-container{
+         .images {
+            .pic-two {
+               height: 275px; 
+               object-position: 25% -14px;
+            }
+         }
+      }
+   }
    
    
+
+   @media  (min-width: 500px){  
+      // ------------------ main ----------------------------------
+      .quote-container {
+         height: 20vh;
+         .intro-quote {
+            font-size: 16px;
+            line-height: 1.6em;
+         }
+      }
+      // ------------------ about me ----------------------------------
+      .about-me-overview-container{
+         .images {
+            .pic-two {
+               height: 350px; 
+               object-position: 25% -18px;
+            }
+            
+         }
+      }
+   }
+
    @media  (min-width: 550px){
+
+      // ------------------  header ----------------------------------
       header {
          height: 40vh;
       }
@@ -126,7 +303,6 @@
          .name {
             top: 2vh;
             font-size: 35px;
-         //  word-spacing: 10px;
          }
          .sub-heading {
             top: 2vh;
@@ -136,7 +312,26 @@
       }
    }
 
+   @media  (min-width: 575px){  
+      // ------------------ main ----------------------------------
+      .quote-container {
+         height: 20vh;
+         .intro-quote {
+            font-size: 20px;
+         }
+      }
+      // ------------------ about me ----------------------------------
+      .about-me-overview-container{
+         .images {
+            .pic-two {
+               height: 420px; 
+            }
+         }
+      }
+   }
+
    @media  (min-width: 650px){
+      // ------------------  header ----------------------------------
       header {
          height: 45vh;
       }
@@ -151,7 +346,19 @@
       }
    }
 
+
+   @media  (min-width: 700px){  
+      // ------------------ main ----------------------------------
+      .quote-container {
+         height: 20vh;
+         .intro-quote {
+            font-size: 22px;
+         }
+      }
+   }
+
    @media  (min-width: 750px){
+      // ------------------  header ----------------------------------
       header {
          height: 50vh;
       }
@@ -167,7 +374,27 @@
       }
    }
 
+   @media  (min-width: 800px){  
+      // ------------------ main ----------------------------------
+      .quote-container {
+         height: 28vh;
+         .intro-quote {
+            font-size: 24px;
+         }
+      }
+      // ------------------ about me ----------------------------------
+      .about-me-overview-container{
+         .images {
+            .pic-two {
+               height: 450px; 
+               object-position: 25% -18px;
+            }
+         }
+      }
+   }
+
    @media  (min-width: 850px){
+      // ------------------  header ----------------------------------
       header {
          height: 65vh;
       }
@@ -189,12 +416,12 @@
    }
 
    @media  (min-width: 1000px){
+      // ------------------  header ----------------------------------
       header {
          height: 70vh;
       }
       .nav-bar-container {
          height: 5vh;
-
          a {
             font-size: 20px;
          }
@@ -210,9 +437,66 @@
 
          }
       }
+      // ------------------ main ----------------------------------
+      .quote-container {
+         height: 28vh;
+         .intro-quote {
+            font-size: 26px;
+         }
+      }
+      // ------------------ about me ----------------------------------
+      .about-me-overview-container{
+         .images {
+            flex-direction: row;
+
+            .pic-one {
+               width: 60%;
+               height:350px;
+               border-bottom: none;
+               border-right: 2px solid $pal-six;
+               border-radius: 5px 0 0 0;
+               box-sizing: border-box;
+               object-fit: cover;
+               object-position: 50% 0;
+            }
+            .pic-two {
+               width: 40%; 
+               height: 350px; 
+               object-position: 50% -10px;
+               border-bottom: none;
+               border-top-right-radius: 5px;
+            }
+         }
+         .content{
+            border-top: 2px solid $pal-six;
+            }
+         }
+      // ------------------ contact ----------------------------------
+         .contact-me-container {
+      
+            .email-container {
+               width: 50%;
+               font-size: 26px;
+
+               img {
+                  padding-left: 3vw;
+                  height: 70px;
+                  width: 70px;
+               }
+            }
+            .contact-icons-container {
+               width: 55%;
+
+               img {
+                  height: 70px;
+                  width: 70px;
+               }
+            }
+         }
    }
 
-   @media  (min-width: 1000px) and (min-height: 1200px){  
+   @media  (min-width: 1000px) and (min-height: 1200px){ 
+      // ------------------  header ----------------------------------
       header {
          height: 45vh;
       }
@@ -231,12 +515,20 @@
          .sub-heading {
             top: 8vh;
             font-size: 35px;
-
+         }
+      }
+      // ------------------ main ----------------------------------
+      .quote-container {
+         height: 18vh;
+      
+         .intro-quote {
+            font-size: 26px;
          }
       }
    }
 
    @media  (min-width: 1100px){
+      // ------------------  header ----------------------------------
       header {
          height: 80vh;
       }
@@ -248,12 +540,18 @@
          .sub-heading {
             top: 30vh;
             font-size: 35px;
-
+         }
+      }
+      // ------------------ contact ----------------------------------
+      .contact-me-container {
+         .email-container {
+            width: 45%;
          }
       }
    }
 
    @media  (min-width: 1320px){
+      // ------------------  header ----------------------------------
       header {
          height: 95vh;
       }
@@ -266,273 +564,35 @@
 
          }
       }
-}
-
-
-// main
-
-@media  (min-width: 320px){
-
-main {
-   @include column;
-   min-height:100vh;
-   background: linear-gradient(-45deg, $pal-four 40%, $pal-three 60%);
-}
-.quote-container {
-   @include row;
-   justify-content: center;
-
-   height: 15vh;
-   width: 100%;
-
-   // padding: 1em 0 1em;
-   
-   .intro-quote {
-         font-family: 'Montserrat', sans-serif;
-         font-weight: normal;
-         font-style: italic;
-         text-align: center;
-         font-size: 12px;
-         width: 90%;
-         color: $pal-one;
-         text-shadow: 3px 3px $pal-five;
-          line-height: 1.4em;
-      }
-   }
-   .section-title {
-      padding:  1em;
-      text-align: center;
-      width: 80%;
-      color: $pal-one;
-      font-weight: normal;
-   }
-
-   .skills-container-title {
-      @include column;
-   }
-
-// about me
-
-
-
-
-   .about-me-overview-container{
-      @include column;
-      width:90%;
-      min-height: 40vh;
-      box-sizing: border-box;
-      padding: .5em;
-      background-color: $pal-six;
-      box-shadow: 5px 5px 25px black;
-      border-radius: 5px;
-      color: $pal-one;
-
-      .images {
-         display: flex;
-         flex-direction: column;
-         
-
-         .pic-one {
-            width: 100%;
-            align-self: center;
-            box-sizing: border-box;
-            border-bottom: 2px solid $pal-six;
-            border-radius: 5px 5px 0 0;
-         }
-         .pic-two {
-            align-self: center;
-            width: 100%; 
-            height: 250px; 
-            box-sizing: border-box;
-            object-fit: cover;
-            object-position: 25% -10px;
-            border-bottom: 2px solid $pal-six;
-         }
-         
-      }
-      .content{
-         @include column;
-         background-color: $pal-five;
-         border-radius: 0 0 5px 5px;
-            p {
-               padding: 1em;
-               box-sizing: border-box;
-            }
-            a {
-               @include button;
-               margin: 0 0 1em;
-               text-decoration: none;
-            }
-            a:hover {
-               @include button-hover;
-            }
-         }
-      }
-
-   }
-
-
-
-   @media  (min-width: 500px){  
-
-      .quote-container {
-         height: 20vh;
-         // padding: 2em 0 2em;
-      
-         .intro-quote {
-            font-size: 16px;
-            line-height: 1.6em;
-         }
-      }
-      // .project-container
-      // .projects
-      // .project {
-      //    height: 60vh;
-      // .image-container {
-      //    position: relative;
-      //    border-radius: 5px;
-      //    width: 100%;
-      //    height:31vh;
-
-      //    img {
-      //       height: 31vh;
-
-      //       }
-      //    }
-      // }
-
-
-      
-   }
-
-   @media  (min-width: 575px){  
-      .quote-container {
-         height: 20vh;
-         // padding: 2.5em 0 2.5em;
-      
-         .intro-quote {
-            font-size: 20px;
-         }
-      }
-   }
-
-   @media  (min-width: 700px){  
-      .quote-container {
-         height: 20vh;
-         // padding: 2.5em 0 2.5em;
-      
-         .intro-quote {
-            font-size: 22px;
-         }
-      }
-   }
-
-   @media  (min-width: 800px){  
-      .quote-container {
-         height: 28vh;
-         // padding: 2.5em 0 2.5em;
-      
-         .intro-quote {
-            font-size: 24px;
-         }
-      }
-   }
-
-   @media  (min-width: 1000px){  
-      .quote-container {
-         height: 28vh;
-         // padding: 2.5em 0 2.5em;
-      
-         .intro-quote {
-            font-size: 26px;
-         }
-      }
-   }
-
-   @media  (min-width: 1000px) and (min-height: 1200px){  
-      .quote-container {
-         height: 18vh;
-      
-         .intro-quote {
-            font-size: 26px;
-         }
-      }
-   }
-
-   @media  (min-width: 1320px){  // bigger size
-
+      // ------------------ main ----------------------------------
       .quote-container {
          height: 30vh;
-         // padding: 2.5em 0 2.5em;
       
          .intro-quote {
             font-size: 30px;
          }
       }
-     
-         }
-         
-         // about me
-
-         @media  (min-width: 1000px){
-            .overview-container{
-               display: flex;
-               justify-content: space-evenly;
-               flex-direction: row;
-               // align-items: center;
-               // height: 100vh;
-               // width:80%;
-               // padding: 10vh 0 10vh 0;
-               border: 2px solid red;
-               
+      // ------------------ about me ----------------------------------
+      .about-me-overview-container{
+         .images {
+            flex-direction: row;
             
-         }
-      }
-
-      @media  (min-width: 1100px){
-         .overview-container{
-
-
-               }
+            .pic-one {
+               height:450px;
             }
-
-         @media  (min-width: 1400px){
-            main
-            .overview-container{
-               // width: 85%;
-
-      }
-   }
-
-
-   // Footer
-
-   .contact-me-container {
-      @include column;
-      justify-content: space-evenly;
-      text-align: center;
-      min-height: 20vh;
-
-      .email-container {
-         @include row;
-         width: 80%;
-         justify-content: center;
-         height: 5vh;
-         color: $pal-one;
-         letter-spacing: 2px;
-         margin-bottom:1em;
-         img {
-            height: 50px;
-            width: 50px;
+            .pic-two {
+               height: 450px; 
+            }
          }
       }
-      .contact-icons-container {
-         @include row;
-         margin-bottom:1em;
-
-         img {
-            height: 50px;
-            width: 50px;
+      // ------------------ contact ----------------------------------
+      .contact-me-container {
+         .email-container {
+            width: 550px;
+            font-size: 28px;
+            }
          }
-      }
-   }
+         .contact-icons-container {
+            width: 650px;
+         }
+}
