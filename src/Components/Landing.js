@@ -1,4 +1,4 @@
-import React, {useState} from "react";
+import React, {useState, useEffect} from "react";
 import { Link } from "react-router-dom";
 import Skills from "./Skills";
 import Projects from "./Projects/Projects";
@@ -17,10 +17,18 @@ import LinkIcon from "../images/contact-icons/LinkedIn.png";
 const Landing = () => {
 
   const [overlayToggle, setOverlayToggle] = useState(false),
-             [toggleType, setToggleType] = useState();
+             [toggleType, setToggleType] = useState(),
+             [copiedTextToggle, setCopiedTextToggle] = useState(false)
 
   const vindermere = "vindermere",
             ecoVerde = "ecoVerde"
+
+  useEffect (() => {
+    if (copiedTextToggle) {
+      console.log("hit")
+      setTimeout(function(){ setCopiedTextToggle(false)}, 1500)
+
+    }}, [copiedTextToggle])
 
   const setToggle = (toggleType) => {
     console.log(toggleType)
@@ -36,6 +44,15 @@ const Landing = () => {
   stopPropagation = (event) => {
     event.stopPropagation();
     event.nativeEvent.stopImmediatePropagation();
+  },
+
+  copyEmail = () => {
+    let copyText = document.getElementById("email-address");
+    copyText.select();
+    copyText.setSelectionRange(0, 99999);
+    document.execCommand("copy");
+    setCopiedTextToggle(true)
+
   };
 
 const contactIconList = [
@@ -121,9 +138,10 @@ const mappedContactIcons = contactIconList.map(el => {
       <div  id="contact"></div>
         <h1 className="section-title"> CONTACT ME</h1>
       <section className="contact-me-container">
-              <div className="email-container">
+              <div className="email-container"onClick={() => copyEmail()} >
                  <img src={EmailIcon}/>
-                <h4> Noahorr2@yahoo.com</h4>
+                <input  id="email-address" type="text" value="Noahorr2@yahoo.com" /> 
+               <h4>{copiedTextToggle ? "Email Address Copied" : "Noahorr2@yahoo.com"}</h4>
               </div>
              <div className="contact-icons-container">
 

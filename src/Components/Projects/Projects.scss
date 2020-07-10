@@ -1,8 +1,6 @@
 @import "../../modules/_variables.scss";
 @import "../../modules/mixins.scss";
 
-//Projects
-
 @media  (min-width: 300px){  
 .project-container {
    @include column;
@@ -15,7 +13,6 @@
       @include column;
       width: 84%;
       min-height: 80vh;
-      // background: linear-gradient(0deg, $pal-three 0%, $pal-six 80%);
       background-color: $pal-six;
       border-radius: 5px;
       padding: .5em;
@@ -25,8 +22,6 @@
          @include column;
          flex-direction: column-reverse;
          width: 100%;
-         // height: 60vh;
-         // padding:5px;
          margin: .25em 0 .25em;
          box-sizing: border-box;
          border-radius: 5px;
@@ -85,7 +80,6 @@
             border-radius: 5px 5px 0 0;
          }
       }
-      
    }
    .column-reverse {
       @include column;
@@ -118,25 +112,10 @@
             color: $pal-one;
          }
          button {
-            width: 32vw;
-            margin-top: 1em;
-            height: 4vh;
-            background-color: transparent;
-            border: 2px solid $pal-two;
-            color: $pal-one;
-            font-size: 14px;
-            font-weight: bold;
-            border-radius: 5px;
+            @include button;
          }
          button:hover {
-            transition:.5s;
-            color: $pal-zero;
-            border-color: $pal-zero;
-            background-color: $pal-five;
-            cursor: pointer;
-            font-size: 22px;
-            height: 5vh;
-            width: 16vw;
+            @include button-hover;
          }
    }
 
@@ -162,7 +141,6 @@
       }
    }
    }
-
 
       // this may be used later on
 
@@ -193,35 +171,30 @@
 }
 
 @media  (min-width: 350px){ 
-.project-container
-.projects{
-.project
-.project-info {
-
-            h1{
-               font-size:24px;
+   .project-container
+   .projects{
+      .project
+      .project-info {
+               h1{
+                  font-size:24px;
+               }
+               p {
+                  font-size: 12px;
+               }
             }
-
-            p {
-               font-size: 12px;
-            }
+         
+      .column-reverse 
+      .project-info {
+         h1{
+            font-size:24px;
          }
-      
-   .column-reverse 
-   .project-info {
 
-      h1{
-         font-size:24px;
+         p {
+            font-size: 12px;
+         }
       }
-
-      p {
-         font-size: 12px;
-      }
-   }
-
    }
 }
-
 
 @media  (min-width: 450px){  
    .project-container
@@ -255,29 +228,29 @@
 @media  (min-width: 600px){  
    .project-container
    .projects{
-   .project{
-      height: 70vh;
+      .project{
+         height: 70vh;
 
-      .image-container {
-         height: 35vh;
-
-         img {
+         .image-container {
             height: 35vh;
+
+            img {
+               height: 35vh;
+            }
+         }
+      }
+      .column-reverse {
+         height: 70vh;
+         
+         .image-container {
+            height: 35vh;
+
+            img {
+               height: 35vh;
+            }
          }
       }
    }
-   .column-reverse {
-      height: 70vh;
-      
-      .image-container {
-         height: 35vh;
-
-         img {
-            height: 35vh;
-         }
-      }
-   }
-}
 }
 
 @media  (min-width: 700px){  
@@ -287,7 +260,6 @@
          height: 70vh;
 
          .project-info {
-            
             h1{
                font-size:40px;
             }
@@ -296,14 +268,12 @@
                width: 80%;
             }
             button {
-               width: 32vw;
                height: 5vh;
                font-size: 20px;
-               border-radius: 5px;
             }
             button:hover {
                font-size: 26px;
-               height: 5vh;
+               height: 6vh;
                width: 18vw;
             }
       }
@@ -320,7 +290,6 @@
          height: 70vh;
          
          .project-info {
-            
             h1{
                font-size:40px;
             }
@@ -329,10 +298,8 @@
                width: 80%;
             }
             button {
-               width: 32vw;
                height: 5vh;
                font-size: 20px;
-               border-radius: 5px;
             }
             button:hover {
                font-size: 26px;
@@ -343,14 +310,12 @@
 
          .image-container {
             height: 40vh;
-            border: 2px solid red;
-
             img {
                height: 40vh;
             }
          }
       }
-}
+   }
 }
 
 @media  (min-width: 800px){  
@@ -380,7 +345,6 @@
          }
       }
    }
-
 
 @media  (min-width: 900px){  
    .project-container

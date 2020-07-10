@@ -55,18 +55,11 @@
             display: flex;
             justify-content: center;
             text-decoration: none;
-            text-emphasis: none;
             font-size: 10px;
             color: $pal-two;
          }
-         a:hover{
-            text-decoration: none;
-            text-emphasis: none;
-            background-color: transparent;
-         }
-         a:after{
-            text-decoration: none;
-            text-emphasis: none;
+         a:hover {
+            font-weight: bold;
          }
       }
       .nav-bar {
@@ -184,15 +177,20 @@
             }
             a {
                @include button;
+               width: 15%;
                margin: 0 0 1em;
                text-decoration: none;
             }
             a:hover {
                @include button-hover;
-               text-decoration: none;
-               background-color: transparent;
+
             }
          }
+      }
+
+      .content:hover {
+         transition: 1s;
+         background-color: $pal-four;
       }
 
 // ------------------ contact me ----------------------------------
@@ -220,6 +218,19 @@
             height: 50px;
             width: 50px;
          }
+         input {
+            background-color: transparent;
+            color: $pal-one;
+            font-size: 5px;
+            width:5%;
+            text-align: center;
+            z-index: -1;
+         }
+      }
+      .email-container:hover {
+         transition: 1s;
+         background-color: $pal-five;
+         color:$pal-zero;
       }
       .contact-icons-container {
          @include row;
@@ -346,13 +357,25 @@
       }
    }
 
-
    @media  (min-width: 700px){  
       // ------------------ main ----------------------------------
       .quote-container {
          height: 20vh;
          .intro-quote {
             font-size: 22px;
+         }
+      }
+      // ------------------ about me ----------------------------------
+      .about-me-overview-container
+      .content{
+         a {
+            height: 5vh;
+            font-size: 20px;
+         }
+         a:hover {
+            font-size: 26px;
+            height: 6vh;
+            width: 18vw;
          }
       }
    }
@@ -469,8 +492,12 @@
          }
          .content{
             border-top: 2px solid $pal-six;
+            
+            a {
+               width: 15vw;
             }
          }
+      }
       // ------------------ contact ----------------------------------
          .contact-me-container {
       

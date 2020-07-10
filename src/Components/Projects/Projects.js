@@ -42,9 +42,7 @@ const Projects = (props) => {
             <h1>Eco Verde Estimating </h1>
             {/* <h3>Full Stack Application</h3> */}
             <p> An estimating software tailor made for Eco Verde Irrigation. This program allows for quick and customizable bids. Including material, payroll, and production rate adjustments. </p>
-            <div>
             <button onClick={() => props.setToggle(ecoVerde)}>More Info</button>
-            </div>
          </div>
       </div>
        <div className="project">

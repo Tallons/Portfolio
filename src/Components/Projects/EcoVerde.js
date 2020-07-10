@@ -6,14 +6,16 @@ import nodejsIcon from "../../images/skill-icons/nodejs-icon.png";
 import postgresqlIcon from "../../images/skill-icons/Postgresql Logo.png";
 import expressIcon from "../../images/skill-icons/Express Logo.png";
 import sassIcon from "../../images/skill-icons/Sass_Logo.png";
-import ecoDash from "../../images/Eco Verde Estimating - Dashboard.png";
 import chartIcon from "../../images/skill-icons/chartjs-logo.svg";
-import "./EcoVerde.scss"
+import ecoDash from "../../images/Eco Verde Estimating - Dashboard.png";
+import ecoOne from "../../images/Eco Verde 1.jpg";
+import ecoTwo from "../../images/Eco Verde 2.jpg";
+import "./Project.scss"
 const EcoVerde = (props) => {
 
    const [imageToggle, setPictureToggle] = useState(ecoDash)
 
-   const images = [ecoDash],
+   const images = [ecoDash, ecoOne, ecoTwo],
             icons = [
                {image: jsIcon, alt: "JavaScript Icon", description: "JavaScript"},
                {image: reactIcon, alt: "React Icon", description: "React"},
@@ -42,7 +44,7 @@ const EcoVerde = (props) => {
    })
 
    return (
-<section className="eco-container" onClick={(event) => props.stopPropagation(event)}>
+<section className="project-page-container" onClick={(event) => props.stopPropagation(event)}>
    <div className="image-container">
 
       <div className="image-selector">
@@ -50,7 +52,7 @@ const EcoVerde = (props) => {
       </div> 
       <img className="main-image" src={imageToggle} alt={`${imageToggle}`}/>
    </div>
-   <div className="eco-details">
+   <div className="project-page-details">
          <h1> EcoVerde</h1>
          {/* {imageToggle ?  : } */}
          <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>

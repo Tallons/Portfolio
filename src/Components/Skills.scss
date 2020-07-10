@@ -32,7 +32,8 @@
             justify-content: center;
             flex-flow: row wrap;
             text-align: center;
-            color: $pal-two;
+            color: $pal-one;
+            margin-bottom:1em;
             
             .skills-icon-container {
                @include column;

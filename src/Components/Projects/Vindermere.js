@@ -13,7 +13,7 @@ import newHeroView from "../../images/Vindermere New Hero.png";
 // import marketView from "../../images/Vindermere Markest View.png";
 import dungeonView from "../../images/Vindermere Dungeon.png";
 import combatView from "../../images/Vindermere Combat.png";
-import "./Vindermere.scss";
+import "./Project.scss";
 
 const Vindermere = (props) => {
 
@@ -48,7 +48,7 @@ const Vindermere = (props) => {
    })
 
    return (
-      <section className="vindermere-container" onClick={(event) => props.stopPropagation(event)}>
+      <section className="project-page-container" onClick={(event) => props.stopPropagation(event)}>
    <div className="image-container">
 
       <div className="image-selector">
@@ -57,7 +57,7 @@ const Vindermere = (props) => {
       <img className="main-image" src={imageToggle} alt={`${imageToggle}`}/>
    </div>
       
-   <div className="Vindermere-details">
+   <div className="project-page-details">
          {/* <h1> Vindermere</h1> */}
          {imageToggle === townView ?  <> <h4> Welcome to Vindermere Traveler!</h4> <p>The town view was designed as the landing page and is meant to accomadate a hero's interation with the town's people. You will be able to trade and train your skill. There is talk of the local bank opening.</p> <h4>Difficulties</h4> <li>Screen size was a big issue, the words and highlight boxes were distorted due to changes in a computer's screen size. </li> <li></li></> : null }
 
