@@ -9,7 +9,7 @@ const Header = () => {
          <nav className="nav-bar">
             <Link to="#skills">SKILLS</Link>
             <Link to="#portfolio">PORFOLIO</Link>
-            <Link to="#about-me">ABOUT ME</Link>
+            <Link to="/me">ABOUT ME</Link>
             <Link to="#contact">CONTACT</Link>
          </nav>
       </section>

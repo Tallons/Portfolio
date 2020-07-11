@@ -1,7 +1,9 @@
 import React, {useState, useEffect} from  "react";
+import { Link } from "react-router-dom";
 import Family from "./Family";
-import Injury from "./Injury";
 import Gymnastics from "./Gymnastics";
+import Injury from "./Injury";
+import Worlds from "./Worlds";
 import Experience from  "./Experience";
 import Education from "./Education";
 import pic from "../../images/DevMountain - Hexagon.png";
@@ -30,8 +32,9 @@ const AboutMe = (props) => {
 
    const me = "me",
              family = "family",
-             injury = "injury",
              gymnastics = "gymnastics",
+             injury = "injury",
+             worlds = "worlds",
              education = "education",
              experience = "experience"
 
@@ -89,7 +92,7 @@ return (
                      onMouseOver={e => e.currentTarget.src=hoverPic5} 
                      onMouseOut={e => e.currentTarget.src=pic5}/>
          ) : <img className="hexagon-selected" src={pic5} /> }
-            <img className="hexagon-five" src={pic6} onClick={()=> setAboutMeToggle(me)} />
+            <img className="hexagon-five" src={pic6} onClick={()=> setAboutMeToggle(worlds)} />
          { aboutMeToggle !== experience ? (
             <img className="hexagon-seven" src={pic3} 
                      onClick={(e)=> {
@@ -104,7 +107,7 @@ return (
             <img className="test" src={pic2}/>
          </div> */}
       </section>
-
+         <Link to="/" className="return-link"> Back to Portfolio </Link>
       <section className="about-me-container">
          { aboutMeToggle === me ? (
             <section className="feature">
@@ -126,19 +129,22 @@ return (
           ) : null}
 
 
-         { aboutMeToggle === family ? (
+         {aboutMeToggle === family ? (
          <Family />) : null}
+
+         {aboutMeToggle === gymnastics ? (
+         <Gymnastics />) : null}
 
          { aboutMeToggle === injury ? (
          <Injury />) : null}
 
-         { aboutMeToggle === gymnastics ? (
-         <Gymnastics />) : null}
+         {aboutMeToggle === worlds ? (
+         <Worlds />) : null}
 
-         { aboutMeToggle === education ? (
+         {aboutMeToggle === education ? (
             <Education />) : null}
 
-            { aboutMeToggle === experience ? (
+          {aboutMeToggle === experience ? (
             <Experience />) : null}
             
 

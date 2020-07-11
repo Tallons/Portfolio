@@ -1,83 +1,214 @@
 @import "../../modules/variables";
-
-* {
-
-}
+@import "../../modules/mixins";
 
 @media  (min-width: 320px){  
    .about-me-page {
-      background:  linear-gradient(0deg, $pal-six 0%, $pal-three 50%);
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      }
-
-      .about-me-container {
-      //    background: linear-gradient(0deg, $pal-three 0%, $pal-six 50%);
-      background-color: $pal-five;   
+      @include column;
+      justify-content: flex-start;
+      background:  linear-gradient(-45deg, $pal-four 10%, $pal-three 100%);
       min-height: 100vh;
+   }
 
-         width: 80%;
+   .return-link {
+      @include button;
+      width: 14vw;
+      margin-bottom: 1.5em;
+   }
+   .return-link:hover {
+      @include button-hover;
+      width: 18vw;
+   }
+   
+   .about-me-container {
+      @include row;
+      justify-content: center;
+      box-shadow: 5px 5px 20px black;
+      background-color: $pal-five;  
+      border-radius: 5px;
+      transition: height 5s;
+      min-height: 20vh;
+      margin-bottom: 3em;
+         width: 90%;
          color: $pal-one;
       }
+      
       .feature-container {
-         display: flex;
-         flex-direction: column;
-         justify-content: center;
-         align-items: center;
-         border: 2px solid orange;
-      }
-      .column {
-         display: flex;
-         border: 2px solid rgb(32, 150, 201);
-   
-      }
-      .feature-column{
-         display: flex;
-         flex-direction: column;
-         width: 95%;
-   
-            .feature-column-title-box{
-               display: flex;
-               width: 100%;
-               border: 2px solid red;
-               
-               .feature-column-title {
-                  display: flex;
-                  flex-direction: column;
-                  justify-content: center;
-                  text-align: center;
-                  width:70%;
-                  border: 2px solid purple;
-               }
-            
-            img {
-               height: 150px;
-               width:150px;
-               border: 2px solid orange;
-            
-            
-            }
+         @include column;
+         align-items: flex-start;
+         width: 90%;
+         // border: 3px solid purple;
+
+         h1 {
+            font-size: 16px;
+            margin: 1em 0 .5em 0;
+            width:80%;
+            text-decoration: underline;
+         }
+
+         .feature-overview {
+            font-size: 12px;
+            width: 100%;
+            padding-bottom: .5em;
          }
       }
       .feature {
          display: flex;
-         border: 2px solid green;
-         width: 95%;
+         justify-content: center;
+         box-sizing: border-box;
+
+         img {
+            height: 50px;
+            width:50px;
+            margin-top: 1em;
+            border: 4px solid $pal-four;
+            -moz-border-radius:50px;
+            -webkit-border-radius: 50px;
+            border-radius: 50%;
+         }
          
+         .feature-description {
+            @include column;
+            align-items: flex-start;
+            box-sizing: border-box;
+            line-height: 1.25em;
+            width:95%;
+            margin: .5em 0 .5em 0;
+            
+               h1 {
+                  font-size: 16px;
+                  margin: 1em 0 1em;
+               }
+               
+               h2 {
+                  font-size: 14px;
+                  margin-top: .5em;
+                  line-height: 1.5em;
+               }
+               h3{
+                  font-size: 12px;
+                  line-height: 1.25em;
+               }
+               p {
+                  font-size: 10px;
+                  margin-top: .5em;
+                  line-height: 1.5em;
+               }
+
+               li {
+                  font-size: 10px;
+                  width: 100%;
+                  line-height: 1.5em;
+               }
+
+               .spacer{
+                  height:1vh;
+                  margin: 1em 0 .5em;
+               }
+         }
+      }
+      .feature-separator{
+         border-top: 2px dashed $pal-four;
+      }
+      // .feature-separator:hover {
+      //    background-color: $pal-six;
+      // }
+
+}
+
+@media  (min-width: 700px){  
+      .feature-container {
+         h1 {
+            font-size: 20px;
+         }
+         .feature-overview {
+            font-size: 14px;
+            align-self: center;
+            width: 85%;
+         }
+      }
+      .feature {
          img {
             height: 75px;
             width:75px;
-            // border: 2px solid red;
-            border-radius: 50%;
+            -moz-border-radius:70px;
+            -webkit-border-radius: 70px;
+         }
+         
+         .feature-description {
+               h1 {
+                  font-size: 20px;
+                  align-self: flex-end;
+                  width: 95%;
+               }
+               h2 {
+                  font-size: 18px;
+               }
+               h3 {
+                  font-size: 14px;
+               }
+               p {
+                  font-size: 12px;
+                  width: 95%;
+                  align-self: flex-end;
+               }
+               li {
+                  font-size: 12px;
+                  width: 95%;
+                  align-self: flex-end;
+               }
+         }
+      }
+}
+
+@media  (min-width: 1000px){  
+   .about-me-container {
+         width: 80%;
+      }
+      
+      .feature-container {
+         h1 {
+            font-size: 28px;
+         }
+         .feature-overview {
+            font-size: 14px;
+            width: 85%;
+            padding-bottom: 1.5em;
+         }
+      }
+      .feature {
+         align-self: center;
+         width: 95%;
+
+         img {
+            margin: 1.25em 0 1em;
          }
    
          .feature-description {
-            display: flex;
-            flex-direction: column;
+            h1 {
+               font-size: 28px;
+            }
+            
+            h2 {
+               font-size: 20px;
+               width: 98%;
+               align-self: flex-end;
+            }
+            h3{
+               font-size: 16px;
+               align-self: flex-end;
+               width: 95%;
+            }
+            p {
+               font-size: 14px;
+               width: 93%;
+            }
+
+            li {
+               font-size: 14px;
+               margin-left: 5em;
+               width: 90%;
+            }
          }
       }
 
 }
-
-

@@ -27,14 +27,12 @@ $hexagon-size-450: 90px;
    align-items: center;
    width: 100%;
    margin-bottom: -15px;
-   border: 2px solid red;
    }
    .hexagon-row-two{
       display:flex;
       justify-content: center;
       align-items: center;
       width: 100%;//this will need to be adjusted
-      border: 2px solid green;
       margin-right:2px;
       
    }
@@ -162,14 +160,12 @@ $hexagon-size-450: 90px;
 
    width: 100%;
    margin-bottom: -15px;
-   border: 2px solid red;
    }
    .hexagon-row-two{
       display:flex;
       justify-content: center;
       align-items: center;
       width: 100%;//this will need to be adjusted
-      border: 2px solid green;
       margin-right:2px;
    }
    .hexagon-selected{
@@ -327,14 +323,12 @@ $hexagon-size-450: 90px;
    .hexagon-row-one{
    width: 100%;
    margin-bottom: -15px;
-   border: 2px solid red;
    }
    .hexagon-row-two{
       display:flex;
       justify-content: center;
       align-items: center;
       width: 100%;//this will need to be adjusted
-      border: 2px solid green;
       margin-right:2px;
    }
    .hexagon-selected{
