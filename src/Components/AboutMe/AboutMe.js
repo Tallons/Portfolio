@@ -20,6 +20,8 @@ import pic6 from "../../images/Worlds - Hexagon 2.png";
 // import hoverPic6 from "../../images/Gymnastics - Hexagon 1.png";
 
 import "./AboutMe.scss";
+import "./Hexagons.scss";
+
 
 const AboutMe = (props) => {
    const [aboutMeToggle, setAboutMeToggle] = useState("me"),
@@ -42,12 +44,6 @@ const AboutMe = (props) => {
 
 return (
    <div className="about-me-page">
-      {/* <nav>
-         <h3 onClick={() => {setAboutMe(true), setExperience(false)}}> About Me </h3>
-         <h3 onClick={() => {setAboutMe(false), setExperience(true)}}> Experience </h3>
-
-         <h3> Gymnastics </h3>
-      </nav> */}
       <section className="hexagon-container">
          <div className="hexagon-row-one">
          { aboutMeToggle !== family ? (
@@ -115,14 +111,14 @@ return (
             {/* <img /> */}
             <div className="feature-description">
                <h1>A Closer Look </h1>
-               <li>Not a big bug fan especially scorpions </li>
                <li>Favorite Movie Princess Bride </li>
                <li>LOVE WATERMELON</li>
-               <li> at 2 years-old, my parents always had to watch me, because I woudl run outside the house NAKED</li>
-               <li>I am a Chololate Milk Conoseur (ask me about my top five)</li>
+               <li> At the age of two I was an accomplished escape artist</li>
                <li> I have been to almost 40 states and 7 Countries </li>
-               <li>Favorite band: Bee Gees</li>
                <li>Learning Japanese</li>
+               <li>Not a big bug fan especially scorpions </li>
+               <li>Favorite band: Bee Gees</li>
+               <li>I am a chocolate milk conoussier (ask me about my top five)</li>
                <li></li>
                      
             </div>

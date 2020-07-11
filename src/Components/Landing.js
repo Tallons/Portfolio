@@ -57,12 +57,12 @@ const Landing = () => {
 
 const contactIconList = [
   // {image: EmailIcon, alt: "Email Icon", description: "Noahorr2@yahoo.com"},
-
-  {image: FacebookIcon, alt: "Facebook Icon", site: "https://www.facebook.com/Tallons27", description: "Tallons27"},
+  
+  {image: LinkIcon, alt: "LinkedIn Icon", site: "https://www.linkedin.com/in/noah-orr-tallons/", description: "Noah Orr"},
   {image: GithubIcon, alt: "GitHub Icon", site: "https://github.com/Tallons", description: "Tallons"},
   {image: GymIcon, alt: "Usa Gymnastics Icon", site: "https://usagym.org/pages/athletes/athleteListDetail.html?id=227805", description: "Noah Orr Gymnastics Profile"},
-  {image: LinkIcon, alt: "LinkedIn Icon", site: "https://www.linkedin.com/in/noah-orr-tallons/", description: "Noah Orr"},
-
+  {image: FacebookIcon, alt: "Facebook Icon", site: "https://www.facebook.com/Tallons27", description: "Tallons27"},
+  
 ]
 
 const mappedContactIcons = contactIconList.map(el => {
@@ -125,7 +125,10 @@ const mappedContactIcons = contactIconList.map(el => {
             <p>
               This is me, here I am. Stuff goes here = )
             </p>
-            <p> Remember to fill this in</p>
+            <li>life quote</li>
+            <li>2019 World Silver Medalist</li>
+
+
  
               
 

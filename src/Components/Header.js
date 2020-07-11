@@ -15,7 +15,7 @@ const Header = () => {
       </section>
       <section className="header-title-container">
          <h1 className="name">NOAH ORR</h1>
-         <h2 className="sub-heading"> Software Developer<br /> 2019 World Silver Medalist </h2>
+         <h2 className="sub-heading"> Software Developer<br /> Senior Elite Gymnast </h2>
       </section>
      </header>
   )

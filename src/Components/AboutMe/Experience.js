@@ -17,7 +17,7 @@ const Experience = (props) => {
    ]
    ;
    const mappedWorkList = workList.map(el => {
-      return ( <div className="feature-column">
+      return ( <div className="feature-container">
                         <div className="feature-column-title-box">
                            <img src={el.image} alt={el.alt} />
                            <div className="feature-column-title">
