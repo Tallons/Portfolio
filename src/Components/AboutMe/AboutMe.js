@@ -42,9 +42,6 @@ const AboutMe = (props) => {
      
    },[])
 
-   console.log(props)
-   console.log(aboutMeToggle)
-
 return (
    <div className="about-me-page">
       <section className="hexagon-container">
@@ -123,16 +120,14 @@ return (
             {/* <img /> */}
             <div className="feature-description">
                <h1>A Closer Look </h1>
-               <li>Favorite Movie Princess Bride </li>
-               <li>LOVE WATERMELON</li>
-               <li> At the age of two I was an accomplished escape artist</li>
-               <li> I have been to almost 40 states and 7 Countries </li>
-               <li>Learning Japanese</li>
-               <li>Not a big bug fan especially scorpions </li>
+               <li>Favorite movie: Princess Bride </li>
+               <li>I love watermelon</li>
+               <li> At the age of two, I was an accomplished escape artist</li>
+               <li>I have been to almost 40 states and 7 countries </li>
+               <li>I’m learning Japanese</li>
+               <li>I’m not a big bug fan, specifically scorpions </li>
                <li>Favorite band: Bee Gees</li>
-               <li>I am a chocolate milk conoussier (ask me about my top five)</li>
-               <li></li>
-                     
+               <li>I am a chocolate milk connoisseur (ask me about my top five)</li>
             </div>
          </section>
           ) : null}

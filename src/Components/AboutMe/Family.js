@@ -7,12 +7,13 @@ const Family = (props) => {
       <section className="feature">
            <div className="feature-description">
             <h1>It's All About Family</h1>
-            <li>I am a midwest guy, Born in Witchita, Kansas</li>
-            <li>I have a blended family (a yours mine and ours) my parents have been together for 27 years </li>
-            <li>my father is 2nd of 10 kids and his mother is 2nd of 15 and her father was one of 21 kids</li>
-            <li>I have five CRAZY sisters, that keep me on my toes </li>
-            <li>Two Brother-in-law positions are currently available and applications are being accepted</li>
-            <li></li>
+            <ul>
+               <li>I was born in Wichita, Kansas</li>
+               <li>I have a blended family (a yours mine and ours). My parents have been together for 27 years </li>
+               <li>My father is the second of ten children. His mother is the second of 15 children. <br></br>Believe it or not, his grandmother was one of 21 children</li>
+               <li>I have five CRAZY sisters who keep me on my toes </li>
+               <li>Two brother-in-law positions are currently available and applications are being accepted</li> 
+            </ul>
          </div>
      
       </section>

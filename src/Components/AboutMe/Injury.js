@@ -15,9 +15,9 @@ const Injury = (props) => {
             <div className="spacer feature-separator"></div>
             <li> April 2018 - State Champion</li>
             <li> May 10, 2018 - Shattered Right Foot at Regionals</li>
-            <li>September 2018 - Starting jumping again</li>
+            <li>September 2018 - Started jumping again</li>
             <div className="spacer feature-separator"></div>
-            <li> May 2019 - State Champion</li>
+            <li> April 2019 - State Champion</li>
             <li> June 2019 - Grade II Right Ankle Sprain  </li>
             <li> July 2019 - National Championships - Silver Medalist</li>
             </div>

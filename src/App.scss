@@ -132,6 +132,17 @@
       .skills-container-title {
          @include column;
       }
+      #portfolio {
+         height: 5vh;
+         position: relative;
+         // background-color: magenta;
+         display: hidden;
+         // z-index: -1;
+         margin: -3vh;
+         // top: 155vh;
+      }
+
+
 
    // ------------------ about me ----------------------------------
 
@@ -177,13 +188,13 @@
             }
             a {
                @include button;
-               width: 15%;
+               width: 30vw;
                margin: 0 0 1em;
                text-decoration: none;
             }
             a:hover {
                @include button-hover;
-
+               width: 32vw;
             }
          }
       }

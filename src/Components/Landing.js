@@ -111,8 +111,8 @@ const mappedContactIcons = contactIconList.map(el => {
         <Projects setToggle = {setToggle}
                          vindermere = {vindermere}
                          ecoVerde = {ecoVerde}/>
-      <h1 className="section-title">IN PROGRESS</h1>
-      <InProgress />
+      {/* <h1 className="section-title">IN PROGRESS</h1>
+      <InProgress /> */}
         <h1 className="section-title"> ABOUT ME</h1>
 
         <section className="about-me-overview-container">
@@ -123,15 +123,8 @@ const mappedContactIcons = contactIconList.map(el => {
           <div className="content">
 
             <p>
-              This is me, here I am. Stuff goes here = )
+            After a successful career in Olympic-level gymnastics, I have jumped into the world of programming and am looking for a challenging role that will push me and continue to build my skills. I am not afraid of extensive research or hard work in order to become a key contributor to my team. I am a quick learner and thrive in leadership roles. Recently, I helped build a company from the ground up and loved the ability to wear multiple hats while it grew. I am ready to put my experience and coding skills to work in my next endeavor.
             </p>
-            <li>life quote</li>
-            <li>2019 World Silver Medalist</li>
-
-
- 
-              
-
 
             <Link to="/me">Learn More</Link>
             </div>

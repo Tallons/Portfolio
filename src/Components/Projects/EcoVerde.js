@@ -16,7 +16,7 @@ const EcoVerde = (props) => {
    const [imageToggle, setPictureToggle] = useState(ecoDash)
 
    const images = [ecoDash, ecoOne, ecoTwo],
-            icons = [
+             icons = [
                {image: jsIcon, alt: "JavaScript Icon", description: "JavaScript"},
                {image: reactIcon, alt: "React Icon", description: "React"},
                {image: postgresqlIcon, alt: "PostgreSQL Icon", description: "PostgreSQL"},
@@ -37,7 +37,7 @@ const EcoVerde = (props) => {
    })
 
    const mappedIcons = icons.map(el => {
-      return (  <div className="skills-icon-container">
+      return (<div className="skills-icon-container">
       <img className="skill-icon" src={el.image} alt={el.alt} height="50px"/>
       <h4>{el.description} </h4>
    </div> )
@@ -52,16 +52,51 @@ const EcoVerde = (props) => {
       </div> 
       <img className="main-image" src={imageToggle} alt={`${imageToggle}`}/>
    </div>
+
    <div className="project-page-details">
-         <h1> EcoVerde</h1>
-         {/* {imageToggle ?  : } */}
-         <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+      {imageToggle === ecoDash ? ( 
+      <> 
+         <h4> Two Week Personal Project </h4>
+         <br></br>
+         <h4> Landing Page</h4>
+         <p>This is the user's dashboard. Here a user can see an overview of all their bids, along with a basic analysis of the division of materials, labor, and overhead. </p> 
+         <br></br>
+         <h4>Programming Challenges</h4> 
+         <li>Pulling data from database and displaying it using Chartjs </li> 
+      </> 
+      ) : null }
+      {imageToggle === ecoOne ? ( 
+         <> 
+            <h4> Bid Page</h4>
+            <p> A user can select the materials needed for there project (materials type and quantity require blueprints) <br /> 
+            Once the product has been selected a task type is needed to determine the production rate (amount of labor hours). This is then calculated and then the user is given the total material cost and labor hours. </p> 
+            <br></br>
+            <h4>Programming Challenges</h4> 
+            <li>Designing a database that could handle multiple bids with multiple materials. Each material type contains several materials each having one or more task types. Each task type has a production rate attached to determine labor hours.</li> 
+         </> 
+      ) : null }
+
+      {imageToggle === ecoTwo ? (
+         <> 
+            <h4> Bid Page (Continued)</h4>
+            <p>As mentioned on the previous image, material types have multiple products. Thus a controller has five products in the database that can be selected. These dropdowns are affected by the database. </p>
+            <br></br>
+            <h4>Future Developments </h4>
+            <li>A payroll system will be implemented (allowing labor rates to be more accurate)</li>
+            <li>Database front-end adjustments (adding, removing, or adjusting products, prices, and production rates)</li>
+            <br></br>
+            <h4>Programming Challenges</h4> 
+            <li>Dynamic dropdown menus</li> 
+            <li> Pulling the correct information based on selections</li> 
+            <li> Saving the data and updating the page immediately</li> 
+         </> 
+       ) : null }
+         </div>
          <div className="skills-container">
          {mappedIcons}
 
          </div>
 
-   </div>
 </section>
    )
  }

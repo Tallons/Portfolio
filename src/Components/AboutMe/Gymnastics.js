@@ -7,7 +7,7 @@ const Gymnastics = (props) => {
       <section className="feature">
            <div className="feature-description">
                <h1>Gymnastics</h1>
-                  <li>I have been on a trampoline since the age of two, but my gymnastic's career officially began at 10. </li>
+                  <li>I have been on a trampoline since the age of two, but my gymnastics career officially began at the age of 10.</li>
                   <li>2010 National Champion</li>
                   <li>Three years on the USA National Team (2012, 2019, 2020)</li>
                   <li>I have competed in Bulgaria, Spain, Portugal, and Japan</li>

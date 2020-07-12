@@ -17,7 +17,7 @@ const Projects = (props) => {
             <h1>Vindermere </h1>
             {/* <h3>Full Stack Application<br />
                     Group Project (3 Members)</h3> */}
-            <p>"The early morning sun forces your eyes open; your throat is dry and your stomach growls with too many days without a meal. Your coin purse hasn't felt the weight of gold for far too long. this bad luck must end soon."</p>
+            <p>"The early morning sun forces your eyes open; your throat is dry and your stomach growls with too many days without a meal. Your coin purse hasn't felt the weight of gold for far too long. This bad luck must end soon."</p>
             <button onClick={() => props.setToggle(vindermere)}>More Info</button>
           </div>
             <div className="image-container">
@@ -50,8 +50,13 @@ const Projects = (props) => {
          <h1>Notepad</h1>
             {/* <h3>Full Stack Application<br />
                     Group Project (3 Members)</h3> */}
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer interdum consequat posuere. Praesent auctor eros in magna facilisis ultricies. Nulla augue metus, euismod non pulvinar sit amet, venenatis non tortor. </p>
-            <button>More Info</button>
+            <p>Notepad allows you to create, edit, and delete notes. You may also search through your notes by title, date, or the note's content.
+              <br></br>
+              <br></br>
+              Notepad was my first project as a student. It tested my understanding of a RESTful API and rudimentary functions used in building websites/applications
+              <br></br>
+              <br></br>
+              This project was developed using JavaScript, CSS, and Express </p>
          </div>
          <div className="image-container">
           <img id="notepad" src={notepadPic} alt="NotePad Picture"/>
