@@ -6,7 +6,7 @@ import Vindermere from "./Projects/Vindermere";
 import EcoVerde from "./Projects/EcoVerde";
 import InProgress from "./InProgress/InProgress";
 import Pic1 from "../images/2014 Family Picture.jpg"
-import Pic2 from "../images/DMT-worlds2.png";
+import Pic2 from "../images/DMT - Worlds 2.jpg";
 import EmailIcon from "../images/contact-icons/Email.png";
 import FacebookIcon from "../images/contact-icons/Facebook.png";
 import GithubIcon from "../images/contact-icons/Github.png";

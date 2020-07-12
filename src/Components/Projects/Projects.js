@@ -1,8 +1,8 @@
 import React from 'react';
 import { Link } from "react-router-dom";
-import vindermerePic from "../../images/Vindermere - Login.png";
-import ecoVerdePic from "../../images/Eco Verde Estimating - login.png";
-import notepadPic from "../../images/Notepad - view.png";
+import vindermerePic from "../../images/Vindermere - Login.jpg";
+import ecoVerdePic from "../../images/Eco Verde Estimating - login.jpg";
+import notepadPic from "../../images/Notepad - view.jpg";
 import "./Projects.scss";
 
 const Projects = (props) => {

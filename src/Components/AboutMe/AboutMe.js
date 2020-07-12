@@ -18,8 +18,8 @@ import pic4 from "../../images/Mission Farewell - Hexagon.png";
 import hoverPic4 from "../../images/Mission Farewell - Hexagon 1.png";
 import pic5 from "../../images/Gymnastics - Hexagon.png";
 import hoverPic5 from "../../images/Gymnastics - Hexagon 1.png";
-import pic6 from "../../images/Worlds - Hexagon 2.png";
-// import hoverPic6 from "../../images/Gymnastics - Hexagon 1.png";
+import pic6 from "../../images/Worlds - Hexagon.png";
+import hoverPic6 from "../../images/Worlds - Hexagon 1.png";
 
 import "./AboutMe.scss";
 import "./Hexagons.scss";
@@ -92,7 +92,16 @@ return (
                      onMouseOver={e => e.currentTarget.src=hoverPic5} 
                      onMouseOut={e => e.currentTarget.src=pic5}/>
          ) : <img className="hexagon-selected" src={pic5} /> }
-            <img className="hexagon-five" src={pic6} onClick={()=> setAboutMeToggle(worlds)} />
+         { aboutMeToggle !== worlds ? (  
+            <img className="hexagon-five" src={pic6} 
+                     onClick={(e)=> {
+                        setAboutMeToggle(worlds)
+                        e.currentTarget.src=pic6 }}
+                     onMouseOver={e => e.currentTarget.src=hoverPic6} 
+                     onMouseOut={e => e.currentTarget.src=pic6}/>
+         ) : <img className="hexagon-selected" src={pic6} /> }
+
+
          { aboutMeToggle !== experience ? (
             <img className="hexagon-seven" src={pic3} 
                      onClick={(e)=> {

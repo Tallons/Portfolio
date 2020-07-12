@@ -7,12 +7,12 @@ import postgresqlIcon from "../../images/skill-icons/Postgresql Logo.png";
 import expressIcon from "../../images/skill-icons/Express Logo.png";
 import sassIcon from "../../images/skill-icons/Sass_Logo.png";
 import gsapIcon from "../../images/skill-icons/GSAP Icon.png";
-import townView from "../../images/Vindermere Town View2.png";
-import heroSelectView from "../../images/Vindermere Hero Select.png";
-import newHeroView from "../../images/Vindermere New Hero.png";
+import townView from "../../images/Vindermere Town View2.jpg";
+import heroSelectView from "../../images/Vindermere Hero Select.jpg";
+import newHeroView from "../../images/Vindermere New Hero.jpg";
 // import marketView from "../../images/Vindermere Markest View.png";
-import dungeonView from "../../images/Vindermere Dungeon.png";
-import combatView from "../../images/Vindermere Combat.png";
+import dungeonView from "../../images/Vindermere Dungeon.jpg";
+import combatView from "../../images/Vindermere Combat.jpg";
 import "./Project.scss";
 
 const Vindermere = (props) => {

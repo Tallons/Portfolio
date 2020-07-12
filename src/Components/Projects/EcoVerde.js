@@ -7,7 +7,7 @@ import postgresqlIcon from "../../images/skill-icons/Postgresql Logo.png";
 import expressIcon from "../../images/skill-icons/Express Logo.png";
 import sassIcon from "../../images/skill-icons/Sass_Logo.png";
 import chartIcon from "../../images/skill-icons/chartjs-logo.svg";
-import ecoDash from "../../images/Eco Verde Estimating - Dashboard.png";
+import ecoDash from "../../images/Eco Verde Estimating - Dashboard.jpg";
 import ecoOne from "../../images/Eco Verde 1.jpg";
 import ecoTwo from "../../images/Eco Verde 2.jpg";
 import "./Project.scss"
