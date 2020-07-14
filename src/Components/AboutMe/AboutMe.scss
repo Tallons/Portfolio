@@ -11,12 +11,15 @@
 
    .return-link {
       @include button;
-      width: 14vw;
+      width: 50vw;
       margin-bottom: 1.5em;
+      font-size: 18px;
    }
    .return-link:hover {
       @include button-hover;
-      width: 18vw;
+      height:4vh;
+      font-size: 18px;
+      width: 50vw;
    }
    
    .about-me-container {
@@ -118,6 +121,12 @@
 }
 
 @media  (min-width: 700px){  
+   .return-link {
+      width: 30vw;
+   }
+   .return-link:hover {
+      width: 30vw;
+   }
       .feature-container {
          h1 {
             font-size: 20px;
@@ -166,13 +175,19 @@
    .about-me-container {
          width: 80%;
       }
+      .return-link {
+         width: 20vw;
+      }
+      .return-link:hover {
+         width: 20vw;
+      }
       
       .feature-container {
          h1 {
             font-size: 28px;
          }
          .feature-overview {
-            font-size: 14px;
+            font-size: 16px;
             width: 85%;
             padding-bottom: 1.5em;
          }
@@ -191,26 +206,45 @@
             }
             
             h2 {
-               font-size: 20px;
+               font-size: 22px;
                width: 98%;
                align-self: flex-end;
             }
             h3{
-               font-size: 16px;
+               font-size: 18px;
                align-self: flex-end;
                width: 95%;
             }
             p {
-               font-size: 14px;
+               font-size: 16px;
                width: 93%;
             }
 
             li {
-               font-size: 14px;
+               font-size: 16px;
                margin-left: 5em;
                width: 90%;
             }
          }
       }
 
+      .smaller-title-text {
+         font-size: 14px;
+      }
+      .smaller-text {
+         font-size: 14px;
+      }
+      .spacer {
+         margin:1vh;
+
+      }
+   }
+
+@media (min-width: 1200px) {
+   .return-link {
+      width: 14vw;
+   }
+   .return-link:hover {
+      width: 14vw;
+   }
 }

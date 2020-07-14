@@ -32,7 +32,7 @@ const mappedEducationList = educationList.map(el => {
 return (
    <section className="feature-container">
       <h1 className="feature-title">Education </h1>
-      <p className="feature-overview"> Training and competing in Gymnastics occupied a majority of my time, along with working a full time job in 2018 and helping my friend grow his business. Due to these circumstances ,I have not been able to pursue my true passion. I have been dreaming for years about the day I would finally be able to work in the tech industry! My education path is not common, but my passion drives me to learn on my own and find resources to further my understanding. I am not afraid of doing hard things and I know that I can learn anything I set my mind to. Below are the lists of courses, books, and Certifications I have completed, studied, and/or currently studying</p>
+      <p className="feature-overview"> Training and competing in Gymnastics occupied a majority of my time, along with working a full time job in 2018 and helping my friend grow his business. Due to these circumstances, I have not been able to pursue my true passion. I have been dreaming for years about the day I would finally be able to work in the tech industry! My education path is not common, but my passion drives me to learn on my own and find resources to further my understanding. I am not afraid of doing hard things and I know that I can learn anything I set my mind to. Below are the lists of courses, books, and Certifications I have completed, studied, and/or currently studying</p>
       {mappedEducationList}
    </section>
 )

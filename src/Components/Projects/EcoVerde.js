@@ -78,20 +78,21 @@ const EcoVerde = (props) => {
 
       {imageToggle === ecoTwo ? (
          <> 
-            <h4> Bid Page (Continued)</h4>
-            <p>As mentioned on the previous image, material types have multiple products. Thus a controller has five products in the database that can be selected. These dropdowns are affected by the database. </p>
-            <br></br>
-            <h4>Future Developments </h4>
-            <li>A payroll system will be implemented (allowing labor rates to be more accurate)</li>
-            <li>Database front-end adjustments (adding, removing, or adjusting products, prices, and production rates)</li>
-            <br></br>
-            <h4>Programming Challenges</h4> 
-            <li>Dynamic dropdown menus</li> 
-            <li> Pulling the correct information based on selections</li> 
-            <li> Saving the data and updating the page immediately</li> 
+            <h4 className="smaller-title-text"> Bid Page (Continued)</h4>
+            <p className="smaller-text">As mentioned on the previous image, material types have multiple products. Thus a controller has five products in the database that can be selected. These dropdowns are affected by the database. </p>
+            <div className="spacer"></div>
+            <h4 className="smaller-title-text">Future Developments </h4>
+            <li className="smaller-text">A payroll system will be implemented (allowing labor rates to be more accurate)</li>
+            <li className="smaller-text">Database front-end adjustments (adding, removing, or adjusting products, prices, and production rates)</li>
+            <div className="spacer"></div>
+            <h4 className="smaller-title-text">Programming Challenges</h4> 
+            <li className="smaller-text">Dynamic dropdown menus</li> 
+            <li className="smaller-text"> Pulling the correct information based on selections</li> 
+            <li className="smaller-text"> Saving the data and updating the page immediately</li> 
          </> 
        ) : null }
          </div>
+         <button onClick={() => props.resetToggle()}>Return</button> 
          <div className="skills-container">
          {mappedIcons}
 

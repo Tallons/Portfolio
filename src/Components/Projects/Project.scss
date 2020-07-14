@@ -16,10 +16,10 @@
       
       .image-container{
          @include column;
-         justify-content: space-between;
+         justify-content: space-evenly;
          margin-top: .25em;
          width:100%;
-         height: 40vh;
+         height: 50%;
          box-sizing: border-box;
          padding: 0 1em 0 1em;
          
@@ -27,12 +27,12 @@
             @include row;
             flex-wrap: wrap;
             justify-content: center;
-            width: 70%;
+            width: 80%;
             background-color: $pal-six-dark;
             padding: .5em .5em .5em .5em;
             border-radius: 5px;
-            min-height: 30vh;
-   
+            min-height: 8vh;
+            
             img {
                width:100%;
                border-radius: 5px;
@@ -41,7 +41,7 @@
                height:  6vh;
                width: 30%;
                position: relative;
-
+               
                
                img {
                   height:6vh;
@@ -79,7 +79,7 @@
          }
       }
       .main-image {
-         height: 25vh;
+         height: 60%;
          border-radius: 7px;
          margin: 5px 0 5px;
       }
@@ -106,7 +106,7 @@
          background-color: transparent;
          border: 2px solid $pal-five;
          color: $pal-one;
-         font-size: 16px;
+         font-size: 18px;
          font-weight: bold;
          border-radius: 5px;
       }
@@ -126,12 +126,12 @@
                flex-flow: row wrap;
                text-align: center;
               color: $pal-one;
-              height: 18vh;
-              width: 80%;
+              height: 16%;
+              width: 90%;
               padding: 1em 0 1em 0;
 
                .skills-icon-container {
-                  width: 45px;
+                  width: 50px;
                   margin: .5em;
                   text-align: center;
                   font-size: 9px;
@@ -145,12 +145,31 @@
             
          }
       }
+      .smaller-title-text{
+         font-size: 9px;
+      }
+      .smaller-text{
+         font-size: 7px;
+      }
+      .spacer {
+         margin:.25em;
+      }
+      
    }
 
    @media  (min-width: 320px) and (min-height: 600px){  
       .project-page-container
       .project-page-details {
             font-size: 10px;
+      }
+      .smaller-title-text{
+         font-size: 10px;
+      }
+      .smaller-text{
+         font-size: 8px;
+      }
+      .spacer {
+         margin:.25em;
       }
    }
 
@@ -159,7 +178,7 @@
 .project-page-container {
    
    .image-container{
-      height: 50vh;
+      // height: 50vh;
 
       .image-selector{
          width: 90%;
@@ -194,7 +213,29 @@
          
       }
    }
+   .smaller-title-text{
+      font-size: 12px;
+   }
+   .smaller-text{
+      font-size: 10px;
+   }
+   .spacer {
+      margin:.25em;
+   }
 }
+
+@media (min-width: 400px) {
+   .smaller-title-text{
+      font-size: 12px;
+   }
+   .smaller-text{
+      font-size: 10px;
+   }
+   .spacer {
+      margin:.25em;
+   }
+}
+
 @media  (min-width: 600px) {
    .project-page-container 
    .skills-container {
@@ -216,6 +257,15 @@
          }
       }
    }
+   .smaller-title-text{
+      font-size: 18px;
+   }
+   .smaller-text{
+      font-size: 16px;
+   }
+   .spacer {
+      margin:.25em;
+   }
 }
 
 
@@ -223,15 +273,15 @@
 
    .project-page-container {
       .image-container{
-         height: 52vh;
+         // height: 52vh;
    
          .image-selector{
-            width: 95%;
+            min-width: 40vw;
             justify-content: space-between;
    
             .pic {
                height:  8vh;
-               width: 19%;
+               width: 20vw;
                
                img {
                   height:8vh;
@@ -241,7 +291,7 @@
       }
 
       .main-image {
-         height: 42vh;
+         // height: 42vh;
       }
       
       .project-page-details {
@@ -285,7 +335,7 @@
    
          .image-selector{
             justify-content: space-evenly;
-            width: 25%;
+            min-width: 10%;
             margin-right: .5em;
 
                .pic {
@@ -300,6 +350,7 @@
          }
          .main-image {
             width:80%;
+            height:100%;
          }
          
          .project-page-details {
@@ -307,12 +358,14 @@
                font-size: 16px;
          }  
          button {
-            width: 300px;
-            height: 8vh;
+            width: 250px;
+            height: 6vh;
+            font-size: 22px;
          }
          button:hover {
-            width: 320px;
-            height: 9vh;
+            width: 280px;
+            height: 7vh;
+            font-size: 24px;
          }
             
                .skills-container {
@@ -329,6 +382,16 @@
                   }
                }
             }
+            .smaller-title-text{
+
+            }
+            .smaller-text{
+
+            }
+            .spacer {
+
+            }
+            
       }
 
 @media  (min-width: 1200px){  
@@ -336,26 +399,10 @@
    .project-page-container{
       width: 1000px;
       
-      .image-container{
-         height: 60vh;
-      }
       .main-image {
-         height: 55vh;
          width:85%;
       }
       
-      .skills-container {
-         
-         .skills-icon-container {
-            width: 95px;
-            font-size: 16px;
-            
-            .skill-icon {
-               height: 70px;
-               width: 70px;
-            }
-         }
-      }
    }
 }
 

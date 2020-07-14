@@ -91,7 +91,8 @@ const mappedContactIcons = contactIconList.map(el => {
                                       resetToggle = {resetToggle} />) : null }
             {toggleType === ecoVerde ? (
               <EcoVerde stopPropagation = {stopPropagation}
-              setToggle = {setToggle} />) : null }
+                                setToggle = {setToggle} 
+                                resetToggle = {resetToggle} />) : null }
              </div> ) : null}
       <div className="quote-container">
         <h2 className="intro-quote">

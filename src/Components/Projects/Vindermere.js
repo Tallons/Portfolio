@@ -76,12 +76,12 @@ const Vindermere = (props) => {
          {imageToggle === heroSelectView ? (
             <> 
             <h4> Heroes</h4> 
-            <li>This window enables you to create a new one or select your hero.</li>
+            <li>This window enables you to create a new hero or select a created hero.</li>
             <li> Additional functions include a delete prompt to verify the removal of a hero.</li> 
             <br></br>
             <h4>Programming Challenges</h4> 
-            <li>Allowing only one hero file to show a dropdown. Once a file is chosen the previous hero file's dropdown closes and opens the selected hero file's dropdown </li> 
-            <li>Pulling all the heroes' information from the database and storing it in local storage <strong>(to prevent unnecessary database calls)</strong> </li>
+            <li>Permit one hero file to show a dropdown at a time </li> 
+            <li>Pull all the heroes' information from the database and storing it in local storage <strong>(to prevent unnecessary database calls)</strong> </li>
          </> 
          ) : null }
 
@@ -115,7 +115,7 @@ const Vindermere = (props) => {
 {imageToggle === combatView ? (
             <> 
             <h4> Game Play </h4> 
-            <p> Vindermere is a tradition dungeon crawler with puzzle solving and combat </p> 
+            <p> Vindermere is a traditional dungeon crawler with puzzle-solving and combat </p> 
             <li>The structure of the game required saving anytime a player died or finished a dungeon </li>
             <li>A dungeon restart would wipe all progress and items acquired up to the previous save</li>
             <br></br>
