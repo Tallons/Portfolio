@@ -217,6 +217,8 @@
          }
    
          .feature-description {
+            width:100%;
+            padding-right: 5vw;
             h1 {
                font-size: 28px;
             }
@@ -243,7 +245,13 @@
             }
          }
       }
-
+      .about-me-buttons{
+         width: 70%;
+      }
+      .about-me-info {
+         font-size: 24px;
+         width: 350px;
+      }
       .smaller-title-text {
          font-size: 14px;
       }
@@ -252,11 +260,20 @@
       }
       .spacer {
          margin:1vh;
-
       }
    }
 
 @media (min-width: 1200px) {
+   .about-me-container {
+      width: 950px;
+   }
+   .about-me-buttons{
+      width: 800px;
+   }
+   .about-me-info {
+      font-size: 28px;
+      width: 450px;;
+   }
    .return-link {
       width: 14vw;
    }

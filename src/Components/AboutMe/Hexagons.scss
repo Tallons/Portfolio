@@ -405,6 +405,99 @@ $hexagon-size-450: 90px;
 
 }
 
+@media  (min-width: 500px){  
+
+   .hexagon-container {
+      width:75%;
+      height: 270px;
+   }
+   .hexagon-row-one{
+   width: 100%;
+   margin-bottom: -15px;
+   }
+   .hexagon-row-two{
+      display:flex;
+      justify-content: center;
+      align-items: center;
+      width: 100%;//this will need to be adjusted
+      margin-right:2px;
+   }
+   .hexagon-selected{
+      height: 140px;
+      width: 135px;
+      // box-shadow: 5px 5px red;
+   }
+   .hexagon-one {
+      // padding-top:5px;
+      height: 110px;
+      width: 110px;
+   }
+   .hexagon-one:hover {
+      height: 115px;
+      width: 115px;
+   }
+   .hexagon-two {
+      padding-top:5px;
+      height: 110px;
+      width: 110px;
+   }
+   .hexagon-two:hover {
+      padding-top:2px;
+      height: 115px;
+      width: 115px;
+   }
+   .hexagon-three {
+      // padding-top:5px;
+      height: 110px;
+      width: 105px;
+   }
+   .hexagon-three:hover {
+      height:115px;
+      width: 110px;
+   }
+   
+   .hexagon-four {
+      height:115px;
+      width: 110px;
+   }
+   .hexagon-four:hover {
+      height: 120px;
+      width: 115px;
+   }
+   .hexagon-five {
+      height: 113px;
+      width: 110px;
+   }
+   .hexagon-five:hover {
+      height: 118px;
+      width: 115px;
+   }
+
+   .hexagon-six {
+      // padding-top:5px;
+      height: 107px;
+      width: 110px;
+   }
+   .hexagon-six:hover {
+      // padding-top:3px;
+      height: 112px;
+      width: 115px;
+   }
+   .hexagon-seven {
+      padding-top:5px;
+      height: 118px;
+      width: 110px;
+   }
+   .hexagon-seven:hover {
+      // padding-top:3px;
+      height:123px;
+      width: 115px;
+   }
+
+}
+
+
+
 
 @media  (min-width: 1000px) {
    .hexagon-container {

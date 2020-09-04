@@ -129,11 +129,11 @@ const mappedContactIcons = contactIconList.map(el => {
             <p>
             After a successful career in Olympic-level gymnastics, I have jumped into the world of programming and am looking for a challenging role that will push me and continue to build my skills. I am not afraid of extensive research or hard work in order to become a key contributor to my team. I am a quick learner and thrive in leadership roles. Recently, I helped build a company from the ground up and loved the ability to wear multiple hats while it grew. I am ready to put my experience and coding skills to work in my next endeavor.
             </p>
-
+            <div className="button-container">
             <Link to="/me">Learn More</Link>
             </div>
-            <div className="button-container">
-            </div>
+          </div>
+
         </section>
       <div  id="contact"></div>
         <h1 className="section-title"> CONTACT ME</h1>
