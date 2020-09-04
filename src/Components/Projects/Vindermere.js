@@ -104,7 +104,7 @@ const Vindermere = (props) => {
             <p> The Inventory system is drag and drop. Due to game design, the inventory is saved in three places: 
             <li><strong>State:</strong> Items appear and can be used, but are deleted if game is not saved</li>
             <li><strong>Local Storage:</strong> Keeps track of hero's saved inventory</li> 
-            <li><strong>Database:</strong> Retrieves to inventory on new game</li></p>
+            <li><strong>Database:</strong> Retrieves inventory on new game</li></p>
             <br></br>
             <h4>Programming Challenges</h4> 
             <li> Drag and drop items into hero model and inventory, while keeping track of the item's image and stats</li>

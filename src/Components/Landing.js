@@ -7,7 +7,8 @@ import EcoVerde from "./Projects/EcoVerde";
 import InProgress from "./InProgress/InProgress";
 import Pic1 from "../images/2014 Family Picture.jpg"
 import Pic2 from "../images/DMT - Worlds 2.jpg";
-import EmailIcon from "../images/contact-icons/Email.png";
+import emailIcon from "../images/contact-icons/email icon.png";
+import resumeIcon from "../images/contact-icons/Resume icon.png";
 import FacebookIcon from "../images/contact-icons/Facebook.png";
 import GithubIcon from "../images/contact-icons/Github.png";
 import GymIcon from "../images/contact-icons/USAG Logo - White.png";
@@ -53,7 +54,11 @@ const Landing = () => {
     document.execCommand("copy");
     setCopiedTextToggle(true)
 
-  };
+  },
+
+  openResume = ( ) => {
+    window.open( "https://docs.google.com/document/d/16CnsZ55_xd1VB3OQsFU8bbyuoukBVdqDq6eitLvkMFk/edit?usp=sharing", "_blank" );
+  }
 
 const contactIconList = [
   // {image: EmailIcon, alt: "Email Icon", description: "Noahorr2@yahoo.com"},
@@ -73,8 +78,6 @@ const mappedContactIcons = contactIconList.map(el => {
                     {/* <h4>{el.description}</h4> */}
                  </div> )
 })
-
-
 
 
    return(
@@ -135,14 +138,20 @@ const mappedContactIcons = contactIconList.map(el => {
       <div  id="contact"></div>
         <h1 className="section-title"> CONTACT ME</h1>
       <section className="contact-me-container">
-              <div className="email-container"onClick={() => copyEmail()} >
-                 <img src={EmailIcon}/>
-                <input  id="email-address" type="text" value="Noahorr2@yahoo.com" /> 
+              <div className="email-resume-container">
+                <div className="email-container" onClick={() => copyEmail()}>
+                 <img src={emailIcon}/>
+                <input id="email-address" type="text" value="Noahorr2@yahoo.com" /> 
                <h4>{copiedTextToggle ? "Email Address Copied" : "Noahorr2@yahoo.com"}</h4>
+                </div>
+                <div className="resume-container" onClick={() => openResume()}>
+               <img src={resumeIcon}/>
+               <h4> View Resume</h4>
+                </div>
               </div>
              <div className="contact-icons-container">
-
               {mappedContactIcons}
+
              </div>
       </section>
 

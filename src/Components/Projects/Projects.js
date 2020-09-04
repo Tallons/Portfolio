@@ -18,7 +18,9 @@ const Projects = (props) => {
             {/* <h3>Full Stack Application<br />
                     Group Project (3 Members)</h3> */}
             <p>"The early morning sun forces your eyes open; your throat is dry and your stomach growls with too many days without a meal. Your coin purse hasn't felt the weight of gold for far too long. This bad luck must end soon."</p>
+            <div className="button-container">
             <button onClick={() => props.setToggle(vindermere)}>More Info</button>
+            </div>
           </div>
             <div className="image-container">
               <img  src={vindermerePic} alt="Vindermere Picture"/>
@@ -42,7 +44,9 @@ const Projects = (props) => {
             <h1>Eco Verde Estimating </h1>
             {/* <h3>Full Stack Application</h3> */}
             <p> An estimating software tailor made for Eco Verde Irrigation. This program allows for quick and customizable bids. Including material, payroll, and production rate adjustments. </p>
+            <div className="button-container">
             <button onClick={() => props.setToggle(ecoVerde)}>More Info</button>
+            </div>
          </div>
       </div>
        <div className="project">

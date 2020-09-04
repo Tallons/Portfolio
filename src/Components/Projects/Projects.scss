@@ -49,6 +49,11 @@
                font-style: italic;
                color: $pal-one;
             }
+            .button-container {
+               @include row;
+               width: 100%;
+               height:5vh;
+            }
             button {
                @include button;
                align-self: center;
@@ -110,6 +115,11 @@
             font-family: $main-font;
             font-style: italic;
             color: $pal-one;
+         }
+         .button-container {
+            @include row;
+            width: 100%;
+            height:5vh;
          }
          button {
             @include button;
@@ -267,6 +277,9 @@
                font-size: 16px;
                width: 80%;
             }
+            .button-container {
+               height:6vh;
+            }
             button {
                height: 5vh;
                font-size: 20px;
@@ -296,6 +309,9 @@
             p {
                font-size: 16px;
                width: 80%;
+            }
+            .button-container {
+               height:6vh;
             }
             button {
                height: 5vh;

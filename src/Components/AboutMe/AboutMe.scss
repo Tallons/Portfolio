@@ -8,18 +8,29 @@
       background:  linear-gradient(-45deg, $pal-four 10%, $pal-three 100%);
       min-height: 100vh;
    }
-
+   .about-me-buttons {
+      @include row;
+      width: 80%;
+      height:7vh;
+      // margin-right: 5vw;
+   }
+   .about-me-info {
+      width: 30vw;
+      text-align:center;
+      color:$pal-one;
+      font-size: 14px;
+   }
    .return-link {
       @include button;
-      width: 50vw;
+      width: 40vw;
       margin-bottom: 1.5em;
-      font-size: 18px;
+      font-size: 14px;
    }
    .return-link:hover {
       @include button-hover;
       height:4vh;
-      font-size: 18px;
-      width: 50vw;
+      font-size: 14px;
+      width: 45vw;
    }
    
    .about-me-container {
@@ -32,15 +43,14 @@
       min-height: 20vh;
       margin-bottom: 2.5em;
       padding-bottom: 1.5em;
-         width: 90%;
-         color: $pal-one;
+      width: 90%;
+      color: $pal-one;
       }
       
       .feature-container {
          @include column;
          align-items: flex-start;
          width: 90%;
-         // border: 3px solid purple;
 
          h1 {
             font-size: 16px;
@@ -51,7 +61,6 @@
 
          .feature-overview {
             font-size: 12px;
-            width: 100%;
             padding-bottom: .5em;
          }
       }
@@ -59,6 +68,7 @@
          display: flex;
          justify-content: center;
          box-sizing: border-box;
+         width: 90%;
 
          img {
             height: 50px;
@@ -118,6 +128,12 @@
       //    background-color: $pal-six;
       // }
 
+}
+@media  (min-width: 450px){  
+   .about-me-info {
+      width: 30vw;
+      font-size: 18px;
+   }
 }
 
 @media  (min-width: 700px){  

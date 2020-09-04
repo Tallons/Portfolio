@@ -185,6 +185,7 @@
             p {
                padding: 1em;
                box-sizing: border-box;
+               font-size: 14px;;
             }
             a {
                @include button;
@@ -211,19 +212,14 @@
       justify-content: space-evenly;
       text-align: center;
       min-height: 20vh;
-
-      .email-container {
-         @include row;
-         width: 80%;
+   }
+      .email-resume-container {
+         @include column;
          justify-content: center;
-         height: 5vh;
+         align-items: center;
          color: $pal-one;
          letter-spacing: 2px;
          margin-bottom:1.5em;
-         padding: .25em;
-         border-radius: 5px;
-         box-shadow: 5px 5px 20px black;
-         background-color: $pal-six;
 
          img {
             height: 50px;
@@ -238,7 +234,32 @@
             z-index: -1;
          }
       }
-      .email-container:hover {
+   
+      .email-container, .resume-container {
+         @include row;
+         justify-items: center;
+         background-color: $pal-six;
+         width: 85%;
+         height: 6vh;
+         box-shadow: 5px 5px 20px black;
+         border-radius: 5px;
+         margin-bottom: .5em;
+      }
+
+      .email-container img {
+         margin-left: .5em;
+      }
+      .resume-container {
+         height: 6vh;
+         width: 60%;
+
+         img {
+            height: 30px;
+            width: 30px;
+            margin-left: .75em;
+         }
+      }
+      .email-container:hover, .resume-container:hover {
          transition: 1s;
          background-color: $pal-five;
          color:$pal-zero;
@@ -252,7 +273,6 @@
             width: 50px;
          }
       }
-   }
    }
 
    @media  (min-width: 400px){
@@ -310,10 +330,14 @@
                height: 350px; 
                object-position: 25% -18px;
             }
-            
          }
       }
+ // ------------------------- contact me ------------------------------
+      .email-container, .resume-container {
+         font-size: 20px;
+      }
    }
+
 
    @media  (min-width: 550px){
 
@@ -330,6 +354,12 @@
             top: 2vh;
             line-height: 1.75em;
             font-size: 20px;
+         }
+      }
+      .email-container {
+         width: 70%;
+         img {
+            margin-left: 1em;
          }
       }
    }
@@ -349,6 +379,19 @@
                height: 420px; 
             }
          }
+         .content p{
+            font-size: 18px;
+         }
+      }
+      // ------------------ contact me ----------------------------------
+      .email-container {
+         width: 65%;
+         img {
+            margin-left: 1em;
+         }
+      }
+      .resume-container {
+         width: 50%;
       }
    }
 
@@ -389,6 +432,12 @@
             width: 18vw;
          }
       }
+
+      .email-container, .resume-container {
+         font-size: 24px;
+         height: 6vh;
+      }
+
    }
 
    @media  (min-width: 750px){
@@ -446,6 +495,13 @@
          .sub-heading {
             top: 20vh;
          }
+      }
+
+      .email-container {
+         width: 50%;
+      }
+      .resume-container {
+         width: 40%;
       }
    }
 
@@ -511,15 +567,33 @@
       }
       // ------------------ contact ----------------------------------
          .contact-me-container {
-      
+
+            .email-resume-container{
+               // width: 90%;
+               flex-direction: row;;
             .email-container {
                width: 50%;
                font-size: 26px;
+               padding-right: 1em;
+               margin-right: 1em;
+               height: 7vh;
 
                img {
-                  padding-left: 3vw;
+                  padding-left: 1vw;
                   height: 70px;
                   width: 70px;
+               }
+            }
+
+            .resume-container {
+               font-size: 26px;
+               width: 30%;
+               height: 7vh;
+
+               img {
+                  padding-left: 1vw;
+                  height: 45px;
+                  width: 45px;
                }
             }
             .contact-icons-container {
@@ -531,6 +605,7 @@
                }
             }
          }
+      }
    }
 
    @media  (min-width: 1000px) and (min-height: 1200px){ 
@@ -581,11 +656,11 @@
          }
       }
       // ------------------ contact ----------------------------------
-      .contact-me-container {
-         .email-container {
-            width: 45%;
-         }
-      }
+   //    .contact-me-container {
+   //       .email-resume-container {
+   //          width: 45%;
+   //       }
+   //    }
    }
 
    @media  (min-width: 1320px){
@@ -625,10 +700,15 @@
       }
       // ------------------ contact ----------------------------------
       .contact-me-container {
-         .email-container {
-            width: 550px;
+         .email-resume-container {
+            width: 80%;
             font-size: 28px;
+
+            .email-container {
+               width: 40%;
             }
+            }
+            
          }
          .contact-icons-container {
             width: 650px;

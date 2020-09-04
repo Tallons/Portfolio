@@ -26,7 +26,7 @@ import "./Hexagons.scss";
 
 
 const AboutMe = (props) => {
-   const [aboutMeToggle, setAboutMeToggle] = useState("me"),
+   const [aboutMeToggle, setAboutMeToggle] = useState("family"),
             [overlay, setOverlay] = useState(false),
             [selected, setSelected] = useState(false)
 
@@ -113,7 +113,12 @@ return (
             <img className="test" src={pic2}/>
          </div> */}
       </section>
+      <div className="about-me-buttons">
          <Link to="/" className="return-link"> Back to Portfolio </Link>
+         <div className="about-me-info">Click above to learn more</div>
+         {/* <button className="return-link" onClick={() => setAboutMeToggle(education) }> Education</button>
+         <button className="return-link" onClick={() => setAboutMeToggle(experience) }> Experience</button> */}
+      </div>
       <section className="about-me-container">
          { aboutMeToggle === me ? (
             <section className="feature">

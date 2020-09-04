@@ -1,7 +1,7 @@
 import React from "react";
 import jsIcon from "../images/skill-icons/JS Logo 2.png";
 import javaIcon from "../images/skill-icons/Java Logo.png";
-import tsIcon from "../images/skill-icons/TS Logo.png";
+// import tsIcon from "../images/skill-icons/TS Logo.png";
 import PythonIcon from "../images/skill-icons/Python.png";
 import htmlIcon from "../images/skill-icons/html-5-logo.png";
 import reactIcon from "../images/skill-icons/React Icon.png";
@@ -13,6 +13,7 @@ import sassIcon from "../images/skill-icons/Sass_Logo.png";
 import postIcon from "../images/skill-icons/Postman Logo.png";
 import chartIcon from "../images/skill-icons/chartjs-logo.svg";
 import gitIcon from "../images/skill-icons/Git Icon.png";
+import mongoIcon from "../images/skill-icons/MongoDB.png";
 import "./Skills.scss"
 
 const Skills = () => {
@@ -20,9 +21,10 @@ const Skills = () => {
   const iconList = [
     {image: jsIcon, alt: "JavaScript Icon", description: "JavaScript"},
     {image: javaIcon, alt: "Java Icon", description: "Java"},
-    {image: tsIcon, alt: "TypeScript Icon", description: "TypeScript"},
+    // {image: tsIcon, alt: "TypeScript Icon", description: "TypeScript"},
     {image: PythonIcon, alt: "Python Icon", description: "Python"},
     {image: postgresqlIcon, alt: "PostgreSQL Icon", description: "PostgreSQL"},
+    {image:mongoIcon, alt: "MongoDB Icon", description: "MongoDB"},
     {image: htmlIcon, alt: "HTML 5 Icon", description: "HTML 5"},
     {image: nodejsIcon, alt: "Nodejs Icon", description: "Nodejs"},
     {image: reactIcon, alt: "React Icon", description: "React"},
